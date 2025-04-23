@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verktøy - BookersDesk | Channel Manager</title>
+  <meta name="description" content="Overvåk den økonomiske ytelsen til eiendommen din med nettbaserte kalkulatorer spesielt designet for hotellbransjen. Få detaljert økonomisk analyse for hoteller, inkludert indikatorer som Net RevPAR, ARPAr, CPOR og mye mer, for å optimalisere ledelse og inntektsvekst." />
+  <meta name="keywords" content="Verktøy, hotell kalkulatorer, økonomisk analyse for hoteller, Net RevPAR, ARPAr, CPOR, hotell økonomistyring, hotell inntektskalkulator, profittanalyse for hoteller, økonomiske strategier for hoteller, hotellinntektsoptimalisering." />
+  
+  
+   <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    a {
+      display: inline-block;
+    }
+    img {
+      display: flex;
+      width: 100%;
+    }
+    .section-lead {
+      max-width: 600px;
+      margin: 1rem auto 1.5rem;
+    }
+    .book-a-demo-wrapper {
+      background: url('https://teamviewer.scene7.com/is/content/teamviewergmbh/hero-highlight-gradient-connected-gray-10?dpr=off') no-repeat ;
+      background-size: 100% 100%;
+      border-radius: 30px !important;
+      padding: 65px 95px;
+    }
+    .hero-title {
+      background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-block: 12px 8px;
+    }
+    .job__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .job__card {
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .job__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 20px; 
+  align-items: start; 
+}
+
+.job__card {
+  background: #fff; 
+  border-radius: 8px; 
+  padding: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  height: auto; 
+}
+    .job__card1 {
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .job__card:hover {
+      background: url(https://www.solidbackgrounds.com/images/4096x2304/4096x2304-ghost-white-solid-color-background.jpg) no-repeat;
+    }
+    .job__card__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .job__card img {
+      max-width: 50px;
+      padding: 10px;
+      border-radius: 100%;
+      background-color: #fff;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .job__card h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card h6 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card h4 {
+      margin-block: 1rem 0.5rem;
+      font-size: 20px;
+      font-weight: 700;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card p {
+      margin-bottom: 1rem;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card__footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .job__card__footer span {
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .job__card__footer .btn1 {
+      color: #4680e7;
+      background-color: #e7edf8;
+    }
+    .job__card__footer .btn2 {
+      color: #f04a0c;
+      background-color: #f6efef;
+    }
+    .job__card__footer .btn3 {
+      color: #0a44a8;
+      background-color: #EEF1FE;
+    }
+    .offer__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 2rem 1rem;
+    }
+    .job__card__header span {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 5px 11px;
+      font-size: 22px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .read-toggle-link {
+  color: #000; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  font-size: 16px; 
+  display: block; 
+  margin-top: 10px; 
+}
+
+.read-toggle-link:hover {
+  text-decoration: none; 
+}
+    .job__card__header .class1 {
+  color: #f04a0c;
+  background-color: #f6efef;
+}
+.job__card__header .class2 {
+  color: #6a38c2;
+  background-color: #e9ddff;
+}
+.job__card__header .class3 {
+  color: #4680e7;
+  background-color: #e7edf8;
+}
+.job__card__header .class4 {
+  color: #3ac2ba;
+  background-color: #f0fffe;
+}
+.job__card__header .class5 {
+  color: #3ac2ba;
+  background-color: #f0fffe;
+}
+.job__card__header .class6 {
+  color: #34a753;
+  background-color: #f1fef5;
+}
+/* Karta të reja */
+.job__card__header .class7 {
+  color: #ff9800;
+  background-color: #fff3e0;
+}
+.job__card__header .class8 {
+  color: #673ab7;
+  background-color: #ede7f6;
+}
+.job__card__header .class9 {
+  color: #009688;
+  background-color: #e0f2f1;
+}
+.job__card__header .class10 {
+  color: #ff5722;
+  background-color: #fbe9e7;
+}
+.job__card__header .class11 {
+  color: #1976d2;
+  background-color: #e3f2fd;
+}
+.job__card__header .class12 {
+  color: #9c27b0;
+  background-color: #f3e5f5;
+}
+    .section.background {
+      background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+      background-size: contain;
+    }
+    .group_testimonial_avatar-service {
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 1.5rem;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      display: flex;
+    }
+    .m_avatar-medium {
+      border-radius: 10rem;
+      width: 70px;
+      display: block;
+    }
+    .offer__card img {
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    .offer__details {
+      display: flex;
+      align-items: flex-start;
+    }
+    .offer__details span {
+      font-size: 35px;
+      font-weight: 800;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #262626;
+      padding-right: 1rem;
+    }
+    .offer__details div {
+      padding-left: 1rem;
+      border-left: 2px solid #374886;
+    }
+    .offer__details h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .offer__details p {
+      color: var(--text-light);
+    }
+    @media (width > 540px) {
+      .job__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .offer__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (width > 768px) {
+      .offer__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .job__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (width > 1024px) {
+      .offer__grid {
+        gap: 2rem;
+      }
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-no.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Tjenester <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Driftsledelse</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Kanalhåndtering</a></li>
+                    <li><a href="pricing-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Priser</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Teknisk støtte</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Reservasjonsledelse</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-no.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Hotellprogram</a></li>
+                    <li><a href="booking-engine-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Bestillingsmotor</a></li>
+                    <li><a href="revenue-management-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Inntektsforvaltning</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Markedsføring og nettside</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Markedsføring</a></li>
+                    <li><a href="business-website-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Bedriftsnettside</a></li>
+                    <li><a href="hotel-marketing-solution-no.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Digital markedsføringspakke</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Bookers Desk visittkort">
+                    </div>
+                    <h3>Utforsk våre tjenester</h3>
+                    <p style="text-align: center;">Vi tilbyr et bredt spekter av tjenester for å optimalisere <br> din hotellforvaltning.</p>
+                    <a href="channel-manager-no.html" class="btn-text1">
+                      <span class="hover-underline">Lær mer</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-no.html" class="nav__link hover-underline">Priser</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Løsninger <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Overnatting</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hoteller</a>
+                    </li>
+                    <li><a href="hostels-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vandrerhjem</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Gjesteopplevelser</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B og
+                        vertshus</a></li>
+                    <li><a href="vaction-rentals-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Ferieutleie</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Oppdateringer og pakker</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Våre
+                        pakker</a></li>
+                    <li><a href="updates-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Siste
+                        oppdateringer</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Partnerskap og støtte</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-no.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Våre partnere</a></li>
+                    <li><a href="reseller-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Autorisert forhandlere</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Alle løsninger på én plattform</span>
+                    </h2>
+                    <a href="booking-engine-no.html" class="btn-text1">
+                      <span class="hover-underline">Lær mer</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Oppdag nye muligheter for din virksomhet! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=no" class="btn-outline">
+                        <span>Be om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li>
+            <a href="reviews-no.html" class="nav__link hover-underline">Anmeldelser</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Ressurser <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+                    <!-- Resources & Tools -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Ressurser og verktøy</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Alle ressurser</a></li>
+                            <li><a href="tools-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Verktøy og veiledninger</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kundestøtte</a></li>
+                        </ul>
+                    </div>
+                    <!-- Booking Management -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Bestillingshåndtering</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Reservasjonsdistribusjon</a></li>
+                            <li><a href="guest-management-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Gjesteforvaltning</a></li>
+                            <li><a href="industry-trends-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Bransjetrender</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reports & Updates -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Rapporter og oppdateringer</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Detaljerte rapporter</a></li>
+                            <li><a href="updates-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kunngjøringer og forbedringer</a></li>
+                            <li><a href="social-impact-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Sosial påvirkning</a></li>
+                        </ul>
+                    </div>
+                    <!-- Additional Section with Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Ressurser fra Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Hvordan kan vi hjelpe deg?</span>
+                            </h2>
+                            <a href="all-resources-no.html" class="btn-text1">
+                                <span class="hover-underline">Se alle de nyeste ressursene</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Selskap <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Om oss</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Om
+                        oss</a></li>
+                    <li><a href="our-team-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vårt
+                        team</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kunder og karrierer</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Våre
+                        kunder</a></li>
+                    <li><a href="careers-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Karrierer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Anmeldelser</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kunde
+                        anmeldelser</a></li>
+                    <li><a href="sales-no.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Salg</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kontakt</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-no.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kontakt
+                        oss</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Støtte</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+                  </div>
+                  <div class="special-text">
+                    <h4>Bransjeledende støtte og partnerskap</h4>
+                    <p>Titusenvis av eiendommer over hele verden stoler på oss <br> for langsiktig suksess og 24/7/365
+                      støtte.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Oppdag nye muligheter for din virksomhet! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=no" class="btn-outline">
+                        <span>Be om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/nk.png" style="width: 18px;" alt="Storbritannia flagg">  NO  
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="tools-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="Fransk flagg">  FR
+                    </a></li>
+                  <li><a href="tools-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Gresk flagg">  EL
+                    </a></li>
+                    <li><a href="tools-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Norsk flagg">  EN
+                    </a></li>
+                  <li><a href="tools-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italiensk flagg">  IT
+                    </a></li>
+                  <li><a href="tools-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Nederlandsk flagg">  NL
+                    </a></li>
+                  <li><a href="tools-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugisisk flagg">  PT
+                    </a></li>
+                  <li><a href="tools-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Spansk flagg">  ES
+                    </a></li>
+                  <li><a href="tools-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Finsk flagg">  FI
+                    </a></li>
+                  <li><a href="tools-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svensk flagg">  SV
+                    </a></li>
+                  <li><a href="tools-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flagg">  DK
+                    </a></li>
+                 
+                  <li><a href="tools-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polsk flagg">  PL
+                    </a></li>
+                  <li><a href="tools.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albansk flagg">  SQ </a></li>
+                  <li><a href="tools-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="Tysk flagg">  DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=no" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="hero"
+        style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Verktøy og kalkulatorer for overnattings-eiere</h1>
+            <p style="color: white;">
+              Overvåk den økonomiske ytelsen til eiendommen din med online kalkulatorer spesialdesignet for gjestfrihetsbransjen.
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+      <section class="section background1 job__container" id="job" style="background-color: #f7f7f77e;">
+        <div class="container">
+          <h2 class="h2 section-title"><span>Kalkulatorer for finansiell analyse av hoteller</span></h2>
+          <p class="section__description">
+            Forbedre hotellets finansielle og ledelsesmessige strategi med disse nøkkelmålingene.
+          </p>
+          <div class="job__grid">
+            <!-- Net RevPAR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class5"><i class="ri-bar-chart-fill"></i></span>
+              </div>
+              <h4>Netto RevPAR</h4>
+              <p class="short-desc">
+                Måler nettoinntekt per tilgjengelig rom, ekskludert distribusjonskostnader og provisjoner...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  Netto RevPAR måler nettoinntekt per tilgjengelig rom etter fratrekk av distribusjonskostnader og provisjoner, og gir en nøyaktig oversikt over reell fortjeneste og hjelper hotelleiere med å ta informerte beslutninger om prisstrategier og kostnadsstyring.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Vurderer reell ytelse ved å inkludere driftsutgifter.</li>
+                  <li>Viser effekten av distribusjonsgebyrer og provisjoner på fortjenesten.</li>
+                  <li>Sammenligner effektiviteten av ulike salgs- og markedsføringsstrategier.</li>
+                  <li>Klargjør hvordan prisendringer påvirker nettofortjenesten.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Reduser distribusjonskostnader gjennom bedre forhandlinger.</li>
+                  <li>Optimaliser prising ved hjelp av markedsanalyse og kundeatferd.</li>
+                  <li>Øk direkte bestillinger gjennom nettstedet ditt med insentiver.</li>
+                  <li>Administrer tilbud på en klok måte for å sikre reell verdi, ikke bare prisreduksjoner.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- ARPAr -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class2"><i class="ri-line-chart-fill"></i></span>
+              </div>
+              <h4>ARPAr</h4>
+              <p class="short-desc">
+                Analyserer justert inntekt per tilgjengelig rom, inkludert tilleggstjenester som restauranter...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  ARPAr (justert inntekt per tilgjengelig rom) måler totale inntekter, inkludert tilleggstjenester og sekundære kilder, for å gi en helhetlig oversikt over fortjenesten. Denne målingen hjelper hotelleiere med å optimalisere strategier for å øke inntektene.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Vurderer økonomisk ytelse ved å inkludere tilleggstjenester.</li>
+                  <li>Støtter utviklingen av strategier for inntektsdiversifisering.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Markedsfør tjenester som restauranter og spa.</li>
+                  <li>Reduser driftskostnader med teknologi og analyse.</li>
+                  <li>Bruk fleksibel prising for å maksimere fortjenesten.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- CPOR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class3"><i class="ri-money-dollar-circle-fill"></i></span>
+              </div>
+              <h4>CPOR</h4>
+              <p class="short-desc">
+                Beregner gjennomsnittlig driftskostnad per okkupert rom, inkludert vedlikeholdsutgifter...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  CPOR (kostnad per okkupert rom) måler gjennomsnittlige driftskostnader for hvert okkuperte rom, som rengjøring, energi og vedlikehold. Denne målingen hjelper til med å forbedre driftseffektiviteten og øke fortjenesten.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Indikerer driftskostnader for å øke nettofortjenesten.</li>
+                  <li>Støtter effektiv kostnadsstyring.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Optimaliser ansatte og arbeidstidsplaner.</li>
+                  <li>Bruk teknologi for å redusere kostnader.</li>
+                  <li>Forbedre energieffektivitet og ressursforvaltning.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- NOI -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class4"><i class="ri-funds-box-fill"></i></span>
+              </div>
+              <h4>NOI</h4>
+              <p class="short-desc">
+                Måler netto driftsinntekt for hotellet etter fratrekk av driftsutgifter, ekskludert skatter...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  NOI (netto driftsinntekt) beregner fortjeneste etter fratrekk av driftsutgifter, ekskludert skatter og renter. Denne målingen er avgjørende for å vurdere hotellets økonomiske helse.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Vurderer økonomisk helse og driftsprestasjon.</li>
+                  <li>Hjelper investorer og ledere med beslutningstaking.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Øk inntektene med tilleggstjenester og bedre prising.</li>
+                  <li>Reduser kostnader med teknologi og effektiv ledelse.</li>
+                  <li>Forbedre produktiviteten uten å øke kostnadene.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- RevPAG -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class1"><i class="ri-user-star-fill"></i></span>
+              </div>
+              <h4>RevPAG</h4>
+              <p class="short-desc">
+                Beregner gjennomsnittlig inntekt per besøkende, analyserer tilleggsutgifter og tjenester...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  RevPAG (inntekt per tilgjengelig gjest) måler gjennomsnittlig inntekt per besøkende, inkludert tjenester som restauranter og aktiviteter. Denne målingen hjelper til med å optimalisere inntektsstrategier.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Analyserer besøkendes forbruk for mer nøyaktige strategier.</li>
+                  <li>Justerer priser og tilbud for å maksimere fortjenesten.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Markedsfør tilleggstjenester for besøkende.</li>
+                  <li>Bruk analyser for fleksibel prising og tilbud.</li>
+                  <li>Øk kundeengasjement med spesialpakker.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- TRevPOR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class6"><i class="ri-hotel-fill"></i></span>
+              </div>
+              <h4>TRevPOR</h4>
+              <p class="short-desc">
+                Inkluderer all inntekt fra et okkupert rom, som spa- og restauranttjenester...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  TRevPOR (total inntekt per okkupert rom) måler all inntekt fra et okkupert rom, inkludert tilleggstjenester som spa og restauranter. Denne målingen hjelper til med å øke fortjenesten.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Viser bidraget fra tilleggstjenester til inntektene.</li>
+                  <li>Støtter optimalisering av markedsføringsstrategier.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Analyser og utvid tjenester som spa og restauranter.</li>
+                  <li>Markedsfør spesialtilbud for å øke engasjementet.</li>
+                  <li>Forbedre markedsføring av komplementære tjenester.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- GOPPAG -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class7"><i class="ri-group-fill"></i></span>
+              </div>
+              <h4>GOPPAG</h4>
+              <p class="short-desc">
+                Måler brutto driftsfortjeneste per tilgjengelig besøkende, og hjelper til med driftseffektivitet...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  GOPPAG (brutto driftsfortjeneste per tilgjengelig gjest) beregner fortjeneste fra driften per besøkende, og hjelper til med å analysere effektivitet og øke fortjenesten.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Analyserer driftseffektivitet og kostnader per besøkende.</li>
+                  <li>Vurderer ytelsen til forretningsstrategier.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Administrer kostnader for å øke fortjenesten per besøkende.</li>
+                  <li>Forbedre driften med mer effektive tjenester.</li>
+                  <li>Identifiser muligheter for effektivitetsgevinster.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- LOS -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class8"><i class="ri-calendar-fill"></i></span>
+              </div>
+              <h4>LOS</h4>
+              <p class="short-desc">
+                Beregner gjennomsnittlig oppholdslengde for besøkende for å optimalisere prising og tilbud...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  LOS (oppholdslengde) måler gjennomsnittlig antall netter besøkende tilbringer på hotellet, og hjelper til med å forutsi inntekter og optimalisere prising.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Forutsier inntekter og hjelper til med planlegging.</li>
+                  <li>Optimaliserer prising og kampanjer for lengre opphold.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Tilby spesielle kampanjer for lengre opphold.</li>
+                  <li>Bruk fleksibel prising for å øke oppholdstiden.</li>
+                  <li>Markedsfør pakker for å øke engasjementet.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- Revenue Contribution -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class9"><i class="ri-exchange-funds-fill"></i></span>
+              </div>
+              <h4>Inntektsbidrag</h4>
+              <p class="short-desc">
+                Analyserer fordelingen av inntekter fra bestillingsplattformer for mer effektive strategier...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  Inntektsbidrag analyserer fordelingen av inntekter fra direkte bestillinger, OTA-er og bedriftskontoer, og hjelper til med å optimalisere distribusjonsstrategier.
+                </p>
+                <p><strong>Hvorfor er det viktig?</strong></p>
+                <ul>
+                  <li>Viser primære inntektskilder og plattformeffektivitet.</li>
+                  <li>Hjelper til med å redusere avhengighet av plattformer med høye provisjoner.</li>
+                </ul>
+                <p><strong>Hvordan forbedre det?</strong></p>
+                <ul>
+                  <li>Øk direkte bestillinger med kampanjer.</li>
+                  <li>Reduser avhengighet av OTA-er med høye provisjoner.</li>
+                  <li>Forbedre relasjoner med bedriftskunder.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Les mer</a>
+                </span>
+                <a href="pricing-no.html" class="class3">
+                  <span class="btn3 class3">Priser ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+ 
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Tjenester</p>
+            </li>
+            <li>
+              <a href="channel-manager-no.html" class="footer-link hover-underline">Kanalbehandler</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-no.html" class="footer-link hover-underline">Hotell-PMS-program</a>
+            </li>
+            <li>
+              <a href="booking-engine-no.html" class="footer-link hover-underline">Bestillingsmotor</a>
+            </li>
+            <li>
+              <a href="marketing-no.html" class="footer-link hover-underline">Markedsføring</a>
+            </li>
+            <li>
+              <a href="business-website-no.html" class="footer-link hover-underline">Bedriftsnettsted</a>
+            </li>
+            <li>
+              <a href="revenue-management-no.html" class="footer-link hover-underline">Inntektshåndtering</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-no.html" class="footer-link hover-underline">Digital markedsføringspakke</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Løsninger</p>
+          </li>
+          <li>
+            <a href="hotels-no.html" class="footer-link hover-underline">Hoteller</a>
+          </li>
+          <li>
+            <a href="hostels-no.html" class="footer-link hover-underline">Vandrerhjem</a>
+          </li>
+          <li>
+            <a href="B&B-inns-no.html" class="footer-link hover-underline">B&B og vertshus</a>
+          </li>
+          <li>
+            <a href="hotel-groups-no.html" class="footer-link hover-underline">Hotellgrupper</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-no.html" class="footer-link hover-underline">Ferieutleie</a>
+          </li>
+          <li>
+            <a href="integration-category-no.html" class="footer-link hover-underline">GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Partnerskap</p>
+          </li>
+          <li>
+            <a href="sales-no.html" class="footer-link hover-underline">Salg</a>
+          </li>
+          <li>
+            <a href="pricing-no.html" class="footer-link hover-underline">Våre pakker</a>
+          </li>
+          <li>
+            <a href="updates-no.html" class="footer-link hover-underline">Oppdateringer</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">Ressurssenter</a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-no.html" class="footer-link hover-underline">Våre partnere</a>
+          </li>
+          <li>
+            <a href="reseller-no.html" class="footer-link hover-underline">Autoriserte forhandlere</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">Teknisk støtte</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Selskap</p>
+          </li>
+          <li>
+            <a href="about-us-no.html" class="footer-link hover-underline">Om oss</a>
+          </li>
+          <li>
+            <a href="our-team-no.html" class="footer-link hover-underline">Vårt team</a>
+          </li>
+          <li>
+            <a href="klientet-no.html" class="footer-link hover-underline">Våre kunder</a>
+          </li>
+          <li>
+            <a href="careers-no.html" class="footer-link hover-underline">Karriere</a>
+          </li>
+          <li>
+            <a href="reviews-no.html" class="footer-link hover-underline">Anmeldelser</a>
+          </li>
+          <li>
+            <a href="social-impact-no.html" class="footer-link hover-underline">Sosial innvirkning</a>
+          </li>
+          <li>
+            <a href="contact-no.html" class="footer-link hover-underline">Kontakt oss</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kontakt</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-no.html" class="footer-link">Informasjonskapselpolicy</a></li>
+          <li><a href="privacy-policy-no.html" class="footer-link">Personvernpolicy</a></li>
+          <li><a href="data-security-no.html" class="footer-link">Datasikkerhet</a></li>
+          <li><a href="terms-and-conditions-no.html" class="footer-link">Vilkår og betingelser</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, en del av <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, tilbyr et PMS og en kanalbehandler for enkel hotelldrift. Det kobler til <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> for bestillinger, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> for hotellsammenligninger og tilbyr nettstedsutvikling med et direktebestillingssystem.
+          </p>
+          <p class="copyright">
+            Opphavsrett © 2020–2025 BookersDesk.com™. Alle rettigheter reservert.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL sikkerhetsmerke">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Samtykke for informasjonskapsler</h2>
+    </header>
+    <div class="data">
+      <p>Vi bruker informasjonskapsler for å forbedre din opplevelse på nettstedet vårt. Ved å bla gjennom dette nettstedet, samtykker du til bruken av informasjonskapsler.<a href="cookies-policy-en.html"> Les mer...</a></p>
+    </div>
+    
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Accept</button>
+      <button class="button" id="declineBtn">Decline</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const readToggleLinks = document.querySelectorAll(".read-toggle-link");
+  
+      readToggleLinks.forEach(link => {
+        const card = link.closest(".job__card");
+        const fullDesc = card.querySelector(".full-desc");
+        const shortDesc = card.querySelector(".short-desc");
+  
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); 
+  
+          // Merr të gjitha kartat në grid
+          const allCards = document.querySelectorAll(".job__card");
+          
+          
+          allCards.forEach(otherCard => {
+            const otherFullDesc = otherCard.querySelector(".full-desc");
+            const otherShortDesc = otherCard.querySelector(".short-desc");
+            const otherLink = otherCard.querySelector(".read-toggle-link");
+  
+            if (otherFullDesc.style.display === "block" && otherCard !== card) {
+              otherFullDesc.style.display = "none";
+              otherShortDesc.style.display = "block";
+              otherLink.textContent = "Read More";
+            }
+          });
+  
+          
+          if (fullDesc.style.display === "none" || fullDesc.style.display === "") {
+            fullDesc.style.display = "block";
+            shortDesc.style.display = "none";
+            link.textContent = "Read Less";
+          } else {
+            fullDesc.style.display = "none";
+            shortDesc.style.display = "block";
+            link.textContent = "Read More";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

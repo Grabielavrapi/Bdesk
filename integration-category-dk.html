@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospitality-integrationer - BookersDesk | Channel Manager</title>
+  <meta name="description" content="Udforsk hospitality-integrationer med BookersDesk Channel Manager. Synkroniser med OTAs, PMS, GDS, metasøgemaskiner og mere for problemfrie bookinger og sikre betalinger.">
+  <meta name="keywords" content="hospitality-integrationer, channel manager-integrationer, OTAs-integration, PMS-software, GDS-forbindelse, metasøgemaskiner, sikre betalingsgateways, direkte bookinger, hotelbookingssoftware, indtægtsforvaltningssystemer, BookersDesk"> <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    .hero-title1 {
+      background: linear-gradient(270deg, #1b75bb 0%, #88b6db 72%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-block: 12px 8px;
+    }
+    .hotel-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #1b75bb;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .hotel-section .icon {
+      width: 50px;
+      height: 50px;
+    }
+    .hotel-section .text {
+      flex: 1;
+      font-size: 16px;
+    }
+    .hotel-section .text b {
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .hotel-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    .accordion-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 15px 0;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-icon {
+      width: 24px;
+      height: 24px;
+      color: #1b75bb;
+    }
+    .accordion-btn .span {
+      font-size: 18px;
+      color: #333;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #688AC4;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .card a {
+      color: #688AC4;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      background-color: #688AC4;
+      color: #fff;
+    }
+    .highlight h3,
+    .highlight p {
+      color: #fff;
+    }
+    .highlight a {
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 28px;
+      }
+      .accordion-btn .span {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
+      .card h3 {
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 13px;
+      }
+      .card a {
+        font-size: 13px;
+      }
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-dk.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Ydelser <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Driftsledelse</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Kanalstyring</a></li>
+                    <li><a href="pricing-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Priser</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Teknisk support</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Reservationsstyring</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-dk.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Hotelprogram</a></li>
+                    <li><a href="booking-engine-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Bookingmotor</a></li>
+                    <li><a href="revenue-management-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Indtægtsstyring</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Markedsføring & hjemmeside</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Markedsføring</a></li>
+                    <li><a href="business-website-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Virksomhedshjemmeside</a></li>
+                    <li><a href="hotel-marketing-solution-dk.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Digital markedsføringspakke</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Bookers Desk visitkort">
+                    </div>
+                    <h3>Udforsk vores tjenester</h3>
+                    <p style="text-align: center;">Vi tilbyder et bredt udvalg af tjenester til at optimere <br> din hotelledelse.</p>
+                    <a href="channel-manager-dk.html" class="btn-text1">
+                      <span class="hover-underline">Læs mere</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-dk.html" class="nav__link hover-underline">Priser</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Løsninger <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Overnatning</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hoteller</a>
+                    </li>
+                    <li><a href="hostels-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vandrehjem</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Gæstfrihed</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B og
+                        kroer</a></li>
+                    <li><a href="vaction-rentals-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Ferieboliger</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Opdateringer & pakker</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        pakker</a></li>
+                    <li><a href="updates-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Seneste
+                        opdateringer</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Partnerskab & support</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-dk.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Vores partnere</a></li>
+                    <li><a href="reseller-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Autoriserede forhandlere</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Alle løsninger på én platform</span>
+                    </h2>
+                    <a href="booking-engine-dk.html" class="btn-text1">
+                      <span class="hover-underline">Læs mere</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Udforsk nye muligheder for din virksomhed! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">
+                        <span>Anmod om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li>
+            <a href="reviews-dk.html" class="nav__link hover-underline">Omtaler</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Ressourcer <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+                    <!-- Resources & Tools -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Ressourcer & værktøjer</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Alle ressourcer</a></li>
+                            <li><a href="tools-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Værktøjer & vejledninger</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kundesupport</a></li>
+                        </ul>
+                    </div>
+                    <!-- Booking Management -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Reservationsstyring</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Reservationsfordeling</a></li>
+                            <li><a href="guest-management-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Gæstestyring</a></li>
+                            <li><a href="industry-trends-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Branchetrends</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reports & Updates -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Rapporter & opdateringer</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Detaljerede rapporter</a></li>
+                            <li><a href="updates-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Meddelelser & forbedringer</a></li>
+                            <li><a href="social-impact-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Social indvirkning</a></li>
+                        </ul>
+                    </div>
+                    <!-- Additional Section with Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Ressourcer fra Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Hvordan kan vi hjælpe dig?</span>
+                            </h2>
+                            <a href="all-resources-dk.html" class="btn-text1">
+                                <span class="hover-underline">Se alle de nyeste ressourcer</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Virksomhed <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Om os</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Om
+                        os</a></li>
+                    <li><a href="our-team-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        team</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kunder & karrierer</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        kunder</a></li>
+                    <li><a href="careers-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Karrierer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Anmeldelser</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kunde
+                        anmeldelser</a></li>
+                    <li><a href="sales-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Salg</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kontakt</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kontakt
+                        os</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Support</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+                  </div>
+                  <div class="special-text">
+                    <h4>Brancheførende support og partnerskab</h4>
+                    <p>Tusindvis af ejendomme verden over stoler på os <br> for langsigtet succes og 24/7/365 support.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Udforsk nye muligheder for din virksomhed! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">
+                        <span>Anmod om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/denmark.png" style="width: 18px;" alt="Storbritanniens flag">  DK  
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="integration-category-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="Fransk flag">  FR
+                    </a></li>
+                  <li><a href="integration-category-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Græsk flag">  EL
+                    </a></li>
+                    <li><a href="integration-category-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Dansk flag">  EN
+                    </a></li>
+                  <li><a href="integration-category-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italiensk flag">  IT
+                    </a></li>
+                  <li><a href="integration-category-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Hollandsk flag">  NL
+                    </a></li>
+                  <li><a href="integration-category-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugisisk flag">  PT
+                    </a></li>
+                  <li><a href="integration-category-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Spansk flag">  ES
+                    </a></li>
+                  <li><a href="integration-category-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Finsk flag">  FI
+                    </a></li>
+                  <li><a href="integration-category-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svensk flag">  SV
+                    </a></li>
+                
+                  <li><a href="integration-category-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">  NO
+                    </a></li>
+                  <li><a href="integration-category-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polsk flag">  PL
+                    </a></li>
+                  <li><a href="integration-category-sv.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albansk flag">  SQ </a></li>
+                  <li><a href="integration-category-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="Tysk flag">  DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="hero"
+        style="background: linear-gradient(90deg, #00112C 9.8%, #011E5A 50%, #002372 79.4%);">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Vi forbinder dig med fremtiden for hospitality</h1>
+            <p class="section-text" style="color: #fff;">
+              Udvid din forretning med problemfri forbindelse til over 500 globale hospitality-partnere.
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="assets/images/gds.png" width="620" height="573" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+    
+      <section class="about section" id="about" data-wow-delay="0.1s"
+        style="background: linear-gradient(#0b45c20c, #fff);">
+        <div class="container">
+          <figure class="hero-banner">
+            <img src="assets/images/BOOKING EN FINAL-08.png" loading="lazy" alt="about banner" class="w-100">
+          </figure>
+          <div class="feature-content">
+            <a href="integration-category.html">
+              <p class="section-subtitle" id="feature-label">Kraftfulde integrationer</p>
+            </a>
+            <a href="integration-category.html">
+              <h2 class="h2 section-title">Anmod om en integration</h2>
+            </a>
+            <p class="section-text">
+              Forbind nemt til nye kanaler eller dit eksisterende PMS for at øge synlighed og forbedre driften.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Kanalintegration (OTA'er, grossister)</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">PMS-integration (Property Management Systems)</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Enkle søge- og filtreringsmuligheder</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Sorter integrationer efter relevans eller rækkefølge</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section feature" aria-labelledby="feature-label"
+        style="border-bottom: 1px solid #d9e6f2;border-top: 1px solid #d9e6f2;">
+        <div class="container">
+          <div class="feature-content">
+            <h2 class="h2 section-title">
+              Stop med at miste direkte bookinger – undgå høje provisioner!
+            </h2>
+            <p class="section-text">
+              Hvorfor give 15–45 % i provision til andre platforme, når du kan få direkte bookinger?
+              Vores system tilbyder en provisionsfri bookingmotor, optimeret til mobil og nem for gæster at bruge.
+            </p>
+            <hr style="margin: 20px 0px; width: 100px; height: 1px;">
+            <div class="accordion-btn">
+              <div class="card-icon">
+                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+              </div>
+              <span class="span h5">Lad gæster booke direkte fra din side uden ekstra gebyrer</span>
+            </div>
+            <div class="accordion-btn">
+              <div class="card-icon">
+                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+              </div>
+              <span class="span h5">Accepter sikre og automatiserede betalinger i enhver valuta eller metode</span>
+            </div>
+            <div class="accordion-btn">
+              <div class="card-icon">
+                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+              </div>
+              <span class="span h5">Tilføj særlige tilbud og mersalg for at øge omsætningen</span>
+            </div>
+          </div>
+          <figure class="features-banner">
+            <img src="assets/images/bdesk/bookersdesk 03.02.25-02.png" width="800" height="531" loading="lazy"
+              alt="feature banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+    
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Maksimer direkte bookinger med problemfri integrationer</h2>
+          </div>
+          <div class="cards-container">
+            <div class="card">
+              <h3>Online rejsebureauer (OTA'er)</h3>
+              <p>Øg bookinger via platforme som Booking.com, Expedia og Airbnb.</p>
+            </div>
+            <div class="card">
+              <h3>Ejendomsstyringssystemer (PMS)</h3>
+              <p>Synkronisér automatisk reservationer, tilgængelighed og priser.</p>
+            </div>
+            <div class="card">
+              <h3>Grossister</h3>
+              <p>Udvid dit netværk via grossister, der distribuerer til rejsebureauer og erhvervskunder.</p>
+            </div>
+            <div class="card">
+              <h3>Betalingsgateways (PG)</h3>
+              <p>Muliggør sikre betalinger i flere valutaer med pålidelige udbydere.</p>
+            </div>
+            <div class="card">
+              <h3>Globale distributionssystemer (GDS)</h3>
+              <p>Forbind med 500.000+ rejsebureauer via platforme som Amadeus og Sabre.</p>
+            </div>
+            <div class="card">
+              <h3>Metasøgemaskiner</h3>
+              <p>Øg direkte bookinger via Google Hotel Ads, Tripadvisor og Trivago.</p>
+            </div>
+            <div class="card highlight">
+              <h3>Bookingmotorer og konverteringsværktøjer</h3>
+              <p>Få flere direkte bookinger med brugervenlige reservationsværktøjer.</p>
+            </div>
+            <div class="card">
+              <h3>Mersalg, CRM og marketingpartnere</h3>
+              <p>Forøg omsætningen og forbedr gæsteoplevelsen med CRM- og marketingværktøjer.</p>
+            </div>
+            <div class="card">
+              <h3>Indtægtsstyringssystemer (RMS)</h3>
+              <p>Optimer priser med AI-drevne værktøjer til indtægtsstyring.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="about section" id="about" data-wow-delay="0.1s"
+        style="background: linear-gradient(#fff, #dfeaf6);">
+        <div class="container">
+          <figure class="hero-banner">
+            <img src="assets/images/vleresime.png" loading="lazy" alt="about banner" class="w-100">
+          </figure>
+          <div class="feature-content">
+            <a href="pms-hotel-program.html">
+              <h2 class="h2 section-title">Hvorfor integrere med BookersDesk?</h2>
+            </a>
+            <p class="section-text">
+              Frigør det fulde potentiale af din hotelvirksomhed med integrationer, der øger bookinger, effektiviserer driften og forbedrer gæsteoplevelser.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Forbind med 500+ betroede globale partnere i hospitality-branchen</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Automatisér reservationer, tilgængelighed og prisopdateringer uden besvær</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Få flere bookinger via førende OTA'er, grossister og metasøgemaskiner</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+                  <span class="span">Forbedr gæsteoplevelsen med mersalg, CRM og marketingværktøjer</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+    
+  </main>
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Tjenester</p>
+            </li>
+            <li>
+              <a href="channel-manager-dk.html" class="footer-link hover-underline">Kanalstyring</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-dk.html" class="footer-link hover-underline">Hotel PMS-program</a>
+            </li>
+            <li>
+              <a href="booking-engine-dk.html" class="footer-link hover-underline">Bookningsmotor</a>
+            </li>
+            <li>
+              <a href="marketing-dk.html" class="footer-link hover-underline">Markedsføring</a>
+            </li>
+            <li>
+              <a href="business-website-dk.html" class="footer-link hover-underline">Virksomhedshjemmeside</a>
+            </li>
+            <li>
+              <a href="revenue-management-dk.html" class="footer-link hover-underline">Indtægtsstyring</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-dk.html" class="footer-link hover-underline">Digital markedsføringspakke</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Løsninger</p>
+          </li>
+          <li>
+            <a href="hotels-dk.html" class="footer-link hover-underline">Hoteller</a>
+          </li>
+          <li>
+            <a href="hostels-dk.html" class="footer-link hover-underline">Vandrerhjem</a>
+          </li>
+          <li>
+            <a href="B&B-inns-dk.html" class="footer-link hover-underline">B&B og kroer</a>
+          </li>
+          <li>
+            <a href="hotel-groups-dk.html" class="footer-link hover-underline">Hotelgrupper</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-dk.html" class="footer-link hover-underline">Ferieudlejning</a>
+          </li>
+          <li>
+            <a href="integration-category-dk.html" class="footer-link hover-underline">GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Partnerskab</p>
+          </li>
+          <li>
+            <a href="sales-dk.html" class="footer-link hover-underline">Salg</a>
+          </li>
+          <li>
+            <a href="pricing-dk.html" class="footer-link hover-underline">Vores pakker</a>
+          </li>
+          <li>
+            <a href="updates-dk.html" class="footer-link hover-underline">Opdateringer</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">Ressourcecenter</a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-dk.html" class="footer-link hover-underline">Vores partnere</a>
+          </li>
+          <li>
+            <a href="reseller-dk.html" class="footer-link hover-underline">Autoriserede forhandlere</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">Teknisk support</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Virksomhed</p>
+          </li>
+          <li>
+            <a href="about-us-dk.html" class="footer-link hover-underline">Om os</a>
+          </li>
+          <li>
+            <a href="our-team-dk.html" class="footer-link hover-underline">Vores team</a>
+          </li>
+          <li>
+            <a href="klientet-dk.html" class="footer-link hover-underline">Vores kunder</a>
+          </li>
+          <li>
+            <a href="careers-dk.html" class="footer-link hover-underline">Karriere</a>
+          </li>
+          <li>
+            <a href="reviews-dk.html" class="footer-link hover-underline">Anmeldelser</a>
+          </li>
+          <li>
+            <a href="social-impact-dk.html" class="footer-link hover-underline">Social indflydelse</a>
+          </li>
+          <li>
+            <a href="contact-dk.html" class="footer-link hover-underline">Kontakt os</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kontakt</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-dk.html" class="footer-link">Cookiepolitik</a></li>
+          <li><a href="privacy-policy-dk.html" class="footer-link">Privatlivspolitik</a></li>
+          <li><a href="data-security-dk.html" class="footer-link">Datasikkerhed</a></li>
+          <li><a href="terms-and-conditions-dk.html" class="footer-link">Vilkår og betingelser</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, en del af <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, tilbyder et PMS og en kanalstyring for nem hoteladministration. Det forbinder med <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> for bookinger, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> for hotelsammenligninger og tilbyder hjemmesideudvikling med et direkte bookingsystem.
+          </p>
+          <p class="copyright">
+            Ophavsret © 2020–2025 BookersDesk.com™. Alle rettigheder forbeholdes.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL-sikkerhedsmærke">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Cookies Consent</h2>
+    </header>
+    <div class="data">
+      <p>We use cookies to improve your experience on our website. By browsing this website, you agree to our use of
+        cookies.<a href="cookies-policy-en.html"> Më shumë...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Accept</button>
+      <button class="button" id="declineBtn">Decline</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

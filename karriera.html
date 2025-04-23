@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karriera - BookersDesk | Channel Manager</title>
+  <meta name="description"
+    content="Bëhu pjesë e ekipit tonë inovativ dhe kreativ për të ndërtuar të ardhmen e industrisë së rezervimeve. Rritu profesionalisht, puno në projekte me ndikim dhe shfrytëzo potencialin tënd maksimal.">
+  <meta name="keywords"
+    content="mundësi karriere, zhvillim profesional, inovacion, ekip kreativ, projekte me ndikim, vende pune, kulturë pune, e ardhmja e rezervimeve, bashkëpunim në ekip, zhvillim karriere">
+  <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+    a {
+      display: inline-block;
+    }
+    img {
+      display: flex;
+      width: 100%;
+    }
+    .section-lead {
+      max-width: 600px;
+      margin: 1rem auto 1.5rem;
+    }
+    .book-a-demo-wrapper {
+      background: url('./assets/images/bg.jpg') no-repeat;
+      border-radius: 30px !important;
+      padding: 65px 95px;
+      background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    .hero-title {
+      background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-block: 12px 8px;
+    }
+    .job__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .job__card {
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .job__card1 {
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .job__card:hover {
+      background-color: rgb(0, 18, 56);
+    }
+    .job__card__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .job__card img {
+      max-width: 50px;
+      padding: 10px;
+      border-radius: 100%;
+      background-color: #fff;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .job__card h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card h6 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card h4 {
+      margin-block: 1rem 0.5rem;
+      font-size: 20px;
+      font-weight: 700;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card p {
+      margin-bottom: 1rem;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card__footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .job__card__footer span {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .job__card__footer .btn1 {
+      color: #4680e7;
+      background-color: #e7edf8;
+    }
+    .job__card__footer .btn2 {
+      color: #f04a0c;
+      background-color: #f6efef;
+    }
+    .job__card__footer .btn3 {
+      color: #0a44a8;
+      background-color: #EEF1FE;
+    }
+    .job__card:hover :is(h5, h4) {
+      color: white;
+    }
+    .job__card:hover :is(h6, p) {
+      color: #e5e5e5;
+    }
+    .job__card:hover .job__card__footer span {
+      color: white;
+      background-color: rgb(0, 18, 56);
+    }
+    .offer__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 2rem 1rem;
+    }
+    .job__card__header span {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 5px 11px;
+      font-size: 22px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .job__card__header .class1 {
+      color: #f04a0c;
+      background-color: #f6efef;
+    }
+    .job__card__header .class2 {
+      color: #6a38c2;
+      background-color: #e9ddff;
+    }
+    .job__card__header .class3 {
+      color: #4680e7;
+      background-color: #e7edf8;
+    }
+    .job__card__header .class4 {
+      color: #3ac2ba;
+      background-color: #f0fffe;
+    }
+    .job__card__header .class5 {
+      color: #3ac2ba;
+      background-color: #f0fffe;
+    }
+    .job__card__header .class6 {
+      color: #34a753;
+      background-color: #f1fef5;
+    }
+    .section.background {
+      background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+      background-size: contain;
+    }
+    .group_testimonial_avatar-service {
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 1.5rem;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      display: flex;
+    }
+    .m_avatar-medium {
+      border-radius: 10rem;
+      width: 70px;
+      display: block;
+    }
+    .offer__card img {
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    .offer__details {
+      display: flex;
+      align-items: flex-start;
+    }
+    .offer__details span {
+      font-size: 35px;
+      font-weight: 800;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #262626;
+      padding-right: 1rem;
+    }
+    .offer__details div {
+      padding-left: 1rem;
+      border-left: 2px solid #374886;
+    }
+    .offer__details h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .offer__details p {
+      color: var(--text-light);
+    }
+    @media (width > 540px) {
+      .job__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .offer__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .book-a-demo-wrapper {
+    padding: 25px 55px;
+    }
+    }
+    @media (width < 540px) {
+
+      .book-a-demo-wrapper {
+    padding: 25px 55px;
+    }
+    }
+    @media (width > 768px) {
+      .offer__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .job__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .book-a-demo-wrapper {
+    padding: 25px 55px;
+    }
+    }
+    @media (width > 1024px) {
+      .offer__grid {
+        gap: 2rem;
+      }
+
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;"
+            alt="Bookers Desk logo">
+        </a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Shërbimet <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Menaxhimi i Operacioneve</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Channel Manager</a></li>
+                    <li><a href="cmimet.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Çmimet</a>
+                    </li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i
+                          class="fa fa-chevron-right"></i> Mbështetje Teknike</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Menaxhimi i Rezervimeve</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli.html" class="dropdown__link "> <i class="fa fa-chevron-right"></i>
+                        PMS - Program Hoteli</a></li>
+                    <li><a href="booking-engine.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Booking Engine</a></li>
+                    <li><a href="revenue-management.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Menaxhimi i të Ardhurave</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Marketing & Faqja e Internetit</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Marketing</a></li>
+                    <li><a href="faqe-interneti.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Faqe
+                        Interneti</a></li>
+                    <li><a href="hotel-marketing-solution.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Paketa e Marketingut Dixhital</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image"
+                        alt="Kartëvizita e Bookers Desk">
+                    </div>
+                    <h3>Eksploroni Shërbimet Tona</h3>
+                    <p style="text-align: center;">Ne ofrojmë një gamë të gjerë shërbimesh për të optimizuar <br>
+                      menaxhimin e hotelit tuaj.</p>
+                    <a href="channel-manager.html" class="btn-text1">
+                      <span class="hover-underline">Mëso më shumë</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="cmimet.html" class="nav__link hover-underline">Cmimet</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Zgjidhjet <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Akomodimi</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotele.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hotelet</a>
+                    </li>
+                    <li><a href="hostele.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hostelet</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Mikpritja</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B dhe
+                        Bujtina</a></li>
+                    <li><a href="qira-afatshkurtra.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Shtëpi me Qira</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Përditësime & Paketa</span>
+                  <ul class="dropdown__list">
+                    <li><a href="cmimet.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Paketat
+                        Tona</a></li>
+                    <li><a href="perditesimet.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Përditësimet e Fundit</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Partneritet & Mbështetje</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-me-bookersdesk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Partnerët Tanë</a></li>
+                    <li><a href="rishitja.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Rishitës të
+                        Autorizuar</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Të gjitha Zgjidhjet në 1 Platformë</span>
+                    </h2>
+                    <a href="booking-engine.html" class="btn-text1">
+                      <span class="hover-underline">Mëso më shumë</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                  <h2 class="dropdown__title">Zbuloni mundësitë e reja për biznesin tuaj! Filloni sot!</h2>
+                  <a href="https://panel.bookersdesk.com/freeDemo?lang=sq" class="btn-outline"><span>Request a Demo <img
+                        src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+                </div>
+              </section>
+            </div>
+          </li>
+          <li>
+            <a href="vleresime.html" class="nav__link hover-underline">Vlerësime</a>
+          </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Burimet <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <!-- Burimet & Mjetet -->
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-book-open-line"></i>
+                  </div>
+                  <span class="dropdown__title">Burimet & Mjetet</span>
+                  <ul class="dropdown__list">
+                    <li><a href="all-resources.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Të
+                        Gjitha Burimet</a></li>
+                    <li><a href="tools.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Mjetet &
+                        Udhëzimet</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i
+                          class="fa fa-chevron-right"></i> Mbështetje për klientët</a></li>
+                  </ul>
+                </div>
+                <!-- Menaxhimi i Rezervimeve -->
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Menaxhimi i Rezervimeve</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reservations-distribution.html" class="dropdown__link"><i
+                          class="fa fa-chevron-right"></i> Shpërndarja e Rezervimeve</a></li>
+                    <li><a href="guest-management.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Administrimi i Mysafirëve</a></li>
+                    <li><a href="industry-trends.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Tendencat e Industrisë</a></li>
+                  </ul>
+                </div>
+                <!-- Raporte & Përditësime -->
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-bar-chart-line"></i>
+                  </div>
+                  <span class="dropdown__title">Raporte & Përditësime</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reports.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Raporte të
+                        detajuara</a></li>
+                    <li><a href="perditesimet.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Njoftime
+                        & Përmirësime</a></li>
+                    <li><a href="ndikimi-social.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ndikimi
+                        Social</a></li>
+                  </ul>
+                </div>
+                <!-- Seksioni Shtesë me Imazh -->
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image"
+                        alt="Burime nga Bookers Desk">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Si mund t'ju ndihmojmë?</span>
+                    </h2>
+                    <a href="all-resources.html" class="btn-text1">
+                      <span class="hover-underline">Shiko të gjitha burimet e fundit</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--=============== DROPDOWN 4 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Kompania <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Rreth Nesh</span>
+                  <ul class="dropdown__list">
+                    <li><a href="rreth-nesh.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Rreth
+                        Nesh</a></li>
+                    <li><a href="ekipi-yne.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ekipi
+                        Ynë</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Klientët & Karriera</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Klientët
+                        Tanë</a></li>
+                    <li><a href="karriera.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Karriera</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Vlerësime</span>
+                  <ul class="dropdown__list">
+                    <li><a href="vleresime.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Dëshmi të
+                        Klientëve</a></li>
+                    <li><a href="shitjet.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Shitjet</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kontakt</span>
+                  <ul class="dropdown__list">
+                    <li><a href="kontakt.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Na
+                        Kontaktoni</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Mbështetje</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none">
+                  <div class="image-containerheader" style="background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+                  </div>
+                  <div class="special-text">
+                    <h4>Mbështetje dhe partneritet lider në industri</h4>
+                    <p>Dhjetëra mijëra prona në mbarë botën na besojnë <br> për suksesin afatgjatë dhe mbështetje
+                      24/7/365.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                  <h2 class="dropdown__title">Zbuloni mundësitë e reja për biznesin tuaj! Filloni sot!</h2>
+                  <a href="https://panel.bookersdesk.com/freeDemo?lang=sq" class="btn-outline"><span>Request a Demo <img
+                        src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+                </div>
+              </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">
+                &nbsp; SQ &nbsp;
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="careers-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
+                    </a></li>
+                  <li><a href="careers-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="United Kingdom flag">&nbsp; EN
+                    </a></li>
+                  <li><a href="careers-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
+                    </a></li>
+                  <li><a href="careers-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL
+                    </a></li>
+                  <li><a href="careers-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
+                    </a></li>
+                  <li><a href="careers-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
+                    </a></li>
+                  <li><a href="careers-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
+                    </a></li>
+                
+                  <li><a href="careers-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
+                    </a></li>
+                  <li><a href="careers-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
+                    </a></li>
+                  <li><a href="careers-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
+                    </a></li>
+                  <li><a href="careers-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
+                    </a></li>
+                  <li><a href="careers-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
+                    </a></li>
+                  <li><a href="careers-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
+                    </a></li>
+                
+                
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline"
+              style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=sq" class="btn-outline"> <span>Request a Demo <img
+                  src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="hero"
+        style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle " style="color: white;">Bashkohuni me Ne</p>
+            <h1 class="h1 hero-title"> Ndërtoni të Ardhmen Tuaj</h1>
+            <p style="color: white;">
+              "Think Big" nuk është vetëm një slogan – është vizioni ynë. Bashkohuni me ekipin tonë për të krijuar
+              përvoja
+              unike dhe për të formësuar të ardhmen e industrisë së rezervimeve, duke zhvilluar potencialin tuaj
+              maksimal!
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/karrierrabaner.png" width="620" height="573" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+      <section class="section background1  job__container" id="job" style="background-color: #f7f7f77e;">
+        <div class="container">
+          <h2 class="h2 section-title "><span>Bashkohuni me Ekipin Tonë – Pozicione të Hapura</span></h2>
+          <p class="section__description">
+            Zbuloni pozicione të reja dhe të kërkuara që do t’ju ndihmojnë të arrini potencialin tuaj maksimal.
+          </p>
+          <div class="job__grid">
+            <div class="job__card" data-sr-id="20"
+              style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+              <div class="job__card__header">
+                <span class="class5"><i class="ri-palette-fill"></i></span>
+              </div>
+              <h4>Graphic Designer</h4>
+              <p>
+                Po kërkojmë një Graphic Designer kreativ që të ndihmojë në krijimin e materialeve vizuale tërheqëse dhe
+                ndërfaqeve intuitive për platformat tona.
+              </p>
+              <div class="job__card__footer"
+                style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="btn1">
+                  1 Pozicione
+                </span>
+                <span class="btn2">
+                  Full Time
+                </span>
+                <a href="mailto:info@intermedia.al" style="margin-left: auto;" class="class3">
+                  <span class="btn3 class3">
+                    Kontakto >
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="job__card" data-sr-id="21"
+              style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+              <div class="job__card__header">
+                <span class="class2"><i class="ri-bar-chart-box-fill"></i></span>
+              </div>
+              <h4>Agjent Shitjeje</h4>
+              <p>
+                Menaxhoni marrëdhëniet me klientët dhe ndihmoni në arritjen e objektivave të shitjeve duke ofruar
+                zgjidhje të përshtatura për çdo nevojë.
+              </p>
+              <div class="job__card__footer"
+                style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="btn1">
+                  1 Pozicione
+                </span>
+                <span class="btn2">
+                  Full Time
+                </span>
+                <a href="mailto:info@intermedia.al" style="margin-left: auto;" class="class3">
+                  <span class="btn3 class3">
+                    Kontakto >
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="job__card" data-sr-id="22"
+              style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+              <div class="job__card__header">
+                <span class="class3"><i class="ri-computer-fill"></i></span>
+              </div>
+              <h4>Java Developer</h4>
+              <p>
+                Zhvilloni aplikacione moderne duke përdorur teknologji të avancuara dhe kontribuoni në krijimin e
+                sistemeve të qëndrueshme dhe efikase për platformat tona.
+              </p>
+              <div class="job__card__footer"
+                style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="btn1">
+                  1 Pozicione
+                </span>
+                <span class="btn2">
+                  Full Time
+                </span>
+                <a href="mailto:info@intermedia.al" style="margin-left: auto;" class="class3">
+                  <span class="btn3 class3">
+                    Kontakto >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+          <div class="container">
+            <div class="book-a-demo-wrapper job__card1">
+              <div class="row align-items-center justify-content-between ppg-block-content-info text-lg-left ">
+                <div class="review-container" style=" text-align: center; display: flex; flex-direction: column; align-items: center; color: var(--sevice-red);
+              ;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" style="width: 3.5rem;padding-bottom:20px;color: #1b75bb;
+                " viewBox="0 0 39 35" fill="none" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true"
+                    role="img">
+                    <path
+                      d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z"
+                      fill="currentColor"></path>
+                  </svg>
+                  <h3 class="review-title" style="color: #050a52;
+                    font-size: 1.9rem;
+                    line-height: 1.8;
+                    margin-bottom: 20px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    /* font-size: 1.5rem; */
+                    font-weight: 400;
+                    line-height: 1.6;">
+                    " Në BookersDesk, ne besojmë se njerëzit janë thelbi i suksesit tonë. Kultura jonë mbështet
+                    inovacionin, bashkëpunimin dhe zhvillimin profesional, duke krijuar një ambient ku secili mund të
+                    japë maksimumin. Bashkohuni me ne për të ndërtuar së bashku të ardhmen e industrisë së rezervimeve. "
+                  </h3><br>
+                  <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6"
+                    class="group_testimonial_avatar-service"><img src="https://media.licdn.com/dms/image/v2/D5603AQGJ8_65cQJMtw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702419862292?e=2147483647&v=beta&t=SYL2GZtzq3or6f3wjpMisJkqUpotSliqqm81JJiNDmQ"
+                      loading="lazy" alt="" class="m_avatar-medium">
+                    <div class="group_testimonial_details">
+                      <div class="m_text-style-16" style="color: #050a52;"><strong>Edmir Cjapi</strong></div>
+                      <div class="m_text-style-16" style="color: #050a52;">CO-FOUNDER & CEO</div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="col-md-12 d-md-none mt-4 mb-4">
+                  <hr style="border: 1px solid #37488628;">
+                </div><br>
+                <div class="review-container" style=" text-align: center; display: flex; flex-direction: column; align-items: center; color: var(--sevice-red);
+                ;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" style="width: 3.5rem;padding-bottom:20px;color: #1b75bb;
+                  " viewBox="0 0 39 35" fill="none" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true"
+                      role="img">
+                      <path
+                        d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z"
+                        fill="currentColor"></path>
+                      <path
+                        d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z"
+                        fill="currentColor"></path>
+                    </svg>
+                    <h3 class="review-title" style="color: #050a52;
+                      font-size: 1.9rem;
+                      line-height: 1.8;
+                      margin-bottom: 20px;
+                      margin-top: 0;
+                      margin-bottom: 0;
+                      /* font-size: 1.5rem; */
+                      font-weight: 400;
+                      line-height: 1.6;">
+                      "Në BookersDesk, suksesi vjen nga përkushtimi dhe puna në ekip. Vizioni ynë është të ofrojmë shërbime të jashtëzakonshme duke fuqizuar inovacionin dhe krijimin e zgjidhjeve të personalizuara për klientët tanë."
+                    </h3><br>
+                    <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6"
+                      class="group_testimonial_avatar-service"><img src="assets/images/oriimg.jpg"
+                        loading="lazy" alt="" class="m_avatar-medium">
+                      <div class="group_testimonial_details">
+                        <div class="m_text-style-16" style="color: #050a52;"><strong>Ori Citozi</strong></div>
+                        <div class="m_text-style-16" style="color: #050a52;">CO-FOUNDER & COO</div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      
+      
+      <section class="section background">
+        <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+          <div class="container">
+            <header class="section-header">
+              <h2 class="h2 section-title " style="padding-top: 25px;">Pse të punoni me ne?
+              </h2>
+            </header>
+            <div class="offer__grid container">
+              <div class="offer__card" data-sr-id="27"
+                style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                <img src="assets/images/bdesk/Photo (6).JPG" alt="offer">
+                <div class="offer__details">
+                  <span>01</span>
+                  <div>
+                    <h4>Ekip Kreativ dhe Inovativ</h4>
+                    <p>
+                      Bashkohuni me një ekip që vlerëson kreativitetin dhe inovacionin, duke ju inkurajuar të sillni ide
+                      të reja.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="offer__card" data-sr-id="28"
+                style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                <img src="assets/images/offer-2.jpg" alt="offer">
+                <div class="offer__details">
+                  <span>02</span>
+                  <div>
+                    <h4>Rritje Profesionale</h4>
+                    <p>Zhvilloni aftësitë tuaja dhe rrituni profesionalisht duke punuar në projekte që ju frymëzojnë dhe
+                      sfidojnë.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="offer__card" data-sr-id="29"
+                style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                <img src="assets/images/bdesk/Photo (63).JPG" alt="offer">
+                <div class="offer__details">
+                  <span>03</span>
+                  <div>
+                    <h4>Projekte me Ndikim</h4>
+                    <p>Bëhuni pjesë e projekteve që kanë ndikim të vërtetë dhe kontribuoni në ndryshime domethënëse në
+                      fushën tuaj.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+              <ul class="footer-list">
+                <li>
+                  <p class="footer-list-title">Shërbimet</p>
+                </li>
+                <li>
+                  <a href="channel-manager.html" class="footer-link hover-underline">Channel Manager</a>
+                </li>
+                <li>
+                  <a href="pms-program-hoteli.html" class="footer-link hover-underline">PMS - Program Hoteli</a>
+                </li>
+                <li>
+                  <a href="booking-engine.html" class="footer-link hover-underline">Booking Engine</a>
+                </li>
+                <li>
+                  <a href="marketing.html" class="footer-link hover-underline">Marketing</a>
+                </li>
+                <li>
+                  <a href="faqe-interneti.html" class="footer-link hover-underline"> Faqe Interneti</a>
+                </li>
+                <li>
+                  <a href="revenue-management.html" class="footer-link hover-underline"> Menaxhimi të Ardhurave</a>
+                </li>
+                <li>
+                  <a href="hotel-marketing-solution.html" class="footer-link hover-underline"> Marketing Digjital</a>
+                </li>
+              </ul>
+          
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Zgjidhje </p>
+          </li>
+          <li>
+            <a href="hotele.html" class="footer-link hover-underline">Hotele</a>
+          </li>
+          <li>
+            <a href="hostele.html" class="footer-link hover-underline">Hostele</a>
+          </li>
+          <li>
+            <a href="B&B-inns.html" class="footer-link hover-underline">B&B dhe Inns</a>
+          </li>
+          <li>
+            <a href="grupet-hoteleve.html" class="footer-link hover-underline">Grupet e Hoteleve</a>
+          </li>
+          <li>
+            <a href="qira-afatshkurtra.html" class="footer-link hover-underline"> Qira Afatshkurtra</a>
+          </li>
+          <li>
+            <a href="integration-category.html" class="footer-link hover-underline"> GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Bashkëpunim</p>
+          </li>
+          <li>
+            <a href="shitjet.html" class="footer-link hover-underline">
+              Shitjet </a>
+          </li>
+          <li>
+            <a href="cmimet.html" class="footer-link hover-underline">
+              Paketat tona </a>
+          </li>
+          <li>
+            <a href="perditesimet.html" class="footer-link hover-underline">
+              Përditësimet </a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">
+              Qendra e Burimeve </a>
+          </li>
+          <li>
+            <a href="partner-me-bookersdesk.html" class="footer-link hover-underline">
+              Partnerët Tanë </a>
+          </li>
+          <li>
+            <a href="rishitja.html" class="footer-link hover-underline">
+              Rishitës të Autorizuar </a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">
+              Mbështetje Teknike </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kompania</p>
+          </li>
+          <li>
+            <a href="rreth-nesh.html" class="footer-link hover-underline"> Rreth Nesh</a>
+          </li>
+          <li>
+            <a href="ekipi-yne.html" class="footer-link hover-underline"> Ekipi Ynë</a>
+          </li>
+          <li>
+            <a href="klientet.html" class="footer-link hover-underline"> Klientët Tanë</a>
+          </li>
+          <li>
+            <a href="karriera.html" class="footer-link hover-underline"> Karriera</a>
+          </li>
+          <li>
+            <a href="vleresime.html" class="footer-link hover-underline"> Vlerësime</a>
+          </li>
+          <li>
+            <a href="ndikimi-social.html" class="footer-link hover-underline">
+              Impakti Social</a>
+          </li>
+          <li>
+            <a href="sitemap.html" class="footer-link hover-underline">
+              Sitemap</a>
+          </li>
+          <li>
+            <a href="kontakt.html" class="footer-link hover-underline">
+              Na kontaktoni </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kontakt</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+         
+         
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+         
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy.html" class="footer-link">Cookies</a></li>
+          <li><a href="privacy-policy.html" class="footer-link">Politikat e Privatësisë</a></li>
+            <li><a href="data-security.html" class="footer-link">Siguria</a></li>
+          <li><a href="terms-and-conditions.html" class="footer-link">Kushtet e Përdorimit</a></li>
+ </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+    
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, pjesë e <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, ofron një PMS dhe menaxher kanalesh për menaxhimin e lehtë të hoteleve. Lidhet me <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> për rezervime, <a href="https://hotelschecking.com/" target="_blank">HotelsChecking.com</a> për krahasime hotelesh, dhe ofron zhvillim faqeje interneti me një sistem rezervimi të drejtpërdrejtë.
+          </p>
+          <p class="copyright">
+            Të drejtat e autorit © 2020–2025 BookersDesk.com™. Të gjitha të drejtat e rezervuara.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL secure badge">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Cookies Consent</h2>
+    </header>
+    <div class="data">
+      <p>Ne përdorim cookie për të përmirësuar përvojën tuaj në faqen tonë të internetit. Duke shfletuar këtë faqe
+        interneti, ju pranoni përdorimin tonë të cookies.<a href="cookies-policy.html"> Më shumë...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Prano</button>
+      <button class="button" id="declineBtn">Refuzo</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

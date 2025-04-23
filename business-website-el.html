@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Επιχειρηματικός ιστότοπος - BookersDesk | Channel Manager</title>
+  <meta name="description" content="Δημιουργήστε μια επαγγελματική ιστοσελίδα ξενοδοχείου με την InterMedia LLC. Η εξειδικευμένη ομάδα μας προσφέρει 
+  ανάπτυξη ιστοσελίδων, δομημένο σχεδιασμό, ασφαλή φιλοξενία και πιστοποιητικά SSL για να ενισχύσετε την online παρουσία σας.">
+  <meta name="keywords" content="Ιστοσελίδα ξενοδοχείου, ανάπτυξη ιστοσελίδων, επαγγελματικός σχεδιασμός ιστοσελίδας, ασφαλής φιλοξενία, 
+  πιστοποιητικά SSL, επαγγελματική ιστοσελίδα, ιστοσελίδα ακινήτου, λύσεις ιστοσελίδων φιλοξενίας, online παρουσία, δομή ιστοσελίδας.">
+  <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+     <style>
+      ::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #1a4d5e 0%, #1C3456 100%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+      .grid-list1 {
+         grid-template-columns: repeat(5, 1fr);
+         display:grid;
+         gap: 10px;
+     }
+     .service-card3 {
+         background-position: center center;
+         width: 230px; /* Set a width for the box */
+         height: 100px; /* Fixed height for the box */
+         padding: 20px 20px 20px 20px;
+         box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.5);
+         border-style: solid;
+         border-width: 0px 0px 0px 0px;
+         border-color: #f5f5f5;
+         border-radius: 10px 10px 10px 10px;
+     
+         box-shadow: 0 0 0 0.05rem hsla(214, 88%, 27%, 0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06);
+         border-radius: 6px;
+     }
+     @media(max-width:1000px){
+       .grid-list1 {
+         grid-template-columns: repeat(2, 1fr);
+       }
+       .service-card3{
+         width: 180px; /* Set a width for the box */
+         height: 100px; /* Fixed height for the box */
+       }
+     }
+     .hero-title {
+    background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-block: 12px 8px;
+}
+       </style>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-el.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Υπηρεσίες <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Διαχείριση Επιχειρησιακών Λειτουργιών</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Διαχειριστής Καναλιών</a></li>
+                    <li><a href="pricing-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Τιμολόγηση</a></li>
+                        <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τεχνική Υποστήριξη</a></li>
+
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Διαχείριση Κρατήσεων</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-el.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Πρόγραμμα Ξενοδοχείου</a></li>
+                    <li><a href="booking-engine-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Μηχανή Κρατήσεων</a></li>
+                    <li><a href="revenue-management-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Διαχείριση Εσόδων</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Μάρκετινγκ & Ιστότοπος</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Μάρκετινγκ</a></li>
+                    <li><a href="business-website-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Επιχειρηματικός Ιστότοπος</a></li>
+                    <li><a href="hotel-marketing-solution-el.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Πακέτο Ψηφιακού Μάρκετινγκ</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
+                    </div>
+                    <h3>Εξερευνήστε τις Υπηρεσίες μας</h3>
+                    <p style="text-align: center;">Προσφέρουμε μια ευρεία γκάμα υπηρεσιών για να βελτιστοποιήσετε <br> τη διαχείριση του ξενοδοχείου σας.</p>
+                    <a href="channel-manager-el.html" class="btn-text1">
+                      <span class="hover-underline">Μάθετε περισσότερα</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-el.html" class="nav__link hover-underline">Τιμολόγιο</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Λύσεις <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Κατάλυμα</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ξενοδοχεία</a>
+                    </li>
+                    <li><a href="hostels-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Χόστελ</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Φιλοξενία</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B και Πανδοχεία</a></li>
+                    <li><a href="vaction-rentals-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ενοικιάσεις Διακοπών</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Ενημερώσεις & Πακέτα</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τα Πακέτα μας</a></li>
+                    <li><a href="updates-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Τελευταίες Ενημερώσεις</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Συνεργασίες & Υποστήριξη</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Οι Συνεργάτες μας</a></li>
+                    <li><a href="reseller-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Εξουσιοδοτημένοι Μεταπωλητές</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Όλες οι Λύσεις σε 1 Πλατφόρμα</span>
+                    </h2>
+                    <a href="booking-engine-el.html" class="btn-text1">
+                      <span class="hover-underline">Μάθετε περισσότερα</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Ανακαλύψτε νέες ευκαιρίες για την επιχείρησή σας! Ξεκινήστε σήμερα!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">
+                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="βέλος"></span>
+                    </a>
+                </div>
+            </section>
+            
+            </div>
+          </li>
+          
+          <li>
+            <a href="reviews-el.html" class="nav__link hover-underline">Ιστορίες Πελατών</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Πόροι <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+        
+                    <!-- Πόροι & Εργαλεία -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Πόροι & Εργαλεία</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Όλοι οι Πόροι</a></li>
+                            <li><a href="tools-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Εργαλεία & Οδηγοί</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Υποστήριξη Πελατών</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Διαχείριση Κρατήσεων -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Διαχείριση Κρατήσεων</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Διανομή Κρατήσεων</a></li>
+                            <li><a href="guest-management-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Διαχείριση Επισκεπτών</a></li>
+                            <li><a href="industry-trends-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τάσεις της Βιομηχανίας</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Αναφορές & Ενημερώσεις -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Αναφορές & Ενημερώσεις</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Λεπτομερείς Αναφορές</a></li>
+                            <li><a href="updates-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ανακοινώσεις & Βελτιώσεις</a></li>
+                            <li><a href="social-impact-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Κοινωνικός Αντίκτυπος</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Πρόσθετη Ενότητα με Εικόνα -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Πώς μπορούμε να σας βοηθήσουμε;</span>
+                            </h2>
+                            <a href="all-resources-el.html" class="btn-text1">
+                                <span class="hover-underline">Δείτε όλους τους πιο πρόσφατους πόρους</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </li>
+        
+
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Εταιρεία <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Σχετικά με Εμάς</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Σχετικά με Εμάς</a></li>
+                    <li><a href="our-team-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Η Ομάδα μας</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Πελάτες & Καριέρες</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Οι Πελάτες μας</a></li>
+                    <li><a href="careers-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Καριέρες</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Κριτικές</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Κριτικές Πελατών</a></li>
+                    <li><a href="sales-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Πωλήσεις</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Επικοινωνία</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Επικοινωνήστε μαζί μας</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Υποστήριξη</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+
+                  </div>
+                  <div class="special-text">
+                    <h4>Ηγετική υποστήριξη και συνεργασία στον κλάδο</h4>
+                    <p>Δεκάδες χιλιάδες ακίνητα σε όλο τον κόσμο μας εμπιστεύονται <br> για μακροπρόθεσμη επιτυχία και υποστήριξη 24/7/365.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Ανακαλύψτε νέες ευκαιρίες για την επιχείρησή σας! Ξεκινήστε σήμερα!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">
+                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="βέλος"></span>
+                    </a>
+                </div>
+            </section>
+            
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL &nbsp;
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="business-website-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
+                    </a></li>
+                  <li><a href="business-website-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Greek flag">&nbsp; EN
+                    </a></li>
+                  <li><a href="business-website-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
+                    </a></li>
+                  <li><a href="business-website-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
+                    </a></li>
+                  <li><a href="business-website-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
+                    </a></li>
+                  <li><a href="business-website-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
+                    </a></li>
+                  <li><a href="business-website-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
+                    </a></li>
+                  <li><a href="business-website-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
+                    </a></li>
+                  <li><a href="business-website-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
+                    </a></li>
+                  <li><a href="business-website-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
+                    </a></li>
+                  <li><a href="business-website-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
+                    </a></li>
+                  <li><a href="faqe-interneti.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
+                  <li><a href="business-website-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section class="section hero has-bg-image " aria-label="home" style=" background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="section-title" style="color: white;   ">
+                Οι επιτυχημένα καταλύματα έχουν τη δική τους <span class="hero-title"> ΙΣΤΟΣΕΛΙΔΑ</span> Δημιουργήστε μία για το κατάλυμά σας!
+
+          </div>
+          <div class="hero-slider" data-slider>
+            <div class="slider-inner ">
+              <ul class="slider-container" data-slider-container>
+                <li class="slider-item">
+                  <figure class="img-holder">
+                    <img src="./assets/images/Resize_image_project-removebg-preview.png" alt=""
+                      class="img-cover banner-animation">
+                  </figure>
+                </li>
+              </ul>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+            <h2 class="h2 section-title" style="text-align: center;">
+                Η εστίασή μας είναι η ποιότητα του ιστοτόπου και η ευρετηρίαση σε κάθε μηχανή αναζήτησης
+              </h2>
+              <ul class="grid-list">
+                <li>
+                  <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                    <img src="assets/images/instant-site-devices2.jpg" style="width: 70px;padding: 10px;">
+                    <h3 class="h4 card-title">Responsive Ιστοσελίδα</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="service-card2" style="display: flex;justify-content: center;align-items: center;
+                background-color: #e5eff7;">
+                    <img src="assets/images/Content-Management.png" style="width: 70px !important;padding: 10px;">
+                    <h3 class="h4 card-title">Ενσωμάτωση Κρατήσεων</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                    <img src="assets/images/instant-site-pages2.jpg" style="width: 70px;padding: 10px;">
+                    <h3 class="h4 card-title">Βελτιστοποίηση SEO</h3>
+                  </div>
+                </li>
+              
+          </ul>
+        </div>
+      </section>
+      <div class="container">
+        <ul class="project-list">
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img src="assets/images/Hotel Uji i Ftohte, Tepelene, Albania (23.11.2023 11_25).png" width="397"
+                  loading="lazy" alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img src="assets/images/empire.png" width="397" loading="lazy"
+                  alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img src="assets/images/screencapture-belvedere-al-2023-11-23-11_44_52.png" width="397" loading="lazy"
+                  alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img src="./assets/images/screencapture-miramare-boutique-al-2023-11-23-11_49_32.png" width="397"
+                  loading="lazy" alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img
+                  src="./assets/images/Rapos Resort Hotel - Best Luxuy Accommodation in Himare (23.11.2023 11_53).png"
+                  width="397" loading="lazy" alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                <img src="./assets/images/screencapture-hotelbelvedere-al-2023-11-23-12_00_32.png" width="397"
+                  height="352" loading="lazy" alt="" class="img-cover">
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <section class="section feature " aria-labelledby="feature-label" style="background-color: #e5eff7;">
+        <div class="container ">
+          <figure class=" about-content">
+            <img src="./assets/images/Resize_image_project-removebg-preview.png" width="800" height="531" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+          <div class="feature-content">
+            <a href="pms-program-hoteli.html">
+              <p class="section-subtitle" id="feautre-label"></p>
+            </a>
+            <a href="pms-program-hoteli.html">
+                <h2 class="h2 section-title">
+                    Ιστοσελίδα Ξενοδοχείου
+                </h2>
+                </a>
+                <p class="section-text">
+                    Η InterMedia LLC με μια ομάδα παθιασμένων ανθρώπων στην ανάπτυξη επαγγελματικών ιστοσελίδων στο σχεδιασμό ή τη δομή ιστοσελίδων, προσφέρει διαδικτυακές υπηρεσίες προκειμένου να παρουσιαστείτε με τον καλύτερο δυνατό τρόπο στην τοπική ή παγκόσμια αγορά. Δεν αναπτύσσουμε μόνο ιστοσελίδες, αλλά προτείνουμε και πώς να δομηθεί η έννοια κατασκευής μιας επαγγελματικής ιστοσελίδας για την επιχείρησή σας, προσφέρουμε επίσης φιλοξενία υψηλής ασφάλειας με διάφορους χώρους και SSL πιστοποιητικά για την ιστοσελίδα σας.
+                </p>
+                
+<br>
+            <span class="herobtn"> <a href="contact-el.html" class="btn">Επαφή</a></span>
+          </div>
+        </div>
+      </section>
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+          <h2 class="h2 section-title" style="text-align: center;">
+            Μερικοί από τους πελάτες μας:
+          </h2>
+          <ul class="grid-list  grid-list1">
+            <li>
+              <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+             <a href="https://vmresort.al/"  target="_blank">  <img src="assets/images/clients/vm-resort.png" style="width: 130px;"> </a> 
+            
+              </div>
+            </li>
+            <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://rapos.al/"  target="_blank">   <img src="assets/images/clients/rapos.png" style="width: 130px;"> </a>
+            
+              </div>
+            </li>
+            <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://bonsai.al/"  target="_blank">   <img src="assets/images/clients/bonsai.png" style="width: 110px;">
+                </a>
+              </div>
+            </li>
+            <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+               <a href="https://niaboutique.al/"   target="_blank"> <img src="assets/images/clients/nia-logo.png" style="width: 110px;"> </a>
+            
+              </div>
+            </li>
+            <li>
+              <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+             <a href="https://mazarine.al/"   target="_blank">   <img src="assets/images/clients/mazarine.png" style="width: 110px;"> </a>
+            
+              </div>
+            </li>
+            <li>
+              <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel1maji.al/"   target="_blank">    <img src="assets/images/clients/hotel1maji.png" style="width: 100px;"> </a>
+            
+              </div>
+            </li>
+            <li>
+              <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.6milje.al/"  target="_blank">   <img src="assets/images/clients/6milje.png" style="width: 130px;">
+            </a>
+              </div>
+        
+            </li>
+            <li>
+              <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+               <a href="https://aurum.al/"  target="_blank"> <img src="assets/images/clients/aurum-logo.png" style="width: 130px;"> </a>
+            
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.bunec-resort.al/"  target="_blank">   <img src="assets/images/clients/bunec-beach-resort.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://seaview-bunec.al/"  target="_blank">   <img src="assets/images/clients/seaview-bunec.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://divo-palace.al/"  target="_blank">   <img src="assets/images/clients/divo-palace.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-holiday.al/"  target="_blank">   <img src="assets/images/clients/holiday.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://monunhotel.al/"  target="_blank">   <img src="assets/images/clients/monun-hotel.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://happy-stay.al/"  target="_blank">   <img src="assets/images/clients/happy-stay.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://kolagji.al/"  target="_blank">   <img src="assets/images/clients/kolagji.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-alpha.al/"  target="_blank">   <img src="assets/images/clients/hotel-alpha.png" style="width: 50px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://vila-celaj.al/"  target="_blank">   <img src="assets/images/clients/celaj.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://goldensun.al/"  target="_blank">   <img src="assets/images/clients/golden-sun.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.sasso.al/"  target="_blank">   <img src="assets/images/clients/sasso-hotel.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://centerboutique.al/"  target="_blank">   <img src="assets/images/clients/center-boutique.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://senator.al/"  target="_blank">   <img src="assets/images/clients/hotel-senator.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://mema.al/"  target="_blank">   <img src="assets/images/clients/mema-resort.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://dorchesterhotel.al/"  target="_blank">   <img src="assets/images/clients/dorchester.png" style="width: 70px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://vullkan-hotel.al/"  target="_blank">   <img src="assets/images/clients/vullkan-hotel.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.hotel-golden.al/"  target="_blank">   <img src="assets/images/clients/golden-hotel.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://harbourhotel.al/"  target="_blank">   <img src="assets/images/clients/harbour.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://sky-way.al/"  target="_blank">   <img src="assets/images/clients/sky-way.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.hotelkaan.al/"  target="_blank">   <img src="assets/images/clients/kaan.png" style="width:80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://alexander.al/"  target="_blank">   <img src="assets/images/clients/alexander-hotel.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.joni-kompleks.al/"  target="_blank">   <img src="assets/images/clients/joni-kompleks.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://sunset-aparthotel.al/"  target="_blank">   <img src="assets/images/clients/sunset-aparthotel.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://apart-hotel-alex.al/"  target="_blank">   <img src="assets/images/clients/alex-aparthotel.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://vila-shpetimi.al/"  target="_blank">   <img src="assets/images/clients/shpetimi-villa.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.oskar.al/"  target="_blank">   <img src="assets/images/clients/oskar.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://sunrays.al/"  target="_blank">   <img src="assets/images/clients/sunrays-hotel.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://vila-milo.al/"  target="_blank">   <img src="assets/images/clients/vila-milo.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://royal1967.al/"  target="_blank">   <img src="assets/images/clients/royal.png" style="width:65px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.arrei.al/"  target="_blank">   <img src="assets/images/clients/arrei-hotel.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://green-garden.al/"  target="_blank">   <img src="assets/images/clients/green-garden.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://oxygenboutique.al/"  target="_blank">   <img src="assets/images/clients/oxygen.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.mesopotam-resort.al/"  target="_blank">   <img src="assets/images/clients/mesopotam.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.hotelbeke.al/"  target="_blank">   <img src="assets/images/clients/hotel-beke.png" style="width:60px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://gesthotel.al/"  target="_blank">   <img src="assets/images/clients/gest-hotel.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://seawave.al/"  target="_blank">   <img src="assets/images/clients/seawave.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://lamaroja.al/"  target="_blank">   <img src="assets/images/clients/la-maroja.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.ottohotel.al/"  target="_blank">   <img src="assets/images/clients/otto-hotel.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-erioni.al/"  target="_blank">   <img src="assets/images/clients/erioni-hotel.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://galaxyhotel.al/"  target="_blank">   <img src="assets/images/clients/galaxy-hotel.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://centerhotel.al/"  target="_blank">   <img src="assets/images/clients/center hotel.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-argjiro.al/"  target="_blank">   <img src="assets/images/clients/argjiro.png" style="width: 70px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-afa.al/"  target="_blank">   <img src="assets/images/clients/hotel-afa.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotelaliko.al/"  target="_blank">   <img src="assets/images/clients/hotel-aliko.png" style="width:50px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://soare.al/"  target="_blank">   <img src="assets/images/clients/soare.png" style="width:90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://lej-laj-residence.al/"  target="_blank">   <img src="assets/images/clients/lej-laj.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://arelhotel.al/"  target="_blank">   <img src="assets/images/clients/arel-hotel.png" style="width: 90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-milo.al/"  target="_blank">   <img src="assets/images/clients/hotel-milo.png" style="width: 80px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.elmare.al/"  target="_blank">   <img src="assets/images/clients/elmare.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://unico-aparthotel.al/"  target="_blank">   <img src="assets/images/clients/unico.png" style="width: 50px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://hotel-sole.al/"  target="_blank">   <img src="assets/images/clients/hotel-sole.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://lamaison.al/"  target="_blank">   <img src="assets/images/clients/la-maison.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://asirooftop.al/"  target="_blank">   <img src="assets/images/clients/asi-rooftop.png" style="width: 40px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://cekodhima.al/"  target="_blank">   <img src="assets/images/clients/cekodhima.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://atlantis-hotel.al/"  target="_blank">   <img src="assets/images/clients/atlantis.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.mega-hostel.al/"  target="_blank">   <img src="assets/images/clients/mega-hosttel.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://ajden.al/"  target="_blank">   <img src="assets/images/clients/ajden.png" style="width: 70px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://albulena-hotel.al/"  target="_blank">   <img src="assets/images/clients/albulena.jpg" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.3islands.al/"  target="_blank">   <img src="assets/images/clients/3islands.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://olimpic.al/index.html"  target="_blank">   <img src="assets/images/clients/olimpic-hotel.png" style="width:90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://blueboutique.al/"  target="_blank">   <img src="assets/images/clients/blue-boutique.png" style="width:90px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://altobelo.al/"  target="_blank">   <img src="assets/images/clients/altobelo.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://areahotel.al/"  target="_blank">   <img src="assets/images/clients/area-hotel.png" style="width: 100px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://comfort-suites.al/"  target="_blank">   <img src="assets/images/clients/comfort-suites.png" style="width: 120px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://emblemhotel.al/"  target="_blank">   <img src="assets/images/clients/emblem.png" style="width: 60px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://sunkissed.al/"  target="_blank">   <img src="assets/images/clients/sunkissed.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+                  <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                    <a href="https://www.elite-hotel.al/"  target="_blank"> <img src="assets/images/clients/elite-hotel.png" style="width:90px;">
+                 
+                   </div> </a>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.belizhotel.com/"  target="_blank">   <img src="assets/images/clients/beliz.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://mira-mare.al/"  target="_blank">   <img src="assets/images/clients/mira-mare.png" style="width: 130px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://adam-eve-suites.al/"  target="_blank">   <img src="assets/images/clients/adam-eve.png" style="width: 60px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://centralhotel.al/"  target="_blank">   <img src="assets/images/clients/central-hotel.png" style="width: 110px;">
+            </a>
+              </div>
+            </li>
+                 <li>
+               <div class="service-card3" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.hotel-kuburi.al/"  target="_blank">   <img src="assets/images/clients/kuburi.png" style="width: 50px;">
+            </a>
+              </div>
+            </li>
+           
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+  
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Υπηρεσίες</p>
+            </li>
+            <li>
+              <a href="channel-manager-el.html" class="footer-link hover-underline">Διαχειριστής Καναλιού</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-el.html" class="footer-link hover-underline">"Πρόγραμμα PMS Ξενοδοχείου</a>
+            </li>
+            <li>
+              <a href="booking-engine-el.html" class="footer-link hover-underline">Μηχανή Κρατήσεων</a>
+            </li>
+            <li>
+              <a href="marketing-el.html" class="footer-link hover-underline">Μάρκετινγκ</a>
+            </li>
+            <li>
+              <a href="business-website-el.html" class="footer-link hover-underline"> Επαγγελματική Ιστοσελίδα</a>
+            </li>
+            <li>
+              <a href="revenue-management-el.html" class="footer-link hover-underline">Διαχείριση Εσόδων</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-el.html" class="footer-link hover-underline"> Σουίτα Ψηφιακού Μάρκετινγκ</a>
+            </li>
+          </ul>
+          
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Λύσεις </p>
+          </li>
+          <li>
+            <a href="hotels-el.html" class="footer-link hover-underline">Ξενοδοχεία</a>
+          </li>
+          <li>
+            <a href="hostels-el.html" class="footer-link hover-underline">Ξενοδοχεία</a>
+          </li>
+          <li>
+            <a href="B&B-inns-el.html" class="footer-link hover-underline">B&B και Πανδοχεία</a>
+          </li>
+          <li>
+            <a href="hotel-groups-el.html" class="footer-link hover-underline">Ομάδες Ξενοδοχείων</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-el.html" class="footer-link hover-underline"> Ενοικιαζόμενα Καλοκαιρινά Καταλύματα</a>
+          </li>
+          <li>
+            <a href="integration-category-el.html" class="footer-link hover-underline">Σύστημα GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Συνεργασία</p>
+          </li>
+          <li>
+            <a href="sales-el.html" class="footer-link hover-underline">
+              Πωλήσεις</a>
+          </li>
+          <li>
+            <a href="pricing-el.html" class="footer-link hover-underline">
+              Τα Πακέτα Μας</a>
+          </li>
+          <li>
+            <a href="updates-el.html" class="footer-link hover-underline">
+              Ενημερώσεις</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">
+              Κέντρο Πόρων
+            </a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-el.html" class="footer-link hover-underline">
+              Οι Συνεργάτες Μας</a>
+          </li>
+          <li>
+            <a href="reseller-el.html" class="footer-link hover-underline">
+              Εξουσιοδοτημένοι Μεταπωλητές</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">
+              Τεχνική Υποστήριξη</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Εταιρεία</p>
+          </li>
+          <li>
+            <a href="about-us-el.html" class="footer-link hover-underline"> Σχετικά με Εμάς</a>
+          </li>
+          <li>
+            <a href="our-team-el.html" class="footer-link hover-underline"> Η Ομάδα Μας</a>
+          </li>
+          <li>
+            <a href="klientet-el.html" class="footer-link hover-underline"> Οι Πελάτες Μας</a>
+          </li>
+          <li>
+            <a href="careers-el.html" class="footer-link hover-underline">Καριέρες</a>
+          </li>
+          <li>
+            <a href="reviews-el.html" class="footer-link hover-underline"> Κριτικές</a>
+          </li>
+           <li>
+            <a href="social-impact-el.html" class="footer-link hover-underline">Κοινωνική Επιρροή</a>
+          </li>
+          <li>
+            <a href="sitemap-el.html" class="footer-link hover-underline">Χάρτης ιστότοπου</a>
+          </li>
+          <li>
+            <a href="contact-el.html" class="footer-link hover-underline"> Επικοινωνήστε Μαζί Μας </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Επικοινωνία </p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-el.html" class="footer-link">Πολιτική Cookies</a></li>
+          <li><a href="privacy-policy-el.html" class="footer-link">Απόρρητο</a></li>
+          <li><a href="data-security-el.html" class="footer-link">Ασφάλεια Δεδομένων</a></li>
+          <li><a href="terms-and-conditions-el.html" class="footer-link">Όροι</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+              <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+          </li>
+      </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description"> Το BookersDesk.com, μέρος της <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, προσφέρει ένα PMS και διαχειριστή καναλιών για εύκολη διαχείριση ξενοδοχείων. Συνδέεται με το <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> για κρατήσεις, το <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> για συγκρίσεις ξενοδοχείων και παρέχει ανάπτυξη ιστοσελίδων με σύστημα απευθείας κρατήσεων. </p> <p class="copyright"> Πνευματικά δικαιώματα © 2020–2025 BookersDesk.com™. Με επιφύλαξη παντός δικαιώματος. </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL secure badge">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Συγκατάθεση για Cookies</h2>
+    </header>
+    <div class="data">
+      <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Περιηγούμενοι σε αυτή την ιστοσελίδα, συμφωνείτε με τη χρήση των cookies.<a href="cookies-policy-el.html"> Περισσότερα...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Αποδοχή</button>
+      <button class="button" id="declineBtn">Απόρριψη</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

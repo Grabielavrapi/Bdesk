@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi siamo - BookersDesk | Channel Manager</title>
+    <meta name="description"
+        content="InterMedia Shpk è nata con passione nel 2006 come la prima agenzia di marketing digitale focalizzata sulla crescita dell'industria del turismo in Albania, promuovendo l'Albania come una nuova destinazione nel mercato turistico globale.">
+    <meta name="keywords"
+        content="Chi siamo, BookersDesk, Channel Manager + PMS, Marketing, Supporto, Sito Web per Aziende, Social Media, Dominio e Hosting, Esperienza e un Team di Sviluppo Professionale, Servizi Tecnologici per qualsiasi Azienda">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero {
+            padding-block-start: calc(100px + 50px);
+            text-align: center;
+        }
+
+        .hero-content {
+            margin-block-end: 30px;
+        }
+
+        .hero-subtitle {
+            color: hsl(240, 6%, 10%);
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            margin-block: 12px 8px;
+        }
+
+        .about {
+            background-color: white;
+        }
+
+        .about-banner {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-block-end: 25px;
+        }
+
+        .about :is(.section-title, .section-text) {
+            text-align: left;
+        }
+
+        .about .section-title {
+            margin-block-end: 5px;
+            padding-top: 10px;
+        }
+
+        .about .section-text:not(:last-child) {
+            margin-block-end: 18px;
+        }
+
+        .about .h3 {
+            margin-block-end: 8px;
+        }
+
+        .about-list {
+            margin-block: 15px 18px;
+        }
+
+        .about-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .about-item ion-icon {
+            color: #931B1E;
+            flex-shrink: 0;
+            margin-block-start: 2px;
+        }
+
+        .about-item:not(:last-child) {
+            margin-block-end: 12px;
+        }
+
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+
+        .servic a {
+            color: #5b7abb;
+            display: block;
+        }
+
+        .servic h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #56ceba;
+            font-size: 2.3rem;
+            margin: 1rem 0 0.6rem;
+        }
+
+        .services-grid {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        .servic {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            -webkit-box-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #e7e7e7;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .servic:hover {
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+            -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .servic i {
+            font-size: 3.45rem;
+            margin: 1rem 0;
+        }
+
+        .service1 i,
+        .service1 h4,
+        .service1 .cta {
+            color: #42b7ca;
+        }
+
+        .service1:hover {
+            border: 2px solid #42b7ca;
+        }
+
+        .service2 i,
+        .service2 h4,
+        .service2 .cta {
+            color: #425fca;
+        }
+
+        .service2:hover {
+            border: 2px solid #425fca;
+        }
+
+        .service3 i,
+        .service3 h4,
+        .service3 .cta {
+            color: #9c42ca;
+        }
+
+        .service3:hover {
+            border: 2px solid #9c42ca;
+        }
+
+        .servic .cta span {
+            font-size: 0.6rem;
+        }
+
+        .servic>* {
+            flex: 1 1 100%;
+        }
+
+        .servic .cta {
+            align-self: flex-end;
+        }
+
+        @media all and (max-width:900px) {
+            .services-grid {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function (t) {
+                        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+
+<body id="top">
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index-it.html" class="logo nav_logo"><img src="assets/images/blueee-03.png"
+                        style="width: 150px;"></a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__toggle-menu"></i>
+                    <i class="ri-close-line nav__toggle-close"></i>
+                </div>
+            </div>
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                  
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            I Servizi <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-settings-3-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">La Gestione delle Operazioni</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="channel-manager-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i> Gestore dei Canali</a></li>
+                                        <li><a href="pricing-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i> I Prezzi</a></li>
+                                                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Assistenza Tecnica </a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-calendar-check-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Gestione delle Prenotazioni
+                                    </span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="pms-program-hoteli-it.html" class="dropdown__link "> <i
+                                                    class="fa fa-chevron-right"></i> PMS - Programma Alberghiero</a>
+                                        </li>
+                                        <li><a href="booking-engine-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i> Motore di Prenotazione</a></li>
+                                        <li><a href="revenue-management-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i>Gestione dei Ricavi></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-global-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Marketing e Sito Web</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="marketing-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i> Marketing</a></li>
+                                        <li><a href="business-website-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i> Sito Web</a></li>
+                                        <li><a href="hotel-marketing-solution-it.html" class="dropdown__link"> <i
+                                                    class="fa fa-chevron-right"></i>Pacchetto di Marketing Digitale</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group dropdown__none">
+                                    <div class="sub-menu-item"
+                                        style="text-align: center;align-items: center;padding: 20px;">
+                                        <div class="image-containerheader">
+                                            <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
+                                        </div>
+                                        <h3>Esplora i Nostri Servizi</h3>
+                                        <p style="text-align: center;">Offriamo una vasta gamma di servizi per
+                                            ottimizzare <br> la gestione del tuo hotel.</p>
+                                        <a href="channel-manager-it.html" class="btn-text1">
+                                            <span class="hover-underline">Scopri di più</span>
+                                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                                                class="md hydrated"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="pricing-it.html" class="nav__link hover-underline">I Prezzi</a>
+                    </li>
+    <!--=============== DROPDOWN 2 ===============-->
+    <li class="dropdown__item">
+        <div class="nav__link dropdown__button">
+            Le Soluzioni<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        </div>
+        <div class="dropdown__container">
+            <div class="dropdown__content">
+               
+                <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                        <i class="ri-hotel-line"></i>
+                    </div>
+                    <span class="dropdown__title">Alloggio</span>
+                    <ul class="dropdown__list">
+                        <li><a href="hotels-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> Gli Hotel</a></li>
+                        <li><a href="hostels-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> Gli Ostelli</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                        <i class="ri-home-line"></i>
+                    </div>
+                    <span class="dropdown__title">Ospitalità</span>
+                    <ul class="dropdown__list">
+                        <li><a href="B&B-inns-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> B&B e Locande</a></li>
+                        <li><a href="vaction-rentals-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> Case Vacanza</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                        <i class="ri-refresh-line"></i>
+                    </div>
+                    <span class="dropdown__title">Aggiornamenti e Pacchetti</span>
+                    <ul class="dropdown__list">
+                        <li><a href="pricing-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i>I Nostri Pacchetti</a></li>
+                        <li><a href="updates-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> Ultimi Aggiornamenti</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                        <i class="ri-team-line"></i>
+                    </div>
+                    <span class="dropdown__title">Partnership e Supporto</span>
+                    <ul class="dropdown__list">
+                        <li><a href="partner-with-bookersdesk-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i> I Nostri Partner</a></li>
+                        <li><a href="reseller-it.html" class="dropdown__link"><i
+                                    class="fa fa-chevron-right"></i>Rivenditori Autorizzati</a></li>
+                    </ul>
+                </div>
+                 <div class="dropdown__group dropdown__none">
+                    <div class="sub-menu-item1 service"
+                        style="text-align: center; align-items: center; padding: 20px;">
+                        <div class="image-containerheader">
+                            <img src="assets/images/ICONN-01.png" style="width: 70px;"
+                                class="center-image">
+                        </div>
+                        <h2 class="title | gradient-text ">
+                            <span>Tutte le Soluzioni in una Piattaforma</span>
+                        </h2>
+                        <a href="booking-engine-it.html" class="btn-text1">
+                            <span class="hover-underline">Scopri di più</span>
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                                class="md hydrated"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Scoprite nuove opportunità per la vostra attività! Iniziate oggi stesso!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=it" class="btn-outline">
+                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="freccia"></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </li>
+                
+                
+                    <li>
+                        <a href="reviews-it.html" class="nav__link hover-underline">Storie Clienti</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Risorse <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                    
+                                <!-- Risorse & Strumenti -->
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-book-open-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Risorse & Strumenti</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="all-resources-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tutte le Risorse</a></li>
+                                        <li><a href="tools-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Strumenti & Guide</a></li>
+                                        <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Assistenza clienti</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Gestione delle Prenotazioni -->
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-calendar-check-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Gestione delle Prenotazioni</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="reservations-distribution-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Distribuzione delle Prenotazioni</a></li>
+                                        <li><a href="guest-management-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Gestione degli Ospiti</a></li>
+                                        <li><a href="industry-trends-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tendenze del Settore</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Report & Aggiornamenti -->
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-bar-chart-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Report & Aggiornamenti</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="reports-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Report dettagliati</a></li>
+                                        <li><a href="updates-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Notifiche & Miglioramenti</a></li>
+                                        <li><a href="social-impact-it.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Impatto Sociale</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Sezione Aggiuntiva con Immagine -->
+                                <div class="dropdown__group dropdown__none">
+                                    <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                                        <div class="image-containerheader">
+                                            <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
+                                        </div>
+                                        <h2 class="title | gradient-text">
+                                            <span>Come possiamo aiutarvi?</span>
+                                        </h2>
+                                        <a href="all-resources-it.html" class="btn-text1">
+                                            <span class="hover-underline">Scopri tutte le ultime risorse</span>
+                                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--=============== DROPDOWN 3 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            L'azienda <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-community-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Chi Siamo</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="about-us-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i> Chi Siamo</a></li>
+                                        <li><a href="our-team-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i>Il Nostro Team</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-user-star-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Klientët & Karriera</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="klientet-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i>I Nostri Clienti</a></li>
+                                        <li><a href="careers-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i> Carriera</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Valutazioni</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="reviews-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i>Testimonianze dei Clienti</a></li>
+                                        <li><a href="sales-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i> Vendite</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <span class="dropdown__title">Contatto</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="contact-it.html" class="dropdown__link"><i
+                                                    class="fa fa-chevron-right"></i> Contattaci</a></li>
+                                        <li><a href="https://help.bookersdesk.com/" class="dropdown__link"
+                                                target="_blank"><i class="fa fa-chevron-right"></i> Supporto</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group special-group dropdown__none">
+                                    <div class="image-containerheader" style="background-color: hsl(220, 68%, 97%);">
+                                        <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+
+                                    </div>
+                                    <div class="special-text">
+                                        <h4>Supporto e partnership leader nel settore</h4>
+                                        <p>Decine di migliaia di proprietà in tutto il mondo si fidano di noi <br> per
+                                            il successo a lungo termine e il supporto 24/7/365.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="cta-section dropdown__none">
+                                <div class="container">
+                                    <h2 class="dropdown__title">Scoprite nuove opportunità per la vostra attività! Iniziate oggi stesso!</h2>
+                                    <a href="https://panel.bookersdesk.com/freeDemo?lang=it" class="btn-outline">
+                                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="freccia"></span>
+                                    </a>
+                                </div>
+                            </section>
+                            
+                        </div>
+                    </li>
+                    <li class="dropdown__item" style="position: relative;">
+                        <div class="nav__link dropdown__button" style="width: auto;">
+                            <span style="display: flex; align-items: center;">
+                                <img src="assets/images/it.png" style="width: 20px;">&nbsp; IT &nbsp;
+
+                                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+                            </span>
+                        </div>
+                        <div class="dropdown__container"
+                            style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+                            <div class="dropdown__content">
+                                <ul class="dropdown__list">
+                                    <li><a href="about-us-en.html" class="dropdown__link " style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/en.png" style="width: 18px;" alt="United Kingdom flag">&nbsp; EN</a></li>
+                                    <li><a href="about-us-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
+                                      </a></li>
+                                    <li><a href="about-us-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL
+                                      </a></li>
+                                    <li><a href="about-us-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
+                                      </a></li>
+                                    <li><a href="about-us-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
+                                      </a></li>
+                                  
+                                    <li><a href="about-us-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
+                                      </a></li>
+                                    <li><a href="about-us-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
+                                      </a></li>
+                                    <li><a href="about-us-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
+                                      </a></li>
+                                    <li><a href="about-us-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
+                                      </a></li>
+                                    <li><a href="about-us-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
+                                      </a></li>
+                                    <li><a href="about-us-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
+                                      </a></li>
+                                    <li><a href="rreth-nesh.html" class="dropdown__link " style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
+                                    <li><a href="about-us-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                                        <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                        <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
+                                      </a></li>
+                                    </ul>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="display: flex; align-items: center;">
+                        <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+                        <span style="margin: 0 10px; color: gray;">|</span>
+                        <a href="https://panel.bookersdesk.com/freeDemo?lang=it" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section class="section hero" id="home" aria-label="hero"
+                style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('./assets/images/footer-bg.png') center/cover no-repeat fixed;">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="hero-subtitle " style="color: white;">InterMedia LLC</p>
+                        <h1 class="h1 hero-title">Chi siamo come azienda.</h1>
+                        <p style="color: white;">
+                            InterMedia Shpk è nata con passione nel 2006 come la prima agenzia di marketing digitale
+                            focalizzata sulla crescita
+                            dell'industria turistica in Albania, promuovendo l'Albania come una nuova destinazione nel
+                            mercato globale del turismo.
+                        </p>
+                    </div>
+                    <figure class="hero-banner">
+                        <img src="assets/images/bdesk/team.png" width="720" height="673" alt="hero banner"
+                            class="w-100">
+                    </figure>
+                </div>
+            </section>
+            <section class="container section">
+                <h2 class="h2 section-title" style="text-align: center;">
+                    I nostri servizi.
+                </h2>
+                <hr>
+                <div class="services-grid">
+                    <div class="servic service1">
+                        <i class="fa fa-bar-chart"></i>
+                        <h4>Gestore canale + PMS</h4>
+                        <p>Il programma Channel Manager e PMS consente un'accelerazione nel tempo per aumentare
+                            l'esposizione online.</p>
+                    </div>
+                    <div class="servic service2">
+                        <i class="fa fa-commenting"></i>
+                        <h4>Marketing</h4>
+                        <p>I servizi di marketing offrono alle proprietà di tutte le dimensioni l'opportunità di
+                            promuovere il loro marchio 24 ore su 24, 7 giorni su 7, a un costo contenuto.</p>
+                    </div>
+                    <div class="servic service3">
+                        <i class="fa fa-users"></i>
+                        <h4>Supporto</h4>
+                        <p>Che sia tramite telefono, chat dal vivo o inviando un'email, i clienti ottengono risposte
+                            attraverso il team di supporto..</p>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="servic service3">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <h4>Sito web aziendale</h4>
+                        <p>Ideale per presentare le tue proprietà, azienda, prodotti e servizi. Design personalizzati e
+                            manutenzione disponibili.
+
+                        </p>
+                    </div>
+                    <div class="servic service2">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <h4>Social Media</h4>
+                        <p>I nostri servizi di social media possono aiutarti a costruire, rinnovare, gestire e misurare
+                            la tua strategia sui social media.</p>
+                    </div>
+                    <div class="servic service1">
+                        <i class="fa fa-globe"></i>
+                        <h4>Dominio e Hosting</h4>
+                        <p> InterMedia ti permette di acquistare il dominio che preferisci. Se stai cercando un servizio
+                            di hosting, offriamo piani di hosting.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section about" id="about" aria-label="about">
+                <div class="container">
+                    <div class=" img-holder" style="--width: 720; --height: 960;">
+                        <img src="./assets/images/pexels-photo-3194519.jpeg" width="720" height="960" loading="lazy"
+                            alt="about banner" class="img-cover" style="border-radius: 10px;">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="h2 section-title">Chi Siamo</h2>
+                        <p class="section-text">
+                            Basato su una visione e anni di esperienza nella tecnologia dell'informazione,
+                            InterMedia è riconosciuta come leader nel marketing digitale, nello sviluppo web e nello
+                            sviluppo di software avanzato, con un focus specifico sull'industria del turismo.
+                        </p>
+                        <h3 class="h3">Who Are We?</h3>
+                        <p class="section-text">
+                            We have many years of experience and a professional development staff and experienced
+                            experts. Every day we expand our knowledge in order to develop better strategies and provide
+                            high quality services to our clients.
+                        </p>
+                        <h3 class="h3">I nostri successi:</h3>
+                        <ul class="about-list">
+                            <li class="about-item">
+                                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                                <p class="section-text">
+                                    La prima agenzia di marketing digitale focalizzata sulla crescita dell'industria
+                                    turistica in Albania.
+                                </p>
+                            </li>
+                            <li class="about-item">
+                                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                                <p class="section-text">
+                                    AllBookers.com si distingue come un successo trionfante, trasformando il panorama
+                                    delle prenotazioni alberghiere e segnando un risultato significativo per la nostra
+                                    azienda.
+                                </p>
+                            </li>
+                            <li class="about-item">
+                                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                                <p class="section-text">
+                                    BookersDesk.com si erge con orgoglio come una realizzazione fondamentale per la
+                                    nostra azienda, ridefinendo il panorama della
+                                    gestione delle proprietà e delle prenotazioni con le sue soluzioni innovative e
+                                    rapide.
+                                </p>
+                            </li>
+                        </ul>
+                        <h3 class="h3">La nostra missione</h3>
+                        <p class="section-text">
+                            Diamo vita alle idee con l'aiuto della tecnologia, creatività e professionalità. Offriamo
+                            servizi tecnologici per ogni tipo di attività.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class=" features" id="features" style="background: linear-gradient(#dfeaf6, #fff);">
+                <div class="container">
+                    <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;">BookersDesk.com</h2>
+                    <figure class="features-banner">
+                        <img src="assets/images/BOOKERSDESK-01-01.png" width="369" height="418" loading="lazy"
+                            alt="Features Banner" class="w-100 ">
+                    </figure>
+                    <ul class="features-list">
+                        <li>
+                            <a href="channel-manager-it.html">
+                                <div class="features-card">
+                                    <div class="icon">
+                                        <ion-icon name="medal-outline" role="img" class="md hydrated"
+                                            aria-label="medal outline"></ion-icon>
+
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="h3 title">Progetto di successo</h3>
+                                        <p class="text">
+                                            BookersDesk è stato creato da Intermedia e ha aiutato gli hotel a gestire le
+                                            loro prenotazioni.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="channel-manager-it.html">
+                                <div class="features-card">
+                                    <div class="icon">
+                                        <ion-icon name="earth-outline" role="img" class="md hydrated"
+                                            aria-label="earth outline"></ion-icon>
+
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="h3 title">Espansione globale</h3>
+                                        <p class="text">
+                                            La piattaforma è utilizzata dai proprietari di immobili per connettersi con
+                                            i clienti in vari mercati.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="features-list">
+                        <li>
+                            <a href="channel-manager-it.html">
+                                <div class="features-card">
+                                    <div class="icon">
+                                        <ion-icon name="star-outline" role="img" class="md hydrated"
+                                            aria-label="star outline"></ion-icon>
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="h3 title">Impegno e Qualità</h3>
+                                        <p class="text">
+                                            Offriamo supporto e tecnologia su misura per le esigenze dei nostri partner.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="channel-manager-it.html">
+                                <div class="features-card">
+                                    <div class="icon">
+                                        <ion-icon name="business-outline" role="img" class="md hydrated"
+                                            aria-label="business outline"></ion-icon>
+
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="h3 title">Il Futuro della Gestione</h3>
+                                        <p class="text">
+                                            Soluzioni pratiche per la gestione delle proprietà con tecnologia moderna ed
+                                            efficiente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+ 
+ <footer class="footer">
+    <div class="container">
+        <div class="footer-top section">
+            <div class="footer-brand1">
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Servizi</p>
+                    </li>
+                    <li>
+                        <a href="channel-manager-it.html" class="footer-link hover-underline">Gestore dei Canali</a>
+                    </li>
+                    <li>
+                        <a href="pms-program-hoteli-it.html" class="footer-link hover-underline">PMS - Programma
+                            Alberghiero</a>
+                    </li>
+                    <li>
+                        <a href="booking-engine-it.html" class="footer-link hover-underline">Motore di
+                            Prenotazione</a>
+                    </li>
+                    <li>
+                        <a href="marketing-it.html" class="footer-link hover-underline">Marketing</a>
+                    </li>
+                    <li>
+                        <a href="business-website-it.html" class="footer-link hover-underline"> Sito Web</a>
+                    </li>
+                    <li>
+                        <a href="revenue-management-it.html" class="footer-link hover-underline">Gestione dei
+                            Ricavi</a>
+                    </li>
+                    <li>
+                        <a href="hotel-marketing-solution-it.html" class="footer-link hover-underline"> Marketing
+                            Digitale</a>
+                    </li>
+                </ul>
+               
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <p class="footer-list-title">Soluzione </p>
+                </li>
+                <li>
+                    <a href="hotels-it.html" class="footer-link hover-underline">Gli Hotel</a>
+                </li>
+                <li>
+                    <a href="hostels-it.html" class="footer-link hover-underline">Ostelli</a>
+                </li>
+                <li>
+                    <a href="B&B-inns-it.html" class="footer-link hover-underline">B&B e Inns</a>
+                </li>
+                <li>
+                    <a href="hotel-groups-it.html" class="footer-link hover-underline">Gruppi Alberghieri</a>
+                </li>
+                <li>
+                    <a href="vaction-rentals-it.html" class="footer-link hover-underline"> Affitti a Breve
+                        Periodo</a>
+                </li>
+                <li>
+                    <a href="integration-category-it.html" class="footer-link hover-underline"> GDS</a>
+                </li>
+            </ul>
+            <ul class="footer-list">
+                <li>
+                    <p class="footer-list-title">Collaborazione</p>
+                </li>
+                <li>
+                    <a href="sales-it.html" class="footer-link hover-underline">
+                        Le Vendite</a>
+                </li>
+                <li>
+                    <a href="pricing-it.html" class="footer-link hover-underline">
+                        I Nostri Pacchetti </a>
+                </li>
+                <li>
+                    <a href="updates-it.html" class="footer-link hover-underline">
+                        Gli Aggiornamenti </a>
+                </li>
+                <li>
+                    <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html"
+                        class="footer-link hover-underline">
+                        Centro Risorse </a>
+                </li>
+                <li>
+                    <a href="partner-with-bookersdesk-it.html" class="footer-link hover-underline">
+                        I Nostri Partner</a>
+                </li>
+                <li>
+                    <a href="reseller-it.html" class="footer-link hover-underline">
+                        Rivenditori Autorizzati </a>
+                </li>
+                <li>
+                    <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">
+                        Supporto Tecnico </a>
+                </li>
+            </ul>
+            <ul class="footer-list">
+                <li>
+                    <p class="footer-list-title">L'azienda</p>
+                </li>
+                <li>
+                    <a href="about-us-it.html" class="footer-link hover-underline"> Chi Siamo</a>
+                </li>
+                <li>
+                    <a href="our-team-it.html" class="footer-link hover-underline"> Il Nostro Team</a>
+                </li>
+                <li>
+                    <a href="klientet-it.html" class="footer-link hover-underline"> I Nostri Clienti</a>
+                </li>
+                <li>
+                    <a href="careers-it.html" class="footer-link hover-underline">Carriera</a>
+                </li>
+                <li>
+                    <a href="reviews-it.html" class="footer-link hover-underline"> Valutazioni</a>
+                </li>
+                <li>
+                    <a href="social-impact-it.html" class="footer-link hover-underline">
+                        Impatto Sociale</a>
+                </li>
+                <li>
+                    <a href="contact-it.html" class="footer-link hover-underline">
+                        Contattaci</a>
+                </li>
+            </ul>
+            <ul class="footer-list">
+                <li>
+                    <p class="footer-list-title">Contatto </p>
+                </li>
+                <li>
+                    <a href="mailto:sales@bookersdesk.com" class="footer-link">
+                      <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+                    </a>
+                  </li>
+                 
+                 
+                  <li>
+                    <a href="mailto:support@bookersdesk.com" class="footer-link">
+                      <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+                      <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+                    </a>
+                  </li>
+                 
+                  <li>
+                    <a href="mailto:people@bookersdesk.com" class="footer-link">
+                      <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+                    </a>
+                  </li>
+                  
+                 <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+            </ul>
+        </div>
+        <div class="footer-brand">
+            <ul class="terms-list">
+                <li><a href="cookies-policy-it.html" class="footer-link">Cookie</a></li>
+                <li><a href="privacy-policy-it.html" class="footer-link">Privacy</a></li>
+                <li><a href="data-security-it.html" class="footer-link">Sicurezza</a></li>
+                <li><a href="terms-and-conditions-it.html" class="footer-link">Termini di Utilizzo</a></li>
+            </ul>
+            <ul class="social-list">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="left-section">
+                <p class="footer-description"> BookersDesk.com, parte di <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, offre un PMS e un channel manager per una facile gestione degli hotel. Si collega con <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> per le prenotazioni, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> per il confronto degli hotel e fornisce lo sviluppo di siti web con un sistema di prenotazione diretta. </p> <p class="copyright"> Copyright © 2020–2025 BookersDesk.com™. Tutti i diritti riservati. </p>
+            </div>
+            <div class="center-section">
+              <div class="image-container">
+                <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL secure badge">
+              </div>
+            </div>
+          </div>
+          <div class="footer-brandbottom">
+            <ul class="terms-list">
+              <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+              <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+              <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+              <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+            </ul>
+          </div>
+      
+    </div>
+</footer>
+
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Consenso sui Cookie</h2>
+        </header>
+        <div class="data">
+            <p>Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito web. Continuando a navigare su
+                questo sito, accetti l'uso dei nostri cookie.<a href="cookies-policy-it.html"> Më shumë...</a></p>
+        </div>
+        <div class="buttons">
+            <button class="button" id="acceptBtn">Accetta</button>
+            <button class="button" id="declineBtn">Rifiuta</button>
+        </div>
+    </div>
+    <!--   *****   JQuery Link   *****   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--   *****   Owl Carousel js Link  *****  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdateringer - BookersDesk | Channel Manager</title>
+  <meta name="description" content="Oplev de nyeste funktioner og forbedringer i BookersDesk. Generer rapporter om indtægtstab, administrer alle ejendomme i én kalenderoversigt, og integrer problemfrit med Hotelbeds API for direkte reservationer.">
+  <meta name="keywords" content="BookersDesk opdateringer, hotelsoftwareforbedringer, indtægtstab rapporter, ejendomshåndteringssystem, gæstfrihedsteknologi, hotel kalenderoversigt, Hotelbeds API integration, bookingstyring, reservationsrapporter, flere ejendomshåndtering">
+  <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .section-header {
+      text-align: center;
+    }
+    .section-header h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .bg-gradient_solid {
+      color: #374886;
+      padding: 48px 0;
+    }
+    .steps {
+      position: relative;
+      margin-top: 32px;
+    }
+    .steps::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      background-color: #374886;
+      opacity: 0.1;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+    }
+    .steps .content p {
+      color: #676767;
+      font-size: 16px;
+    }
+    .steps .content h2 {
+      font-weight: 600;
+      font-size: 16px;
+      color: #676767;
+    }
+    .steps-container {
+      position: relative;
+      background-color: inherit;
+      width: calc(50% + 32px);
+    }
+    .steps-container .content {
+      padding: 32px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 0px 0px 80px 0px;
+      box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
+    }
+    .steps .steps-container:nth-child(even) {
+      left: calc(50% - 32px);
+      flex-direction: row-reverse;
+    }
+    .steps-container {
+      display: flex;
+    }
+    .steps .steps-container .date {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #1b75bb;
+      border: 1px solid #1b75bb;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date:hover {
+      background: #2563EB;
+      color: #ffffff;
+      border-color: #2563EB;
+    }
+    .steps .steps-container .date1 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #32c0a0;
+      border: 1px solid #32c0a0;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date1:hover {
+      background: #1db491;
+      color: #ffffff;
+      border-color: #1db491;
+    }
+    .steps .steps-container .date2 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #F59E0B;
+      border: 1px solid #F59E0B;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date2:hover {
+      background: #F59E0B;
+      color: #ffffff;
+      border-color: #F59E0B;
+    }
+    .step-line {
+      width: 40px;
+      background-color: #374886;
+      height: 1px;
+      margin-top: 31px;
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+    .hotel-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #1b75bb;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .hotel-section .icon {
+      width: 50px;
+      height: 50px;
+    }
+    .hotel-section .text {
+      flex: 1;
+      font-size: 16px;
+    }
+    .hotel-section .text b {
+      font-weight: bold;
+    }
+    @media (max-width: 767px) {
+      .steps::after {
+        left: 32px;
+      }
+      .steps-container {
+        left: 0;
+        flex-direction: row-reverse;
+        width: auto;
+        margin-bottom: 16px;
+      }
+      .steps .steps-container:nth-child(even) {
+        left: 0;
+      }
+      .hotel-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-dk.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Ydelser <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Driftsledelse</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Kanalstyring</a></li>
+                    <li><a href="pricing-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Priser</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Teknisk support</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Reservationsstyring</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-dk.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Hotelprogram</a></li>
+                    <li><a href="booking-engine-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Bookingmotor</a></li>
+                    <li><a href="revenue-management-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Indtægtsstyring</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Markedsføring & hjemmeside</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Markedsføring</a></li>
+                    <li><a href="business-website-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Virksomhedshjemmeside</a></li>
+                    <li><a href="hotel-marketing-solution-dk.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Digital markedsføringspakke</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Bookers Desk visitkort">
+                    </div>
+                    <h3>Udforsk vores tjenester</h3>
+                    <p style="text-align: center;">Vi tilbyder et bredt udvalg af tjenester til at optimere <br> din hotelledelse.</p>
+                    <a href="channel-manager-dk.html" class="btn-text1">
+                      <span class="hover-underline">Læs mere</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-dk.html" class="nav__link hover-underline">Priser</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Løsninger <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Overnatning</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hoteller</a>
+                    </li>
+                    <li><a href="hostels-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vandrehjem</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Gæstfrihed</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B og
+                        kroer</a></li>
+                    <li><a href="vaction-rentals-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Ferieboliger</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Opdateringer & pakker</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        pakker</a></li>
+                    <li><a href="updates-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Seneste
+                        opdateringer</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Partnerskab & support</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-dk.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Vores partnere</a></li>
+                    <li><a href="reseller-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Autoriserede forhandlere</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Alle løsninger på én platform</span>
+                    </h2>
+                    <a href="booking-engine-dk.html" class="btn-text1">
+                      <span class="hover-underline">Læs mere</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Udforsk nye muligheder for din virksomhed! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">
+                        <span>Anmod om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li>
+            <a href="reviews-dk.html" class="nav__link hover-underline">Omtaler</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Ressourcer <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+                    <!-- Resources & Tools -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Ressourcer & værktøjer</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Alle ressourcer</a></li>
+                            <li><a href="tools-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Værktøjer & vejledninger</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kundesupport</a></li>
+                        </ul>
+                    </div>
+                    <!-- Booking Management -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Reservationsstyring</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Reservationsfordeling</a></li>
+                            <li><a href="guest-management-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Gæstestyring</a></li>
+                            <li><a href="industry-trends-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Branchetrends</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reports & Updates -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Rapporter & opdateringer</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Detaljerede rapporter</a></li>
+                            <li><a href="updates-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Meddelelser & forbedringer</a></li>
+                            <li><a href="social-impact-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Social indvirkning</a></li>
+                        </ul>
+                    </div>
+                    <!-- Additional Section with Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Ressourcer fra Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Hvordan kan vi hjælpe dig?</span>
+                            </h2>
+                            <a href="all-resources-dk.html" class="btn-text1">
+                                <span class="hover-underline">Se alle de nyeste ressourcer</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Virksomhed <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Om os</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Om
+                        os</a></li>
+                    <li><a href="our-team-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        team</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kunder & karrierer</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vores
+                        kunder</a></li>
+                    <li><a href="careers-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Karrierer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Anmeldelser</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kunde
+                        anmeldelser</a></li>
+                    <li><a href="sales-dk.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Salg</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kontakt</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-dk.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kontakt
+                        os</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Support</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+                  </div>
+                  <div class="special-text">
+                    <h4>Brancheførende support og partnerskab</h4>
+                    <p>Tusindvis af ejendomme verden over stoler på os <br> for langsigtet succes og 24/7/365 support.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Udforsk nye muligheder for din virksomhed! Start i dag!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">
+                        <span>Anmod om en demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/denmark.png" style="width: 18px;" alt="Storbritanniens flag">  DK  
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="updates-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="Fransk flag">  FR
+                    </a></li>
+                  <li><a href="updates-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Græsk flag">  EL
+                    </a></li>
+                    <li><a href="updates-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Dansk flag">  EN
+                    </a></li>
+                  <li><a href="updates-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italiensk flag">  IT
+                    </a></li>
+                  <li><a href="updates-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Hollandsk flag">  NL
+                    </a></li>
+                  <li><a href="updates-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugisisk flag">  PT
+                    </a></li>
+                  <li><a href="updates-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Spansk flag">  ES
+                    </a></li>
+                  <li><a href="updates-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Finsk flag">  FI
+                    </a></li>
+                  <li><a href="updates-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svensk flag">  SV
+                    </a></li>
+                
+                  <li><a href="updates-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">  NO
+                    </a></li>
+                  <li><a href="updates-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polsk flag">  PL
+                    </a></li>
+                  <li><a href="perditesimet.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albansk flag">  SQ </a></li>
+                  <li><a href="updates-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="Tysk flag">  DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=dk" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="pil"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section>
+        <div class="bg-images"
+          style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
+          <section class="container text-center">
+            <h1 style="color: white; font-size: 3.6rem;">  
+              Softwareopdateringer  
+          </h1>
+          </section>
+        </div>
+      </section>
+      <section class="section" style="background: linear-gradient(#dfeaf6, #fff);">
+        <div class="container">
+          <div class="bg-gradient_solid">
+            <div class="container">
+              <div class="section-header">
+                <h2>Se de nyeste funktionsversioner og forbedringer i BookersDesk</h2>
+              </div>
+              <div class="steps">
+                <!-- UPDATE -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">31. januar 2025</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Indtægtsmangelsrapporter for Reservationer</h2>
+                    <p>Vi har tilføjet en ny funktion, der muliggør generering af månedlige indtægtsrapporter for reservationer, hvilket giver et klart overblik over indtægter og tendenser over tid.</p>
+                </div>
+                  <i class="step-line"></i>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">27. januar 2025</p>
+                    <h2><i class="ri-refresh-line text-primary"  style="color: #2563EB;"></i> Kalender viser alle ejendomme i én visning</h2>
+                    <p>Du kan nu se alle dine ejendomme i en enkelt kalender, hvilket forenkler administrationen af flere steder og forbedrer dit workflow.</p>
+                </div>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <!-- NEW FEATURE -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">21. januar 2025</p>
+                    <h2><i class="ri-tools-line text-primary"  style="color: #32c0a0;"></i> Nye sprog tilføjet til BookersDesk</h2>
+                    <p>BookersDesk understøtter nu nye sprog, herunder italiensk, græsk, spansk, fransk og tysk, hvilket giver flere muligheder for internationale brugere.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">23. december 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Hotelbeds API aktiveret i produktion</h2>
+                    <p>Hotelbeds API er blevet integreret og er nu live i produktion. Du kan nu administrere Hotelbeds reservationer direkte gennem BookersDesk.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">17. december 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Nyt frontend for BookersDesk lanceret i produktion</h2>
+                    <p>Vi har lanceret et nyt og forbedret design for BookersDesk, hvilket giver en enklere og mere brugervenlig grænseflade til ejendomshåndtering.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">2. december 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Pengeskuffe til ejendomme</h2>
+                    <p>En ny funktion til håndtering af kontanttransaktioner er nu tilgængelig, hvilket muliggør en mere sikker og nøjagtig håndtering af kontanttransaktioner.</p>
+                </div>
+                  <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">15. november 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Hostelworld sender reservationer med kreditkort</h2>
+                    <p>Reservationer fra Hostelworld inkluderer nu kreditkortoplysninger, hvilket muliggør lettere betalingsbehandling og reservationsstyring.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">6. november 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Airbnb API Integration</h2>
+                    <p>Vi har integreret Airbnb API'et, hvilket giver dig mulighed for at administrere Airbnb reservationer direkte fra BookersDesk.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">16. oktober 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Tilføj tilbud for at vise forskellige priser i bookingsystemet</h2>
+                    <p>Du kan nu tilføje specielle tilbud, der viser forskellige priser i bookingsystemet, hvilket hjælper dig med at køre kampagner og tiltrække flere gæster.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <!-- IMPROVEMENT -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">2. august 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Booking-side for voksne & børn / AddNewBooking for deltagere</h2>
+                    <p>Booking-siden tillader nu lettere valg af voksne og børns gæster, med forbedringer af AddNewBooking-funktionaliteten.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">30. august 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> PCI DSS-certificering</h2>
+                    <p>Vi er glade for at kunne meddele, at BookersDesk nu er PCI DSS-certificeret, hvilket sikrer de højeste sikkerhedsstandarder for vores brugere og kunder.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">24. juli 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color:#F59E0B;"></i> Første ejendomme tilføjet til BookersDesk</h2>
+                    <p>Vi har nu tilføjet de første ejendomme til BookersDesk, hvilket markerer et vigtigt skridt i udvidelsen af platformen.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">22. juli 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Nye upsell-varer tilføjet</h2>
+                    <p>Der er tilføjet nye upsell-varer, så ejendommene kan tilbyde flere ekstra muligheder for gæsterne og øge indtægterne.</p>
+                </div>
+                  <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label" >15. juli 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Ny rapport - Månedlig belægnings-, ankomst- og reception-rapport</h2>
+                    <p>En ny funktion til månedlig rapportering er blevet tilføjet for at følge belægning, gæsteankomster og receptionens aktivitet, hvilket hjælper dig med at holde styr på vigtige målinger.</p>
+                </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">8. juli 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Hostelworld API Integration</h2>
+                    <p>Hostelworld API'et er nu integreret, hvilket muliggør problemfri administration af reservationer foretaget via Hostelworld.</p>
+                </div>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Tjenester</p>
+            </li>
+            <li>
+              <a href="channel-manager-dk.html" class="footer-link hover-underline">Kanalstyring</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-dk.html" class="footer-link hover-underline">Hotel PMS-program</a>
+            </li>
+            <li>
+              <a href="booking-engine-dk.html" class="footer-link hover-underline">Bookningsmotor</a>
+            </li>
+            <li>
+              <a href="marketing-dk.html" class="footer-link hover-underline">Markedsføring</a>
+            </li>
+            <li>
+              <a href="business-website-dk.html" class="footer-link hover-underline">Virksomhedshjemmeside</a>
+            </li>
+            <li>
+              <a href="revenue-management-dk.html" class="footer-link hover-underline">Indtægtsstyring</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-dk.html" class="footer-link hover-underline">Digital markedsføringspakke</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Løsninger</p>
+          </li>
+          <li>
+            <a href="hotels-dk.html" class="footer-link hover-underline">Hoteller</a>
+          </li>
+          <li>
+            <a href="hostels-dk.html" class="footer-link hover-underline">Vandrerhjem</a>
+          </li>
+          <li>
+            <a href="B&B-inns-dk.html" class="footer-link hover-underline">B&B og kroer</a>
+          </li>
+          <li>
+            <a href="hotel-groups-dk.html" class="footer-link hover-underline">Hotelgrupper</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-dk.html" class="footer-link hover-underline">Ferieudlejning</a>
+          </li>
+          <li>
+            <a href="integration-category-dk.html" class="footer-link hover-underline">GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Partnerskab</p>
+          </li>
+          <li>
+            <a href="sales-dk.html" class="footer-link hover-underline">Salg</a>
+          </li>
+          <li>
+            <a href="pricing-dk.html" class="footer-link hover-underline">Vores pakker</a>
+          </li>
+          <li>
+            <a href="updates-dk.html" class="footer-link hover-underline">Opdateringer</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">Ressourcecenter</a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-dk.html" class="footer-link hover-underline">Vores partnere</a>
+          </li>
+          <li>
+            <a href="reseller-dk.html" class="footer-link hover-underline">Autoriserede forhandlere</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">Teknisk support</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Virksomhed</p>
+          </li>
+          <li>
+            <a href="about-us-dk.html" class="footer-link hover-underline">Om os</a>
+          </li>
+          <li>
+            <a href="our-team-dk.html" class="footer-link hover-underline">Vores team</a>
+          </li>
+          <li>
+            <a href="klientet-dk.html" class="footer-link hover-underline">Vores kunder</a>
+          </li>
+          <li>
+            <a href="careers-dk.html" class="footer-link hover-underline">Karriere</a>
+          </li>
+          <li>
+            <a href="reviews-dk.html" class="footer-link hover-underline">Anmeldelser</a>
+          </li>
+          <li>
+            <a href="social-impact-dk.html" class="footer-link hover-underline">Social indflydelse</a>
+          </li>
+          <li>
+            <a href="contact-dk.html" class="footer-link hover-underline">Kontakt os</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kontakt</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-dk.html" class="footer-link">Cookiepolitik</a></li>
+          <li><a href="privacy-policy-dk.html" class="footer-link">Privatlivspolitik</a></li>
+          <li><a href="data-security-dk.html" class="footer-link">Datasikkerhed</a></li>
+          <li><a href="terms-and-conditions-dk.html" class="footer-link">Vilkår og betingelser</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, en del af <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, tilbyder et PMS og en kanalstyring for nem hoteladministration. Det forbinder med <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> for bookinger, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> for hotelsammenligninger og tilbyder hjemmesideudvikling med et direkte bookingsystem.
+          </p>
+          <p class="copyright">
+            Ophavsret © 2020–2025 BookersDesk.com™. Alle rettigheder forbeholdes.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL-sikkerhedsmærke">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Cookies Samtykke</h2>
+      </header>
+      <div class="data">
+          <p>Vi bruger cookies for at forbedre din oplevelse på vores hjemmeside. Ved at browse på denne hjemmeside, accepterer du vores brug af
+              cookies.<a href="cookies-policy-en.html"> Læs mere...</a></p>
+      </div>
+      <div class="buttons">
+          <button class="button" id="acceptBtn">Accepter</button>
+          <button class="button" id="declineBtn">Afvis</button>
+      </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

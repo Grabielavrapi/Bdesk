@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Επαφή - BookersDesk | Channel Manager</title>
+  <meta name="description" content="Ευέλικτες και διαφανείς τιμές για τη συνδρομή στο Channel Manager, προσαρμοσμένες στις ανάγκες της επιχείρησής σας. Επιλέξτε με βάση τα κανάλια κρατήσεων, τον τύπο της επιχείρησης και τον αριθμό των ακινήτων. Προβλέψιμο κόστος και μια ολοκληρωμένη λύση για τη διαχείριση.">
+  <meta name="keywords" content="τιμές channel manager, συνδρομή OTA, λογισμικό κρατήσεων ξενοδοχείου, διαχείριση διανομής online, λογισμικό για ενοικιαζόμενες βίλες, 
+  μοντέλο τιμών για τη φιλοξενία, συνδρομή λογισμικού ξενοδοχείου, τιμές για διαχείριση ακινήτων, διαφανές κόστος, προβλέψιμο κόστος">
+    
+  <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+     .brand span {
+      color: #ffffff;
+    }
+    .wrapper1 {
+      box-shadow: 0 0 20px 0 rgba(206, 206, 207, 0.7);
+    }
+    .wrapper1>* {
+    padding: 20px;
+}
+    .company-info {
+     
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .company-info h3,
+    .company-info ul {
+      text-align: center;
+
+    }
+    /* ------- */
+    /* Contact */
+    /* ------- */
+    .contact {
+   
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    /* ---- */
+    /* FORM */
+    /* ---- */
+    .contact form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    .contact form label {
+      display: block;
+    }
+    .contact form p {
+      margin: 0;
+    }
+    .contact form .full {
+      grid-column: 1 / 3;
+    }
+    
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      padding: 10px;
+      border-top: 1px solid #e6e6f2;
+      background: #f6f6ff;
+      border-radius: 4px;
+  
+    }
+    .contact form textarea {
+      resize: none;
+    }
+    @media only screen and (min-width: 700px) {
+      .wrapper1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+   
+      .company-info {
+        border-radius: 4px 0 0 4px;
+      }
+      .contact {
+        border-radius: 0 4px 4px 0;
+      }
+      .company-info h3,
+      .company-info ul,
+      .brand {
+        text-align: left;
+      }
+    }
+    .business-card {
+    width: 320px;
+    height: 218px;
+    margin: auto;
+}
+
+.card-inner {
+    width: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.business-card:hover .card-inner {
+    transform: rotateY(-180deg); 
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden; 
+    border-radius: 10px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-el.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Υπηρεσίες <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Διαχείριση Επιχειρησιακών Λειτουργιών</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Διαχειριστής Καναλιών</a></li>
+                    <li><a href="pricing-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Τιμολόγηση</a></li>
+                        <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τεχνική Υποστήριξη</a></li>
+
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Διαχείριση Κρατήσεων</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-el.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Πρόγραμμα Ξενοδοχείου</a></li>
+                    <li><a href="booking-engine-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Μηχανή Κρατήσεων</a></li>
+                    <li><a href="revenue-management-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Διαχείριση Εσόδων</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Μάρκετινγκ & Ιστότοπος</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Μάρκετινγκ</a></li>
+                    <li><a href="business-website-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Επιχειρηματικός Ιστότοπος</a></li>
+                    <li><a href="hotel-marketing-solution-el.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Πακέτο Ψηφιακού Μάρκετινγκ</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
+                    </div>
+                    <h3>Εξερευνήστε τις Υπηρεσίες μας</h3>
+                    <p style="text-align: center;">Προσφέρουμε μια ευρεία γκάμα υπηρεσιών για να βελτιστοποιήσετε <br> τη διαχείριση του ξενοδοχείου σας.</p>
+                    <a href="channel-manager-el.html" class="btn-text1">
+                      <span class="hover-underline">Μάθετε περισσότερα</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-el.html" class="nav__link hover-underline">Τιμολόγιο</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Λύσεις <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Κατάλυμα</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ξενοδοχεία</a>
+                    </li>
+                    <li><a href="hostels-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Χόστελ</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Φιλοξενία</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B και Πανδοχεία</a></li>
+                    <li><a href="vaction-rentals-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ενοικιάσεις Διακοπών</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Ενημερώσεις & Πακέτα</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τα Πακέτα μας</a></li>
+                    <li><a href="updates-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Τελευταίες Ενημερώσεις</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Συνεργασίες & Υποστήριξη</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Οι Συνεργάτες μας</a></li>
+                    <li><a href="reseller-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Εξουσιοδοτημένοι Μεταπωλητές</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Όλες οι Λύσεις σε 1 Πλατφόρμα</span>
+                    </h2>
+                    <a href="booking-engine-el.html" class="btn-text1">
+                      <span class="hover-underline">Μάθετε περισσότερα</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Ανακαλύψτε νέες ευκαιρίες για την επιχείρησή σας! Ξεκινήστε σήμερα!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">
+                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="βέλος"></span>
+                    </a>
+                </div>
+            </section>
+            
+            </div>
+          </li>
+          
+          <li>
+            <a href="reviews-el.html" class="nav__link hover-underline">Ιστορίες Πελατών</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Πόροι <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+        
+                    <!-- Πόροι & Εργαλεία -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Πόροι & Εργαλεία</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Όλοι οι Πόροι</a></li>
+                            <li><a href="tools-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Εργαλεία & Οδηγοί</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Υποστήριξη Πελατών</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Διαχείριση Κρατήσεων -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Διαχείριση Κρατήσεων</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Διανομή Κρατήσεων</a></li>
+                            <li><a href="guest-management-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Διαχείριση Επισκεπτών</a></li>
+                            <li><a href="industry-trends-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Τάσεις της Βιομηχανίας</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Αναφορές & Ενημερώσεις -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Αναφορές & Ενημερώσεις</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Λεπτομερείς Αναφορές</a></li>
+                            <li><a href="updates-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ανακοινώσεις & Βελτιώσεις</a></li>
+                            <li><a href="social-impact-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Κοινωνικός Αντίκτυπος</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Πρόσθετη Ενότητα με Εικόνα -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Πώς μπορούμε να σας βοηθήσουμε;</span>
+                            </h2>
+                            <a href="all-resources-el.html" class="btn-text1">
+                                <span class="hover-underline">Δείτε όλους τους πιο πρόσφατους πόρους</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </li>
+        
+
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Εταιρεία <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Σχετικά με Εμάς</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Σχετικά με Εμάς</a></li>
+                    <li><a href="our-team-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Η Ομάδα μας</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Πελάτες & Καριέρες</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Οι Πελάτες μας</a></li>
+                    <li><a href="careers-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Καριέρες</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Κριτικές</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Κριτικές Πελατών</a></li>
+                    <li><a href="sales-el.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Πωλήσεις</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Επικοινωνία</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-el.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Επικοινωνήστε μαζί μας</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Υποστήριξη</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+
+                  </div>
+                  <div class="special-text">
+                    <h4>Ηγετική υποστήριξη και συνεργασία στον κλάδο</h4>
+                    <p>Δεκάδες χιλιάδες ακίνητα σε όλο τον κόσμο μας εμπιστεύονται <br> για μακροπρόθεσμη επιτυχία και υποστήριξη 24/7/365.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Ανακαλύψτε νέες ευκαιρίες για την επιχείρησή σας! Ξεκινήστε σήμερα!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">
+                        <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="βέλος"></span>
+                    </a>
+                </div>
+            </section>
+            
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL &nbsp;
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="contact-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
+                    </a></li>
+                  <li><a href="contact-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Greek flag">&nbsp; EN
+                    </a></li>
+                  <li><a href="contact-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
+                    </a></li>
+                  <li><a href="contact-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
+                    </a></li>
+                  <li><a href="contact-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
+                    </a></li>
+                  <li><a href="contact-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
+                    </a></li>
+                  <li><a href="contact-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
+                    </a></li>
+                  <li><a href="contact-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
+                    </a></li>
+                  <li><a href="contact-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
+                    </a></li>
+                  <li><a href="contact-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
+                    </a></li>
+                  <li><a href="contact-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
+                    </a></li>
+                  <li><a href="kontakt.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
+                  <li><a href="contact-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=gr" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="hero" style="background: linear-gradient(90deg, #1d2c40 9.803921568627452%, #213550 50%, #3a638d 79.41%);">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle" style="color: white;">InterMedia LLC</p>
+            <h1 class="h1 hero-title">Επικοινωνήστε Μαζί Μας</h1>
+            <p style="color: white;">
+                Επικοινωνήστε μαζί μας για οποιεσδήποτε ερωτήσεις ή πληροφορίες! Είμαστε διαθέσιμοι στη διεύθυνσή μας στον Bulevardi Bajram Curri.
+                 Η ομάδα μας είναι έτοιμη να σας εξυπηρετήσει με οποιοδήποτε αίτημα το συντομότερο δυνατό.
+            </p>
+            
+        </div>
+        
+          <div class="business-card hero-banner">
+            <div class="card-inner">
+                <img src="assets/images/bdesk/kartevizite.png" alt="Business Card Front" class="card-front">
+                <img src="assets/images/bdesk/cartback.png" alt="Business Card Back" class="card-back">
+            </div>
+        </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="contact_action_area">
+          <div class="container">
+            <div class="wrapper1">
+              <div class="company-info">
+                <iframe class="w-100 h-100"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.1497239595205!2d19.8284068!3d41.3273575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350315e9f0ce6c5%3A0xa95943cc9373ace1!2sIntermedia%20Global%20Visibility!5e0!3m2!1ssq!2s!4v1698658187202!5m2!1ssq!2s"
+                  height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="contact">
+                <h3>Έχετε απορίες; Παρακαλούμε χρησιμοποιήστε αυτή τη φόρμα για το μήνυμά σας.</h3><br>
+                <form id="contact-form">
+                  <p>
+                    <label>Όνομα</label>
+                    <input type="text" name="name" id="name" required placeholder="Το Όνομά σας">
+                    <span id="nameError" class="error" style="display: none; color: red;"></span>
+                  </p>
+                  <p>
+                    <label>Κατάλυμα</label>
+                    <input type="text" name="company" id="company" placeholder="Το Κατάλυμά σας">
+                    <span id="pronaError" class="error" style="display: none; color: red;"></span>
+                  </p>
+                  <p>
+                    <label>Διεύθυνση E-mail</label>
+                    <input type="email" name="email" id="email" required placeholder="Η Διεύθυνση E-mail σας">
+                    <span id="emailError" class="error" style="display: none; color: red;"></span>
+                  </p>
+                
+                  <p>
+                    <label>Αριθμός Τηλεφώνου</label>
+                    <input type="text" name="phone" id="phone" placeholder="Ο Αριθμός Τηλεφώνου σας">
+                    <span id="phoneError" class="error" style="display: none; color: red;"></span>
+                  </p>
+                
+                  <p class="full">
+                    <label>Μήνυμα</label>
+                    <textarea name="message" rows="5" id="message"></textarea>
+                    <span id="messageError" class="error" style="display: none; color: red;"></span>
+                  </p>
+                  <p class="full">
+                    <button type="button" onclick="submitForm()" name="submit">Αποστολή</button>
+                  </p>
+                </form>
+                
+              
+              </div>
+            </div>
+          </div><br>
+        </div>
+      </section>
+    </article>
+  </main>
+<!-- SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<!-- jQuery (required for SweetAlert) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- SweetAlert JS -->
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function submitForm() {
+        // Check if all required fields are filled
+        if (!validateForm()) {
+            return;
+        }
+        Swal.fire({
+            title: 'Sending Email',
+            text: 'Please wait...',
+            icon: 'info',
+            showConfirmButton: false,
+            allowOutsideClick: false
+        });
+        const email = {
+            emailDTO: document.getElementById("email").value,
+            nameDTO: document.getElementById("name").value,
+            pronaDTO: document.getElementById("company").value,
+            phoneDTO: document.getElementById("phone").value,
+            messageDTO: document.getElementById("message").value
+        };
+        fetch("https://api.bookersdesk.com/sendEmailContactForm", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "x-my-custom-header": "some value"
+            },
+            body: JSON.stringify(email)
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                }
+                throw new Error("Failed to send email.");
+            })
+            .then(data => {
+                Swal.fire({
+                    title: "Success!",
+                    text: data, // Display text response
+                    icon: "success"
+                }).then(() => {
+                    location.reload();
+                });
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: "Error",
+                    text: "Failed to send email: " + error.message,
+                    icon: "error"
+                });
+            });
+    }
+    function validateForm() {
+        const name = $("#name").val();
+        const email = $("#email").val();
+        const phone = $("#phone").val();
+        const message = $("#message").val();
+        const prona = $("#company").val();
+        if (!name) {
+            $("#nameError").text("Please enter your name").show();
+            return false;
+        } else {
+            $("#nameError").hide();
+        }
+        if (!email) {
+            $("#emailError").text("Please enter your email").show();
+            return false;
+        } else {
+            $("#emailError").hide();
+        }
+        if (!phone) {
+            $("#phoneError").text("Please enter your phone number").show();
+            return false;
+        } else {
+            $("#phoneError").hide();
+        }
+        if (!prona) {
+        $("#pronaError").text("Please enter your property").show();
+        return false;
+    } else {
+        $("#pronaError").hide();
+    }
+        if (!message) {
+            $("#messageError").text("Please enter your message").show();
+            return false;
+        } else {
+            $("#messageError").hide();
+        }
+        return true;
+    }
+</script>
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Υπηρεσίες</p>
+            </li>
+            <li>
+              <a href="channel-manager-el.html" class="footer-link hover-underline">Διαχειριστής Καναλιού</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-el.html" class="footer-link hover-underline">"Πρόγραμμα PMS Ξενοδοχείου</a>
+            </li>
+            <li>
+              <a href="booking-engine-el.html" class="footer-link hover-underline">Μηχανή Κρατήσεων</a>
+            </li>
+            <li>
+              <a href="marketing-el.html" class="footer-link hover-underline">Μάρκετινγκ</a>
+            </li>
+            <li>
+              <a href="business-website-el.html" class="footer-link hover-underline"> Επαγγελματική Ιστοσελίδα</a>
+            </li>
+            <li>
+              <a href="revenue-management-el.html" class="footer-link hover-underline">Διαχείριση Εσόδων</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-el.html" class="footer-link hover-underline"> Σουίτα Ψηφιακού Μάρκετινγκ</a>
+            </li>
+          </ul>
+          
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Λύσεις </p>
+          </li>
+          <li>
+            <a href="hotels-el.html" class="footer-link hover-underline">Ξενοδοχεία</a>
+          </li>
+          <li>
+            <a href="hostels-el.html" class="footer-link hover-underline">Ξενοδοχεία</a>
+          </li>
+          <li>
+            <a href="B&B-inns-el.html" class="footer-link hover-underline">B&B και Πανδοχεία</a>
+          </li>
+          <li>
+            <a href="hotel-groups-el.html" class="footer-link hover-underline">Ομάδες Ξενοδοχείων</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-el.html" class="footer-link hover-underline"> Ενοικιαζόμενα Καλοκαιρινά Καταλύματα</a>
+          </li>
+          <li>
+            <a href="integration-category-el.html" class="footer-link hover-underline">Σύστημα GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Συνεργασία</p>
+          </li>
+          <li>
+            <a href="sales-el.html" class="footer-link hover-underline">
+              Πωλήσεις</a>
+          </li>
+          <li>
+            <a href="pricing-el.html" class="footer-link hover-underline">
+              Τα Πακέτα Μας</a>
+          </li>
+          <li>
+            <a href="updates-el.html" class="footer-link hover-underline">
+              Ενημερώσεις</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">
+              Κέντρο Πόρων
+            </a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-el.html" class="footer-link hover-underline">
+              Οι Συνεργάτες Μας</a>
+          </li>
+          <li>
+            <a href="reseller-el.html" class="footer-link hover-underline">
+              Εξουσιοδοτημένοι Μεταπωλητές</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">
+              Τεχνική Υποστήριξη</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Εταιρεία</p>
+          </li>
+          <li>
+            <a href="about-us-el.html" class="footer-link hover-underline"> Σχετικά με Εμάς</a>
+          </li>
+          <li>
+            <a href="our-team-el.html" class="footer-link hover-underline"> Η Ομάδα Μας</a>
+          </li>
+          <li>
+            <a href="klientet-el.html" class="footer-link hover-underline"> Οι Πελάτες Μας</a>
+          </li>
+          <li>
+            <a href="careers-el.html" class="footer-link hover-underline">Καριέρες</a>
+          </li>
+          <li>
+            <a href="reviews-el.html" class="footer-link hover-underline"> Κριτικές</a>
+          </li>
+           <li>
+            <a href="social-impact-el.html" class="footer-link hover-underline">Κοινωνική Επιρροή</a>
+          </li>
+          <li>
+            <a href="sitemap-el.html" class="footer-link hover-underline">Χάρτης ιστότοπου</a>
+          </li>
+          <li>
+            <a href="contact-el.html" class="footer-link hover-underline"> Επικοινωνήστε Μαζί Μας </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Επικοινωνία </p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-el.html" class="footer-link">Πολιτική Cookies</a></li>
+          <li><a href="privacy-policy-el.html" class="footer-link">Απόρρητο</a></li>
+          <li><a href="data-security-el.html" class="footer-link">Ασφάλεια Δεδομένων</a></li>
+          <li><a href="terms-and-conditions-el.html" class="footer-link">Όροι</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+              <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+          </li>
+      </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description"> Το BookersDesk.com, μέρος της <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, προσφέρει ένα PMS και διαχειριστή καναλιών για εύκολη διαχείριση ξενοδοχείων. Συνδέεται με το <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> για κρατήσεις, το <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> για συγκρίσεις ξενοδοχείων και παρέχει ανάπτυξη ιστοσελίδων με σύστημα απευθείας κρατήσεων. </p> <p class="copyright"> Πνευματικά δικαιώματα © 2020–2025 BookersDesk.com™. Με επιφύλαξη παντός δικαιώματος. </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL secure badge">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+<div class="wrapper">
+  <header>
+    <i class="bx bx-cookie"></i>
+    <h2>Συγκατάθεση για Cookies</h2>
+  </header>
+  <div class="data">
+    <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Περιηγούμενοι σε αυτή την ιστοσελίδα, συμφωνείτε με τη χρήση των cookies.<a href="cookies-policy-el.html"> Περισσότερα...</a></p>
+  </div>
+  <div class="buttons">
+    <button class="button" id="acceptBtn">Αποδοχή</button>
+    <button class="button" id="declineBtn">Απόρριψη</button>
+  </div>
+</div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

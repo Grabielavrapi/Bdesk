@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moteur de réservation - BookersDesk | Gestionnaire de canaux</title>
+  <meta name="description" content="Améliorez l'expérience de réservation de vos clients avec un système de réservation convivial. Disponibilité en temps réel, confirmation instantanée et processus de réservation fluide augmentent la satisfaction et les taux de conversion.">
+  <meta name="keywords" content="processus de réservation simplifié, réservations en ligne, disponibilité en temps réel, confirmation instantanée de réservation, moteur de réservation hôtelier, système de réservation fluide, expérience de réservation des clients, système de gestion des propriétés, logiciel hôtelier, logiciel d'hôtellerie">
+   <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-fr.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Opérations de gestion</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Gestionnaire de canaux</a></li>
+                    <li><a href="pricing-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Tarification</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Gestion des réservations</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-fr.html" class="dropdown__link "> <i class="fa fa-chevron-right"></i> PMS - Programme Hôtel</a></li>
+                    <li><a href="booking-engine-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Moteur de réservation</a></li>
+                    <li><a href="revenue-management-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Gestion des revenus</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Marketing & Site Web</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Marketing</a></li>
+                    <li><a href="business-website-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Site Web d'entreprise</a></li>
+                    <li><a href="hotel-marketing-solution-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Suite Marketing Digital</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
+                    </div>
+                    <h3>Explorez Nos Services</h3>
+                    <p style="text-align: center;">Nous offrons une large gamme de services pour optimiser <br> la gestion de votre hôtel.</p>
+                    <a href="channel-manager-fr.html" class="btn-text1">
+                      <span class="hover-underline">En savoir plus</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-fr.html" class="nav__link hover-underline">Tarification</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Solutions <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+               
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Hébergement</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hôtels</a></li>
+                    <li><a href="hostels-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Auberges</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Hôtellerie</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Chambres d'hôtes et Auberges</a></li>
+                    <li><a href="vaction-rentals-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Locations de vacances</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Mises à jour & Forfaits</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Nos forfaits</a></li>
+                    <li><a href="updates-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Dernières mises à jour</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Partenariats & Support</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Nos partenaires</a></li>
+                    <li><a href="reseller-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Revendeurs autorisés</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Toutes les solutions 1 plateforme</span>
+                    </h2>
+                    <a href="booking-engine-fr.html" class="btn-text1">
+                      <span class="hover-underline">En savoir plus</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+       
+          <li>
+            <a href="reviews-fr.html" class="nav__link hover-underline">Avis</a>
+        </li>
+        
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Ressources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+        
+                    <!-- Ressources & Outils -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Ressources & Outils</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Toutes les Ressources</a></li>
+                            <li><a href="tools-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Outils & Guides</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Support Client</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Gestion des Réservations -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Gestion des Réservations</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Distribution des Réservations</a></li>
+                            <li><a href="guest-management-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Gestion des Invités</a></li>
+                            <li><a href="industry-trends-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tendances du Secteur</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Rapports & Mises à Jour -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Rapports & Mises à Jour</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Rapports détaillés</a></li>
+                            <li><a href="updates-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Annonces & Améliorations</a></li>
+                            <li><a href="social-impact-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Impact Social</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Section Supplémentaire avec Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Comment pouvons-nous vous aider ?</span>
+                            </h2>
+                            <a href="all-resources-fr.html" class="btn-text1">
+                                <span class="hover-underline">Voir toutes les dernières ressources</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </li>
+        
+          <!--=============== DROPDOWN 4 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Entreprise <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">À propos de nous</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> À propos de nous</a></li>
+                    <li><a href="our-team-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Notre équipe</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Clients & Carrières</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Nos clients</a></li>
+                    <li><a href="careers-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Carrières</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Avis</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Avis des clients</a></li>
+                    <li><a href="sales-fr.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Ventes</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Contact</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-fr.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Contactez-nous</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i class="fa fa-chevron-right"></i> Support</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+
+                  </div>
+                  <div class="special-text">
+                    <h4>Support et partenariat de leader de l'industrie</h4>
+                    <p>Des dizaines de milliers de propriétés à travers le monde nous <br> font confiance  pour le succès à long terme et un support 24/7/365.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Découvrez de nouvelles opportunités pour votre entreprise ! Commencez dès aujourd'hui !</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=fr" class="btn-outline">
+                        <span>Demander une démo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="flèche"></span>
+                    </a>
+                </div>
+            </section>
+            
+            </div>
+          </li>
+          
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR &nbsp;
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="booking-engine-en.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="United Kingdom flag">&nbsp; EN</a></li>
+                  <li><a href="booking-engine-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL
+                    </a></li>
+                  <li><a href="booking-engine-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
+                    </a></li>
+                  <li><a href="booking-engine-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
+                    </a></li>
+                  <li><a href="booking-engine-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
+                    </a></li>
+                
+                  <li><a href="booking-engine-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
+                    </a></li>
+                  <li><a href="booking-engine-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
+                    </a></li>
+                  <li><a href="booking-engine-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
+                    </a></li>
+                  <li><a href="booking-engine-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
+                    </a></li>
+                  <li><a href="booking-engine-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
+                    </a></li>
+                  <li><a href="booking-engine-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
+                    </a></li>
+                  <li><a href="booking-engine.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
+                  <li><a href="booking-engine-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=fr" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section>
+        <div class="bg-images"
+          style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') bottom/cover no-repeat fixed;">
+          <section class="container text-center">
+            <h1 style="color: white;
+        font-size: 3.6rem;">
+             Moteur de réservation </h1>
+          </section>
+        </div>
+      </section>
+      <section class="about section" id="about" data-wow-delay="0.1s">
+        <div class="container">
+          <figure class=" about-banner">
+            <img src="./assets/images/frcom.png" loading="lazy" alt="about banner" class="w-100 ">
+          </figure>
+          <div class="about-content">
+            <h2 class="h2 section-title underline">Processus de réservation simplifié:</h2>
+            <p class="about-text">
+              Améliorez l'expérience de réservation de vos clients grâce à notre
+              moteur de réservation convivial. Le processus de réservation simplifié permet aux clients de parcourir sans effort les options de chambre,
+              de sélectionner les dates et de confirmer les réservations en toute simplicité. Notre conception intuitive garantit un parcours fluide de
+              l'exploration à la confirmation, améliorant ainsi la satisfaction des utilisateurs et augmentant les taux de conversion.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 
+        - #PMS
+      -->
+      <section class="section feature " aria-labelledby="feature-label" style="background-color: #ebeffd;">
+        <div class="container ">
+          <div class="feature-content">
+              <h2 class="h2 section-title">
+                Disponibilité en temps réel et confirmation instantanée :
+              </h2>
+            <p class="section-text">
+              Fournissez aux clients des informations
+              précises et actualisées sur la disponibilité des chambres. Le moteur de réservation fonctionne en temps réel, garantissant aux clients une
+              confirmation instantanée une fois la réservation effectuée. Cette transparence renforce la confiance, éléments
+              essentiels pour créer une expérience de réservation positive.
+            </p>
+          </div>
+          <figure class=" features-banner">
+            <img src="./assets/images/frbooking.png" width="800" height="531" loading="lazy" alt="Real-time booking engine in BookersDesk"
+              class="w-100">
+          </figure>
+        </div>
+      </section>
+      <section class="about section" id="about" data-wow-delay="0.1s">
+        <div class="container">
+          <figure class=" features-banner">
+            <img src="./assets/images/frsales.png" loading="lazy" alt="Sales and transactions system in BookersDesk" class="w-100 ">
+          </figure>
+          <div class="about-content">
+              <h2 class="h2 section-title underline">Opportunités de vente et transactions sécurisées:</h2>
+            <p class="about-text">
+              Maximisez vos revenus en tirant parti des opportunités de vente et de 
+              notre stockage sécurisé des données de transaction. Notre moteur de 
+              réservation s'intègre parfaitement aux services et équipements de 
+              votre propriété, vous permettant de présenter des modules complémentaires pendant le processus de réservation. 
+              Améliorez l'expérience client en augmentant la valeur moyenne des transactions pour votre propriété.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  
+ <footer class="footer">
+  <div class="container">
+    <div class="footer-top section">
+      <div class="footer-brand1">
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+          <li>
+            <a href="channel-manager-fr.html" class="footer-link hover-underline">Gestionnaire de canaux</a>
+          </li>
+          <li>
+            <a href="pms-program-hoteli-fr.html" class="footer-link hover-underline">PMS - Programme Hôtel</a>
+          </li>
+          <li>
+            <a href="booking-engine-fr.html" class="footer-link hover-underline">Moteur de réservation</a>
+          </li>
+          <li>
+            <a href="marketing-fr.html" class="footer-link hover-underline">Marketing</a>
+          </li>
+          <li>
+            <a href="business-website-fr.html" class="footer-link hover-underline">Site Internet</a>
+          </li>
+          <li>
+            <a href="revenue-management-fr.html" class="footer-link hover-underline">Gestion des revenus</a>
+          </li>
+          <li>
+            <a href="hotel-marketing-solution-fr.html" class="footer-link hover-underline">Marketing numérique</a>
+          </li>
+        </ul>
+     
+      
+      </div>
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Solutions</p>
+        </li>
+        <li>
+          <a href="hotels-fr.html" class="footer-link hover-underline">Hôtels</a>
+        </li>
+        <li>
+          <a href="hostels-fr.html" class="footer-link hover-underline">Auberges</a>
+        </li>
+        <li>
+          <a href="B&B-inns-fr.html" class="footer-link hover-underline">Chambres d'hôtes et Auberges</a>
+        </li>
+        <li>
+          <a href="hotel-groups-fr.html" class="footer-link hover-underline">Groupes hôteliers</a>
+        </li>
+        <li>
+          <a href="vaction-rentals-fr.html" class="footer-link hover-underline">Locations à court terme</a>
+        </li>
+        <li>
+          <a href="integration-category-fr.html" class="footer-link hover-underline">GDS</a>
+        </li>
+      </ul>
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Collaboration</p>
+        </li>
+        <li>
+          <a href="sales-fr.html" class="footer-link hover-underline">
+            Ventes</a>
+        </li>
+        <li>
+          <a href="pricing-fr.html" class="footer-link hover-underline">
+            Nos forfaits</a>
+        </li>
+        <li>
+          <a href="updates-fr.html" class="footer-link hover-underline">
+            Mises à jour</a>
+        </li>
+        <li>
+          <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">
+            Centre de ressources</a>
+        </li>
+        <li>
+          <a href="partner-with-bookersdesk-fr.html" class="footer-link hover-underline">
+            Nos partenaires</a>
+        </li>
+        <li>
+          <a href="reseller-fr.html" class="footer-link hover-underline">
+            Revendeurs autorisés</a>
+        </li>
+        <li>
+          <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">
+            Support technique</a>
+        </li>
+      </ul>
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">L'entreprise</p>
+        </li>
+        <li>
+          <a href="about-us-fr.html" class="footer-link hover-underline">À propos de nous</a>
+        </li>
+        <li>
+          <a href="our-team-fr.html" class="footer-link hover-underline">Notre équipe</a>
+        </li>
+        <li>
+          <a href="klientet-fr.html" class="footer-link hover-underline">Nos clients</a>
+        </li>
+        <li>
+          <a href="careers-fr.html" class="footer-link hover-underline">Carrières</a>
+        </li>
+        <li>
+          <a href="reviews-fr.html" class="footer-link hover-underline">Avis</a>
+        </li>
+        <li>
+          <a href="social-impact-fr.html" class="footer-link hover-underline">
+            Impact social</a>
+        </li>
+        <li>
+          <a href="sitemap-fr.html" class="footer-link hover-underline">
+            Plan du site</a>
+        </li>
+        <li>
+          <a href="contact-fr.html" class="footer-link hover-underline">
+            Contactez-nous</a>
+        </li>
+      </ul>
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Contact</p>
+        </li>
+        <li>
+          <a href="mailto:sales@bookersdesk.com" class="footer-link">
+            <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+          </a>
+        </li>
+       
+       
+        <li>
+          <a href="mailto:support@bookersdesk.com" class="footer-link">
+            <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+          </a>
+        </li>
+        <li>
+          <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+            <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+          </a>
+        </li>
+       
+        <li>
+          <a href="mailto:people@bookersdesk.com" class="footer-link">
+            <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+          </a>
+        </li>
+        
+      <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li> <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="footer-brand">
+      <ul class="terms-list">
+        <li><a href="cookies-policy-fr.html" class="footer-link">Cookies</a></li>
+        <li><a href="privacy-policy-fr.html" class="footer-link">Confidentialité</a></li>
+        <li><a href="data-security-fr.html" class="footer-link">Sécurité</a></li>
+        <li><a href="terms-and-conditions-fr.html" class="footer-link">Conditions</a></li>
+      </ul>
+      <ul class="social-list">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div class="left-section">
+      <p class="footer-description">
+BookersDesk.com, une partie de <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>, propose un PMS et un gestionnaire de canaux pour une gestion hôtelière simplifiée. Il se connecte à <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> pour les réservations, à <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> pour les comparaisons d'hôtels, et offre le développement de sites web avec un système de réservation directe.
+</p>
+<p class="copyright">
+Droits d'auteur © 2020–2025 BookersDesk.com™. Tous droits réservés.
+</p>
+      </div>
+      <div class="center-section">
+        <div class="image-container">
+          <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL secure badge">
+        </div>
+      </div>
+    </div>
+    <div class="footer-brandbottom">
+      <ul class="terms-list">
+        <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+        <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+        <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+        <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Consentement aux cookies</h2>
+    </header>
+    <div class="data">
+      <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site Web. En naviguant sur ce site, vous acceptez notre utilisation de cookies..<a href="cookies-policy-fr.html"> Plus...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Accepter</button>
+      <button class="button" id="declineBtn">Rejeter</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

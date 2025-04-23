@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Päivitykset - BookersDesk | Kanavanhallinta</title>
+  <meta name="description" content="Tutustu BookersDeskin uusimpiin ominaisuuksiin ja parannuksiin. Luo tulojen vaje raportteja, hallitse kaikkia kiinteistöjä yhdessä kalenterinäkymässä ja integroi saumattomasti Hotelbeds API:hin suoravarauksia varten.">
+  <meta name="keywords" content="BookersDesk päivitykset, hotellin ohjelmistoparannukset, tulojen vaje raportit, kiinteistönhallintajärjestelmä, vieraanvaraisuusteknologia, hotellin kalenterinäkymä, Hotelbeds API integraatio, varausten hallinta, varausraportit, usean kiinteistön hallinta"><link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .section-header {
+      text-align: center;
+    }
+    .section-header h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .bg-gradient_solid {
+      color: #374886;
+      padding: 48px 0;
+    }
+    .steps {
+      position: relative;
+      margin-top: 32px;
+    }
+    .steps::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      background-color: #374886;
+      opacity: 0.1;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+    }
+    .steps .content p {
+      color: #676767;
+      font-size: 16px;
+    }
+    .steps .content h2 {
+      font-weight: 600;
+      font-size: 16px;
+      color: #676767;
+    }
+    .steps-container {
+      position: relative;
+      background-color: inherit;
+      width: calc(50% + 32px);
+    }
+    .steps-container .content {
+      padding: 32px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 0px 0px 80px 0px;
+      box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
+    }
+    .steps .steps-container:nth-child(even) {
+      left: calc(50% - 32px);
+      flex-direction: row-reverse;
+    }
+    .steps-container {
+      display: flex;
+    }
+    .steps .steps-container .date {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #1b75bb;
+      border: 1px solid #1b75bb;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date:hover {
+      background: #2563EB;
+      color: #ffffff;
+      border-color: #2563EB;
+    }
+    .steps .steps-container .date1 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #32c0a0;
+      border: 1px solid #32c0a0;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date1:hover {
+      background: #1db491;
+      color: #ffffff;
+      border-color: #1db491;
+    }
+    .steps .steps-container .date2 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      width: 62px;
+      height: 62px;
+      background-color: #F59E0B;
+      border: 1px solid #F59E0B;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .steps .steps-container .date2:hover {
+      background: #F59E0B;
+      color: #ffffff;
+      border-color: #F59E0B;
+    }
+    .step-line {
+      width: 40px;
+      background-color: #374886;
+      height: 1px;
+      margin-top: 31px;
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+    .hotel-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #1b75bb;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .hotel-section .icon {
+      width: 50px;
+      height: 50px;
+    }
+    .hotel-section .text {
+      flex: 1;
+      font-size: 16px;
+    }
+    .hotel-section .text b {
+      font-weight: bold;
+    }
+    @media (max-width: 767px) {
+      .steps::after {
+        left: 32px;
+      }
+      .steps-container {
+        left: 0;
+        flex-direction: row-reverse;
+        width: auto;
+        margin-bottom: 16px;
+      }
+      .steps .steps-container:nth-child(even) {
+        left: 0;
+      }
+      .hotel-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-fi.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Palvelut <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Toiminnan hallinta</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Kanavahallinta</a></li>
+                    <li><a href="pricing-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Hinnat</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Tekninen tuki</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Varausten hallinta</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-fi.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Hotelliohjelma</a></li>
+                    <li><a href="booking-engine-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Varausmoottori</a></li>
+                    <li><a href="revenue-management-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Tulojen hallinta</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Markkinointi & verkkosivusto</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Markkinointi</a></li>
+                    <li><a href="business-website-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Yrityssivusto</a></li>
+                    <li><a href="hotel-marketing-solution-fi.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Digitaalinen markkinointipaketti</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Bookers Desk käyntikortti">
+                    </div>
+                    <h3>Tutustu palveluihimme</h3>
+                    <p style="text-align: center;">Tarjoamme laajan valikoiman palveluita hotellin <br> hallinnan optimointiin.</p>
+                    <a href="channel-manager-fi.html" class="btn-text1">
+                      <span class="hover-underline">Lue lisää</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-fi.html" class="nav__link hover-underline">Hinnat</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Ratkaisut <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Majoitus</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hotellit</a>
+                    </li>
+                    <li><a href="hostels-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hostellit</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Vieraanvaraisuus</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B ja
+                        majatalot</a></li>
+                    <li><a href="vaction-rentals-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Loma-asunnot</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Päivitykset & paketit</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Pakettimme</a></li>
+                    <li><a href="updates-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Viimeisimmät
+                        päivitykset</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kumppanuus & tuki</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-fi.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Kumppanimme</a></li>
+                    <li><a href="reseller-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Valtuutetut jälleenmyyjät</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Kaikki ratkaisut yhdellä alustalla</span>
+                    </h2>
+                    <a href="booking-engine-fi.html" class="btn-text1">
+                      <span class="hover-underline">Lue lisää</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Löydä uusia mahdollisuuksia yrityksellesi! Aloita tänään!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">
+                        <span>Pyydä demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li>
+            <a href="reviews-fi.html" class="nav__link hover-underline">Arvostelut</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Resurssit <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+                    <!-- Resources & Tools -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Resurssit & työkalut</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kaikki resurssit</a></li>
+                            <li><a href="tools-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Työkalut & oppaat</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakastuki</a></li>
+                        </ul>
+                    </div>
+                    <!-- Booking Management -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Varausten hallinta</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Varausten jakelu</a></li>
+                            <li><a href="guest-management-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vieraiden hallinta</a></li>
+                            <li><a href="industry-trends-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Alan trendit</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reports & Updates -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Raportit & päivitykset</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Yksityiskohtaiset raportit</a></li>
+                            <li><a href="updates-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ilmoitukset & parannukset</a></li>
+                            <li><a href="social-impact-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Sosiaalinen vaikutus</a></li>
+                        </ul>
+                    </div>
+                    <!-- Additional Section with Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Resurssit Bookers Deskiltä">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Kuinka voimme auttaa sinua?</span>
+                            </h2>
+                            <a href="all-resources-fi.html" class="btn-text1">
+                                <span class="hover-underline">Katso kaikki uusimmat resurssit</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Yritys <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Meistä</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Meistä</a></li>
+                    <li><a href="our-team-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tiimimme</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Asiakkaat & urat</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakkaamme</a></li>
+                    <li><a href="careers-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Urat</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Arvostelut</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakasarvostelut</a></li>
+                    <li><a href="sales-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Myynti</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Yhteystiedot</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ota yhteyttä</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Tuki</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk tiimi">
+                  </div>
+                  <div class="special-text">
+                    <h4>Alan johtava tuki ja kumppanuus</h4>
+                    <p>Kymmenet tuhannet kiinteistöt ympäri maailman luottavat meihin <br> pitkän aikavälin menestyksen ja 24/7/365 tuen suhteen.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Löydä uusia mahdollisuuksia yrityksellesi! Aloita tänään!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">
+                        <span>Pyydä demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/finland.png" style="width: 18px;" alt="Yhdistyneen kuningaskunnan lippu">  FI  
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="updates-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="Ranskan lippu">  FR
+                    </a></li>
+                  <li><a href="updates-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Kreikan lippu">  EL
+                    </a></li>
+                  <li><a href="updates-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian lippu">  IT
+                    </a></li>
+                  <li><a href="updates-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Alankomaiden lippu">  NL
+                    </a></li>
+                  <li><a href="updates-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugalin lippu">  PT
+                    </a></li>
+                  <li><a href="updates-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Espanjan lippu">  ES
+                    </a></li>
+                  <li><a href="updates-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Suomen lippu">  EN
+                    </a></li>
+                  <li><a href="updates-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Ruotsin lippu">  SV
+                    </a></li>
+                  <li><a href="updates-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Tanskan lippu">  DK
+                    </a></li>
+                  <li><a href="updates-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norjan lippu">  NO
+                    </a></li>
+                  <li><a href="updates-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Puolan lippu">  PL
+                    </a></li>
+                  <li><a href="perditesimet.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian lippu">  SQ </a></li>
+                  <li><a href="updates-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="Saksan lippu">  DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section>
+        <div class="bg-images"
+          style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
+          <section class="container text-center">
+            <h1 style="color: white; font-size: 3.6rem;">  
+              Ohjelmistopäivitykset  
+            </h1>
+          </section>
+        </div>
+      </section>
+      <section class="section" style="background: linear-gradient(#dfeaf6, #fff);">
+        <div class="container">
+          <div class="bg-gradient_solid">
+            <div class="container">
+              <div class="section-header">
+                <h2>Tutustu BookersDeskin uusimpiin ominaisuusversioihin ja parannuksiin</h2>
+              </div>
+              <div class="steps">
+                <!-- PÄIVITYS -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">31. tammikuuta 2025</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Tulovaje-raportit varauksista</h2>
+                    <p>Olemme lisänneet uuden ominaisuuden, joka mahdollistaa kuukausittaisten tuloraporttien luomisen varauksista, antaen selkeän yleiskuvan tuloista ja trendeistä ajan mittaan.</p>
+                  </div>
+                  <i class="step-line"></i>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">27. tammikuuta 2025</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Kalenteri näyttää kaikki kohteet yhdellä näkymällä</h2>
+                    <p>Voit nyt tarkastella kaikkia kohteitasi yhdellä kalenterilla, mikä yksinkertaistaa useiden sijaintien hallintaa ja parantaa työnkulkuasi.</p>
+                  </div>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <!-- UUSI OMINAISUUS -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">21. tammikuuta 2025</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Uusia kieliä lisätty BookersDeskiin</h2>
+                    <p>BookersDesk tukee nyt uusia kieliä, mukaan lukien italia, kreikka, espanja, ranska ja saksa, tarjoten lisää vaihtoehtoja kansainvälisille käyttäjille.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">23. joulukuuta 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Hotelbeds API aktivoitu tuotannossa</h2>
+                    <p>Hotelbeds API on onnistuneesti integroitu ja on nyt käytössä tuotannossa. Voit nyt hallita Hotelbeds-varauksia suoraan BookersDeskin kautta.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">17. joulukuuta 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Uusi BookersDeskin käyttöliittymä julkaistu tuotannossa</h2>
+                    <p>Olemme julkaisseet uuden ja parannetun suunnittelun BookersDeskille, tarjoten yksinkertaisemman ja käyttäjäystävällisemmän käyttöliittymän kiinteistöjen hallintaan.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">2. joulukuuta 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Kassalaatikko kiinteistöille</h2>
+                    <p>Uusi toiminnallisuus käteistapahtumien hallintaan on nyt saatavilla, mahdollistaen turvallisemman ja tarkemman käteistapahtumien hallinnan.</p>
+                  </div>
+                  <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">15. marraskuuta 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Hostelworld lähettää varaukset luottokortilla</h2>
+                    <p>Hostelworldin varaukset sisältävät nyt luottokorttitiedot, mikä mahdollistaa helpomman maksujen käsittelyn ja varausten hallinnan.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">6. marraskuuta 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Airbnb API -integraatio</h2>
+                    <p>Olemme onnistuneesti integroineet Airbnb API:n, mahdollistaen Airbnb-varausten suoran hallinnan BookersDeskin kautta.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">16. lokakuuta 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Tarjousten lisääminen varausmoottorin eri hintojen näyttämiseen</h2>
+                    <p>Voit nyt lisätä erikoistarjouksia, jotka näyttävät erilaisia hintoja varausmoottorissa, auttaen sinua järjestämään kampanjoita ja houkuttelemaan lisää vieraita.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <!-- PARANNUS -->
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">2. elokuuta 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Varaussivu aikuisille ja lapsille / AddNewBooking osallistujille</h2>
+                    <p>Varaussivu mahdollistaa nyt helpomman aikuisten ja lasten vieraiden valinnan, ja AddNewBooking-ominaisuuden toiminnallisuutta on parannettu.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">30. elokuuta 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> PCI DSS -sertifiointi</h2>
+                    <p>Olemme iloisia voidessamme ilmoittaa, että BookersDesk on nyt PCI DSS -sertifioitu, varmistaen korkeimmat turvallisuusstandardit käyttäjillemme ja asiakkaillemme.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">24. heinäkuuta 2024</p>
+                    <h2><i class="ri-lightbulb-line text-primary" style="color: #F59E0B;"></i> Ensimmäiset kiinteistöt lisätty BookersDeskiin</h2>
+                    <p>Olemme onnistuneesti lisänneet ensimmäiset kiinteistöt BookersDeskiin, merkaten merkittävän askeleen alustan laajentamisessa.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date2"> <i class="ri-lightbulb-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">22. heinäkuuta 2024</p>
+                    <h2><i class="ri-tools-line text-primary" style="color: #32c0a0;"></i> Uusia lisämyyntituotteita lisätty</h2>
+                    <p>Uusia lisämyyntituotteita on lisätty, mahdollistaen kiinteistöille tarjota enemmän lisävalintoja vieraille ja kasvattaa tuloja.</p>
+                  </div>
+                  <i class="step-line"></i>
+                  <div class="date1"> <i class="ri-tools-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">15. heinäkuuta 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Uusi raportti - Kuukausittainen käyttöaste, saapumiset ja vastaanottoraportti</h2>
+                    <p>Uusi kuukausittainen raportointiominaisuus on lisätty seuraamaan käyttöastetta, vieraiden saapumisia ja vastaanoton toimintaa, auttaen sinua pitämään tärkeät mittarit hallinnassa.</p>
+                  </div>
+                  <i class="step-line"></i> <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+                <div class="steps-container">
+                  <div class="content">
+                    <p class="section-subtitle" id="about-label">8. heinäkuuta 2024</p>
+                    <h2><i class="ri-refresh-line text-primary" style="color: #2563EB;"></i> Hostelworld API -integraatio</h2>
+                    <p>Hostelworld API on nyt integroitu, mahdollistaen saumattoman Hostelworldin kautta tehtyjen varausten hallinnan.</p>
+                  </div>
+                  <i class="step-line"></i>
+                  <div class="date"> <i class="ri-refresh-line"></i> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Palvelut</p>
+            </li>
+            <li>
+              <a href="channel-manager-fi.html" class="footer-link hover-underline">Kanavanhallinta</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-fi.html" class="footer-link hover-underline">Hotellin PMS-ohjelma</a>
+            </li>
+            <li>
+              <a href="booking-engine-fi.html" class="footer-link hover-underline">Varausmoottori</a>
+            </li>
+            <li>
+              <a href="marketing-fi.html" class="footer-link hover-underline">Markkinointi</a>
+            </li>
+            <li>
+              <a href="business-website-fi.html" class="footer-link hover-underline">Yrityssivusto</a>
+            </li>
+            <li>
+              <a href="revenue-management-fi.html" class="footer-link hover-underline">Tulojen hallinta</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-fi.html" class="footer-link hover-underline">Digitaalinen markkinointipaketti</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Ratkaisut</p>
+          </li>
+          <li>
+            <a href="hotels-fi.html" class="footer-link hover-underline">Hotellit</a>
+          </li>
+          <li>
+            <a href="hostels-fi.html" class="footer-link hover-underline">Hostellit</a>
+          </li>
+          <li>
+            <a href="B&B-inns-fi.html" class="footer-link hover-underline">B&B ja majatalot</a>
+          </li>
+          <li>
+            <a href="hotel-groups-fi.html" class="footer-link hover-underline">Hotelliryhmät</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-fi.html" class="footer-link hover-underline">Loma-asunnot</a>
+          </li>
+          <li>
+            <a href="integration-category-fi.html" class="footer-link hover-underline">GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kumppanuus</p>
+          </li>
+          <li>
+            <a href="sales-fi.html" class="footer-link hover-underline">Myynti</a>
+          </li>
+          <li>
+            <a href="pricing-fi.html" class="footer-link hover-underline">Pakettimme</a>
+          </li>
+          <li>
+            <a href="updates-fi.html" class="footer-link hover-underline">Päivitykset</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">Resurssikeskus</a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-fi.html" class="footer-link hover-underline">Kumppanimme</a>
+          </li>
+          <li>
+            <a href="reseller-fi.html" class="footer-link hover-underline">Valtuutetut jälleenmyyjät</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">Tekninen tuki</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Yritys</p>
+          </li>
+          <li>
+            <a href="about-us-fi.html" class="footer-link hover-underline">Meistä</a>
+          </li>
+          <li>
+            <a href="our-team-fi.html" class="footer-link hover-underline">Tiimimme</a>
+          </li>
+          <li>
+            <a href="klientet-fi.html" class="footer-link hover-underline">Asiakkaamme</a>
+          </li>
+          <li>
+            <a href="careers-fi.html" class="footer-link hover-underline">Ura</a>
+          </li>
+          <li>
+            <a href="reviews-fi.html" class="footer-link hover-underline">Arvostelut</a>
+          </li>
+          <li>
+            <a href="social-impact-fi.html" class="footer-link hover-underline">Sosiaalinen vaikutus</a>
+          </li>
+          <li>
+            <a href="contact-fi.html" class="footer-link hover-underline">Ota yhteyttä</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Yhteystiedot</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-fi.html" class="footer-link">Evästekäytäntö</a></li>
+          <li><a href="privacy-policy-fi.html" class="footer-link">Tietosuojakäytäntö</a></li>
+          <li><a href="data-security-fi.html" class="footer-link">Tietoturva</a></li>
+          <li><a href="terms-and-conditions-fi.html" class="footer-link">Käyttöehdot</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, osa <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>:tä, tarjoaa PMS:n ja kanavanhallinnan helpottamaan hotellien hallintaa. Se yhdistyy <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> -sivustoon varauksia varten, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> -sivustoon hotellien vertailua varten ja tarjoaa verkkosivujen kehitystä suoravarausjärjestelmällä.
+          </p>
+          <p class="copyright">
+            Tekijänoikeus © 2020–2025 BookersDesk.com™. Kaikki oikeudet pidätetään.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL-turvallisuusmerkki">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Cookies Consent</h2>
+    </header>
+    <div class="data">
+      <p>Käytämme evästeitä parantaaksemme verkkosivustomme käyttökokemusta. Selaamalla tätä verkkosivustoa hyväksyt evästeidemme käytön.<a href="cookies-policy-en.html"> Lisätietoja...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Hyväksy</button>
+      <button class="button" id="declineBtn">Hylkää</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

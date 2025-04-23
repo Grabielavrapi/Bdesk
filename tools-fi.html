@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Työkalut - BookersDesk | Kanavanhallinta</title>
+  <meta name="description" content="Seuraa kiinteistösi taloudellista suorituskykyä verkossa toimivilla laskimilla, jotka on suunniteltu erityisesti vieraanvaraisuusalalle. Saat yksityiskohtaisen taloudellisen analyysin hotelleille, mukaan lukien indikaattorit kuten Net RevPAR, ARPAr, CPOR ja paljon muuta, optimoidaksesi hallintaa ja tulojen kasvua.">
+  <meta name="keywords" content="työkalut, hotellin laskimet, taloudellinen analyysi hotelleille, Net RevPAR, ARPAr, CPOR, hotellin taloushallinta, hotellin tulolaskuri, voittoanalyysi hotelleille, taloudelliset strategiat hotelleille, hotellin tulojen optimointi">
+   <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./assets/css/style-elements.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    a {
+      display: inline-block;
+    }
+    img {
+      display: flex;
+      width: 100%;
+    }
+    .section-lead {
+      max-width: 600px;
+      margin: 1rem auto 1.5rem;
+    }
+    .book-a-demo-wrapper {
+      background: url('https://teamviewer.scene7.com/is/content/teamviewergmbh/hero-highlight-gradient-connected-gray-10?dpr=off') no-repeat ;
+      background-size: 100% 100%;
+      border-radius: 30px !important;
+      padding: 65px 95px;
+    }
+    .hero-title {
+      background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-block: 12px 8px;
+    }
+    .job__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .job__card {
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .job__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 20px; 
+  align-items: start; 
+}
+
+.job__card {
+  background: #fff; 
+  border-radius: 8px; 
+  padding: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  height: auto; 
+}
+    .job__card1 {
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .job__card:hover {
+      background: url(https://www.solidbackgrounds.com/images/4096x2304/4096x2304-ghost-white-solid-color-background.jpg) no-repeat;
+    }
+    .job__card__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .job__card img {
+      max-width: 50px;
+      padding: 10px;
+      border-radius: 100%;
+      background-color: #fff;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .job__card h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card h6 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card h4 {
+      margin-block: 1rem 0.5rem;
+      font-size: 20px;
+      font-weight: 700;
+      color: #262626;
+      transition: 0.3s;
+    }
+    .job__card p {
+      margin-bottom: 1rem;
+      color: #737373;
+      transition: 0.3s;
+    }
+    .job__card__footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .job__card__footer span {
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .job__card__footer .btn1 {
+      color: #4680e7;
+      background-color: #e7edf8;
+    }
+    .job__card__footer .btn2 {
+      color: #f04a0c;
+      background-color: #f6efef;
+    }
+    .job__card__footer .btn3 {
+      color: #0a44a8;
+      background-color: #EEF1FE;
+    }
+    .offer__grid {
+      margin-top: 4rem;
+      display: grid;
+      gap: 2rem 1rem;
+    }
+    .job__card__header span {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 5px 11px;
+      font-size: 22px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .read-toggle-link {
+  color: #000; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  font-size: 16px; 
+  display: block; 
+  margin-top: 10px; 
+}
+
+.read-toggle-link:hover {
+  text-decoration: none; 
+}
+    .job__card__header .class1 {
+  color: #f04a0c;
+  background-color: #f6efef;
+}
+.job__card__header .class2 {
+  color: #6a38c2;
+  background-color: #e9ddff;
+}
+.job__card__header .class3 {
+  color: #4680e7;
+  background-color: #e7edf8;
+}
+.job__card__header .class4 {
+  color: #3ac2ba;
+  background-color: #f0fffe;
+}
+.job__card__header .class5 {
+  color: #3ac2ba;
+  background-color: #f0fffe;
+}
+.job__card__header .class6 {
+  color: #34a753;
+  background-color: #f1fef5;
+}
+/* Karta të reja */
+.job__card__header .class7 {
+  color: #ff9800;
+  background-color: #fff3e0;
+}
+.job__card__header .class8 {
+  color: #673ab7;
+  background-color: #ede7f6;
+}
+.job__card__header .class9 {
+  color: #009688;
+  background-color: #e0f2f1;
+}
+.job__card__header .class10 {
+  color: #ff5722;
+  background-color: #fbe9e7;
+}
+.job__card__header .class11 {
+  color: #1976d2;
+  background-color: #e3f2fd;
+}
+.job__card__header .class12 {
+  color: #9c27b0;
+  background-color: #f3e5f5;
+}
+    .section.background {
+      background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+      background-size: contain;
+    }
+    .group_testimonial_avatar-service {
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 1.5rem;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      display: flex;
+    }
+    .m_avatar-medium {
+      border-radius: 10rem;
+      width: 70px;
+      display: block;
+    }
+    .offer__card img {
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    .offer__details {
+      display: flex;
+      align-items: flex-start;
+    }
+    .offer__details span {
+      font-size: 35px;
+      font-weight: 800;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #262626;
+      padding-right: 1rem;
+    }
+    .offer__details div {
+      padding-left: 1rem;
+      border-left: 2px solid #374886;
+    }
+    .offer__details h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .offer__details p {
+      color: var(--text-light);
+    }
+    @media (width > 540px) {
+      .job__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .offer__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (width > 768px) {
+      .offer__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .job__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (width > 1024px) {
+      .offer__grid {
+        gap: 2rem;
+      }
+    }
+  </style>
+  <script>
+    "use strict";
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('panc3fz8stu7');
+  </script>
+</head>
+
+<body id="top">
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index-fi.html" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Palvelut <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-settings-3-line"></i>
+                  </div>
+                  <span class="dropdown__title">Toiminnan hallinta</span>
+                  <ul class="dropdown__list">
+                    <li><a href="channel-manager-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Kanavahallinta</a></li>
+                    <li><a href="pricing-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Hinnat</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i> Tekninen tuki</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  <span class="dropdown__title">Varausten hallinta</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pms-program-hoteli-fi.html" class="dropdown__link "> <i
+                          class="fa fa-chevron-right"></i> PMS - Hotelliohjelma</a></li>
+                    <li><a href="booking-engine-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Varausmoottori</a></li>
+                    <li><a href="revenue-management-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Tulojen hallinta</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <span class="dropdown__title">Markkinointi & verkkosivusto</span>
+                  <ul class="dropdown__list">
+                    <li><a href="marketing-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Markkinointi</a></li>
+                    <li><a href="business-website-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Yrityssivusto</a></li>
+                    <li><a href="hotel-marketing-solution-fi.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Digitaalinen markkinointipaketti</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Bookers Desk käyntikortti">
+                    </div>
+                    <h3>Tutustu palveluihimme</h3>
+                    <p style="text-align: center;">Tarjoamme laajan valikoiman palveluita hotellin <br> hallinnan optimointiin.</p>
+                    <a href="channel-manager-fi.html" class="btn-text1">
+                      <span class="hover-underline">Lue lisää</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pricing-fi.html" class="nav__link hover-underline">Hinnat</a>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Ratkaisut <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-hotel-line"></i>
+                  </div>
+                  <span class="dropdown__title">Majoitus</span>
+                  <ul class="dropdown__list">
+                    <li><a href="hotels-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hotellit</a>
+                    </li>
+                    <li><a href="hostels-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hostellit</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-line"></i>
+                  </div>
+                  <span class="dropdown__title">Vieraanvaraisuus</span>
+                  <ul class="dropdown__list">
+                    <li><a href="B&B-inns-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B ja
+                        majatalot</a></li>
+                    <li><a href="vaction-rentals-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                        Loma-asunnot</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-refresh-line"></i>
+                  </div>
+                  <span class="dropdown__title">Päivitykset & paketit</span>
+                  <ul class="dropdown__list">
+                    <li><a href="pricing-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Pakettimme</a></li>
+                    <li><a href="updates-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Viimeisimmät
+                        päivitykset</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <span class="dropdown__title">Kumppanuus & tuki</span>
+                  <ul class="dropdown__list">
+                    <li><a href="partner-with-bookersdesk-fi.html" class="dropdown__link"> <i
+                          class="fa fa-chevron-right"></i> Kumppanimme</a></li>
+                    <li><a href="reseller-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                        Valtuutetut jälleenmyyjät</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group dropdown__none">
+                  <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                    <div class="image-containerheader">
+                      <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                    </div>
+                    <h2 class="title | gradient-text ">
+                      <span>Kaikki ratkaisut yhdellä alustalla</span>
+                    </h2>
+                    <a href="booking-engine-fi.html" class="btn-text1">
+                      <span class="hover-underline">Lue lisää</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                        class="md hydrated"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Löydä uusia mahdollisuuksia yrityksellesi! Aloita tänään!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">
+                        <span>Pyydä demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li>
+            <a href="reviews-fi.html" class="nav__link hover-underline">Arvostelut</a>
+          </li>
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+                Resurssit <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+                <div class="dropdown__content">
+                    <!-- Resources & Tools -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <span class="dropdown__title">Resurssit & työkalut</span>
+                        <ul class="dropdown__list">
+                            <li><a href="all-resources-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Kaikki resurssit</a></li>
+                            <li><a href="tools-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Työkalut & oppaat</a></li>
+                            <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakastuki</a></li>
+                        </ul>
+                    </div>
+                    <!-- Booking Management -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <span class="dropdown__title">Varausten hallinta</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reservations-distribution-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Varausten jakelu</a></li>
+                            <li><a href="guest-management-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Vieraiden hallinta</a></li>
+                            <li><a href="industry-trends-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Alan trendit</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reports & Updates -->
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="dropdown__title">Raportit & päivitykset</span>
+                        <ul class="dropdown__list">
+                            <li><a href="reports-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Yksityiskohtaiset raportit</a></li>
+                            <li><a href="updates-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ilmoitukset & parannukset</a></li>
+                            <li><a href="social-impact-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Sosiaalinen vaikutus</a></li>
+                        </ul>
+                    </div>
+                    <!-- Additional Section with Image -->
+                    <div class="dropdown__group dropdown__none">
+                        <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                            <div class="image-containerheader">
+                                <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Resurssit Bookers Deskiltä">
+                            </div>
+                            <h2 class="title | gradient-text">
+                                <span>Kuinka voimme auttaa sinua?</span>
+                            </h2>
+                            <a href="all-resources-fi.html" class="btn-text1">
+                                <span class="hover-underline">Katso kaikki uusimmat resurssit</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+          <!--=============== DROPDOWN 3 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Yritys <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-community-line"></i>
+                  </div>
+                  <span class="dropdown__title">Meistä</span>
+                  <ul class="dropdown__list">
+                    <li><a href="about-us-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Meistä</a></li>
+                    <li><a href="our-team-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tiimimme</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-user-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Asiakkaat & urat</span>
+                  <ul class="dropdown__list">
+                    <li><a href="klientet-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakkaamme</a></li>
+                    <li><a href="careers-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Urat</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="dropdown__title">Arvostelut</span>
+                  <ul class="dropdown__list">
+                    <li><a href="reviews-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Asiakasarvostelut</a></li>
+                    <li><a href="sales-fi.html" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Myynti</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <span class="dropdown__title">Yhteystiedot</span>
+                  <ul class="dropdown__list">
+                    <li><a href="contact-fi.html" class="dropdown__link"><i class="fa fa-chevron-right"></i> Ota yhteyttä</a></li>
+                    <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                          class="fa fa-chevron-right"></i>Tuki</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__group special-group dropdown__none ">
+                  <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                    <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk tiimi">
+                  </div>
+                  <div class="special-text">
+                    <h4>Alan johtava tuki ja kumppanuus</h4>
+                    <p>Kymmenet tuhannet kiinteistöt ympäri maailman luottavat meihin <br> pitkän aikavälin menestyksen ja 24/7/365 tuen suhteen.</p>
+                  </div>
+                </div>
+              </div>
+              <section class="cta-section dropdown__none">
+                <div class="container">
+                    <h2 class="dropdown__title">Löydä uusia mahdollisuuksia yrityksellesi! Aloita tänään!</h2>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">
+                        <span>Pyydä demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span>
+                    </a>
+                </div>
+            </section>
+            </div>
+          </li>
+          <li class="dropdown__item" style="position: relative;">
+            <div class="nav__link dropdown__button" style="width: auto;">
+              <span style="display: flex; align-items: center;">
+                <img src="assets/finland.png" style="width: 18px;" alt="Yhdistyneen kuningaskunnan lippu">  FI  
+                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+              </span>
+            </div>
+            <div class="dropdown__container"
+              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
+              <div class="dropdown__content">
+                <ul class="dropdown__list">
+                  <li><a href="tools-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/fr.png" style="width: 18px;" alt="Ranskan lippu">  FR
+                    </a></li>
+                  <li><a href="tools-el.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/gr.png" style="width: 18px;" alt="Kreikan lippu">  EL
+                    </a></li>
+                  <li><a href="tools-it.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian lippu">  IT
+                    </a></li>
+                  <li><a href="tools-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/nl.png" style="width: 18px;" alt="Alankomaiden lippu">  NL
+                    </a></li>
+                  <li><a href="tools-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugalin lippu">  PT
+                    </a></li>
+                  <li><a href="tools-es.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/es.png" style="width: 18px;" alt="Espanjan lippu">  ES
+                    </a></li>
+                  <li><a href="tools-en.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/en.png" style="width: 18px;" alt="Suomen lippu">  EN
+                    </a></li>
+                  <li><a href="tools-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/sweden.png" style="width: 18px;" alt="Ruotsin lippu">  SV
+                    </a></li>
+                  <li><a href="tools-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/denmark.png" style="width: 18px;" alt="Tanskan lippu">  DK
+                    </a></li>
+                  <li><a href="tools-no.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/nk.png" style="width: 18px;" alt="Norjan lippu">  NO
+                    </a></li>
+                  <li><a href="tools-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/pl (2).png" style="width: 18px;" alt="Puolan lippu">  PL
+                    </a></li>
+                  <li><a href="tools.html" class="dropdown__link " style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian lippu">  SQ </a></li>
+                  <li><a href="tools-de.html" class="dropdown__link" style="display: flex; align-items: center;">
+                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                      <img src="assets/images/de.png" style="width: 18px;" alt="Saksan lippu">  DE
+                    </a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center;">
+            <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+            <span style="margin: 0 10px; color: gray;">|</span>
+            <a href="https://panel.bookersdesk.com/freeDemo?lang=fi" class="btn-outline">  <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="nuoli"></span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="hero"
+        style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Työkalut ja laskimet majoitusomistajille</h1>
+            <p style="color: white;">
+              Seuraa kiinteistösi taloudellista suorituskykyä verkossa toimivilla laskimilla, jotka on suunniteltu erityisesti majoitusalalle.
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="pääbanneri" class="w-100">
+          </figure>
+        </div>
+      </section>
+      <section class="section background1 job__container" id="job" style="background-color: #f7f7f77e;">
+        <div class="container">
+          <h2 class="h2 section-title"><span>Hotellien talousanalyysilaskimet</span></h2>
+          <p class="section__description">
+            Paranna hotellin taloudellista ja hallinnollista strategiaa näillä keskeisillä mittareilla.
+          </p>
+          <div class="job__grid">
+            <!-- Net RevPAR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class5"><i class="ri-bar-chart-fill"></i></span>
+              </div>
+              <h4>Netto RevPAR</h4>
+              <p class="short-desc">
+                Mittaa nettotuloja per saatavilla oleva huone jakelukustannukset ja palkkiot pois lukien...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  Netto RevPAR mittaa nettotuloja per saatavilla oleva huone jakelukustannukset ja palkkiot vähennettynä, antaen tarkan yleiskuvan todellisesta voitosta ja auttaen hotellinpitäjiä tekemään tietoon perustuvia päätöksiä hinnoittelustrategioista ja kustannusten hallinnasta.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Arvioi todellista suorituskykyä ottamalla huomioon toimintakulut.</li>
+                  <li>Näyttää jakelumaksujen ja palkkioiden vaikutuksen voittoon.</li>
+                  <li>Vertaa eri myynti- ja markkinointistrategioiden tehokkuutta.</li>
+                  <li>Selventää, miten hintamuutokset vaikuttavat nettotuloihin.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Vähennä jakelukustannuksia paremmilla neuvotteluilla.</li>
+                  <li>Optimoi hinnoittelu markkina-analyysin ja asiakkaiden käyttäytymisen avulla.</li>
+                  <li>Lisää suoria varauksia verkkosivustollasi kannustimilla.</li>
+                  <li>Hallitse tarjouksia viisaasti varmistaaksesi todellisen arvon, ei vain hinnanalennuksia.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- ARPAr -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class2"><i class="ri-line-chart-fill"></i></span>
+              </div>
+              <h4>ARPAr</h4>
+              <p class="short-desc">
+                Analysoi mukautettuja tuloja per saatavilla oleva huone, mukaan lukien lisäpalvelut kuten ravintolat...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  ARPAr (mukautettu tulo per saatavilla oleva huone) mittaa kokonaistuloja, mukaan lukien lisäpalvelut ja toissijaiset lähteet, antaen kattavan näkymän voitosta. Tämä mittari auttaa hotellinpitäjiä optimoimaan strategioita tulojen lisäämiseksi.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Arvioi taloudellista suorituskykyä ottamalla huomioon lisäpalvelut.</li>
+                  <li>Tukee strategioiden kehittämistä tulojen monipuolistamiseksi.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Mainosta palveluita kuten ravintoloita ja kylpylöitä.</li>
+                  <li>Vähennä toimintakustannuksia teknologian ja analyysin avulla.</li>
+                  <li>Käytä joustavaa hinnoittelua maksimoidaksesi voitot.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- CPOR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class3"><i class="ri-money-dollar-circle-fill"></i></span>
+              </div>
+              <h4>CPOR</h4>
+              <p class="short-desc">
+                Laskee keskimääräiset toimintakustannukset per varattu huone, mukaan lukien ylläpitokulut...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  CPOR (kustannus per varattu huone) mittaa keskimääräiset toimintakustannukset jokaisesta varatusta huoneesta, kuten siivous, energia ja ylläpito. Tämä mittari auttaa parantamaan toiminnan tehokkuutta ja lisäämään voittoja.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Osoittaa toimintakustannukset nettotulojen lisäämiseksi.</li>
+                  <li>Tukee tehokasta kulujen hallintaa.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Optimoi henkilöstö ja työaikataulut.</li>
+                  <li>Käytä teknologiaa kustannusten vähentämiseen.</li>
+                  <li>Paranna energiatehokkuutta ja tarvikkeiden hallintaa.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- NOI -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class4"><i class="ri-funds-box-fill"></i></span>
+              </div>
+              <h4>NOI</h4>
+              <p class="short-desc">
+                Mittaa hotellin nettotulos toimintakustannusten vähentämisen jälkeen, pois lukien verot...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  NOI (nettotulos toiminnasta) laskee voiton toimintakustannusten vähentämisen jälkeen, pois lukien verot ja korot. Tämä mittari on olennainen hotellin taloudellisen terveyden arvioinnissa.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Arvioi taloudellista terveyttä ja toiminnan suorituskykyä.</li>
+                  <li>Auttaa sijoittajia ja johtajia päätöksenteossa.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Lisää tuloja lisäpalveluilla ja paremmalla hinnoittelulla.</li>
+                  <li>Vähennä kuluja teknologian ja tehokkaan hallinnan avulla.</li>
+                  <li>Paranna tuottavuutta kustannuksia lisäämättä.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- RevPAG -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class1"><i class="ri-user-star-fill"></i></span>
+              </div>
+              <h4>RevPAG</h4>
+              <p class="short-desc">
+                Laskee keskimääräiset tulot per vierailija, analysoiden lisäkustannuksia ja palveluita...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  RevPAG (tulo per saatavilla oleva vierailija) mittaa keskimääräiset tulot per vierailija, mukaan lukien palvelut kuten ravintolat ja aktiviteetit. Tämä mittari auttaa optimoimaan tulostrategioita.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Analysoi vierailijoiden kulutusta tarkempien strategioiden luomiseksi.</li>
+                  <li>Säätää hinnoittelua ja tarjouksia voittojen maksimoimiseksi.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Mainosta lisäpalveluita vierailijoille.</li>
+                  <li>Käytä analyysiä joustavaan hinnoitteluun ja tarjouksiin.</li>
+                  <li>Lisää asiakkaiden sitoutumista erikoispaketeilla.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- TRevPOR -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class6"><i class="ri-hotel-fill"></i></span>
+              </div>
+              <h4>TRevPOR</h4>
+              <p class="short-desc">
+                Sisältää kaikki tulot varatusta huoneesta, kuten kylpylä- ja ravintolapalvelut...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  TRevPOR (kokonaistulo per varattu huone) mittaa kaikki tulot varatusta huoneesta, mukaan lukien lisäpalvelut kuten kylpylät ja ravintolat. Tämä mittari auttaa lisäämään voittoja.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Näyttää lisäpalveluiden osuuden tuloissa.</li>
+                  <li>Tukee markkinointistrategioiden optimointia.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Analysoi ja laajenna palveluita kuten kylpylöitä ja ravintoloita.</li>
+                  <li>Mainosta erikoistarjouksia sitoutumisen lisäämiseksi.</li>
+                  <li>Tehosta markkinointia täydentäville palveluille.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- GOPPAG -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class7"><i class="ri-group-fill"></i></span>
+              </div>
+              <h4>GOPPAG</h4>
+              <p class="short-desc">
+                Mittaa bruttokäyttövoittoa per saatavilla oleva vierailija, auttaen toiminnan tehokkuudessa...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  GOPPAG (bruttokäyttövoitto per saatavilla oleva vierailija) laskee toiminnasta saadun voiton per vierailija, auttaen analysoimaan tehokkuutta ja lisäämään voittoja.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Analysoi toiminnan tehokkuutta ja kustannuksia per vierailija.</li>
+                  <li>Arvioi liiketoimintastrategioiden suorituskykyä.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Hallitse kustannuksia lisätäksesi voittoa per vierailija.</li>
+                  <li>Paranna toimintaa tehokkaammilla palveluilla.</li>
+                  <li>Tunnista mahdollisuuksia tehokkuuden parantamiseen.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- LOS -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class8"><i class="ri-calendar-fill"></i></span>
+              </div>
+              <h4>LOS</h4>
+              <p class="short-desc">
+                Laskee vierailijoiden keskimääräisen oleskeluajan hinnoittelun ja tarjousten optimoimiseksi...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  LOS (oleskelun pituus) mittaa vierailijoiden keskimääräisen yöpymisten määrän hotellissa, auttaen ennustamaan tuloja ja optimoimaan hinnoittelua.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Ennustaa tuloja ja auttaa suunnittelussa.</li>
+                  <li>Optimoi hinnoittelua ja kampanjoita pidemmille oleskeluille.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Tarjoa erikoiskampanjoita pidemmille oleskeluille.</li>
+                  <li>Käytä joustavaa hinnoittelua oleskelujen lisäämiseksi.</li>
+                  <li>Mainosta paketteja sitoutumisen tehostamiseksi.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+    
+            <!-- Revenue Contribution -->
+            <div class="job__card">
+              <div class="job__card__header">
+                <span class="class9"><i class="ri-exchange-funds-fill"></i></span>
+              </div>
+              <h4>Tulojen jakauma</h4>
+              <p class="short-desc">
+                Analysoi tulojen jakautumista varausalustoilta tehokkaampien strategioiden luomiseksi...
+              </p>
+              <div class="full-desc" style="display: none;">
+                <p>
+                  Tulojen jakauma analysoi tulojen jakautumista suorista varauksista, OTA:ista ja yritystileistä, auttaen optimoimaan jakelustrategioita.
+                </p>
+                <p><strong>Miksi se on tärkeää?</strong></p>
+                <ul>
+                  <li>Näyttää ensisijaiset tulolähteet ja alustojen tehokkuuden.</li>
+                  <li>Auttaa vähentämään riippuvuutta korkean provision alustoista.</li>
+                </ul>
+                <p><strong>Kuinka parantaa sitä?</strong></p>
+                <ul>
+                  <li>Lisää suoria varauksia kampanjoilla.</li>
+                  <li>Vähennä riippuvuutta korkean provision OTA:ista.</li>
+                  <li>Tehosta suhteita yrityskumppaneihin.</li>
+                </ul>
+              </div>
+              <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <span class="">
+                  <a href="#" class="read-toggle-link">Lue lisää</a>
+                </span>
+                <a href="pricing-fi.html" class="class3">
+                  <span class="btn3 class3">Hinnoittelu ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+ 
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top section">
+        <div class="footer-brand1">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Palvelut</p>
+            </li>
+            <li>
+              <a href="channel-manager-fi.html" class="footer-link hover-underline">Kanavanhallinta</a>
+            </li>
+            <li>
+              <a href="pms-program-hoteli-fi.html" class="footer-link hover-underline">Hotellin PMS-ohjelma</a>
+            </li>
+            <li>
+              <a href="booking-engine-fi.html" class="footer-link hover-underline">Varausmoottori</a>
+            </li>
+            <li>
+              <a href="marketing-fi.html" class="footer-link hover-underline">Markkinointi</a>
+            </li>
+            <li>
+              <a href="business-website-fi.html" class="footer-link hover-underline">Yrityssivusto</a>
+            </li>
+            <li>
+              <a href="revenue-management-fi.html" class="footer-link hover-underline">Tulojen hallinta</a>
+            </li>
+            <li>
+              <a href="hotel-marketing-solution-fi.html" class="footer-link hover-underline">Digitaalinen markkinointipaketti</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Ratkaisut</p>
+          </li>
+          <li>
+            <a href="hotels-fi.html" class="footer-link hover-underline">Hotellit</a>
+          </li>
+          <li>
+            <a href="hostels-fi.html" class="footer-link hover-underline">Hostellit</a>
+          </li>
+          <li>
+            <a href="B&B-inns-fi.html" class="footer-link hover-underline">B&B ja majatalot</a>
+          </li>
+          <li>
+            <a href="hotel-groups-fi.html" class="footer-link hover-underline">Hotelliryhmät</a>
+          </li>
+          <li>
+            <a href="vaction-rentals-fi.html" class="footer-link hover-underline">Loma-asunnot</a>
+          </li>
+          <li>
+            <a href="integration-category-fi.html" class="footer-link hover-underline">GDS</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Kumppanuus</p>
+          </li>
+          <li>
+            <a href="sales-fi.html" class="footer-link hover-underline">Myynti</a>
+          </li>
+          <li>
+            <a href="pricing-fi.html" class="footer-link hover-underline">Pakettimme</a>
+          </li>
+          <li>
+            <a href="updates-fi.html" class="footer-link hover-underline">Päivitykset</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/kategorite/hyrje/hyrje.html" class="footer-link hover-underline">Resurssikeskus</a>
+          </li>
+          <li>
+            <a href="partner-with-bookersdesk-fi.html" class="footer-link hover-underline">Kumppanimme</a>
+          </li>
+          <li>
+            <a href="reseller-fi.html" class="footer-link hover-underline">Valtuutetut jälleenmyyjät</a>
+          </li>
+          <li>
+            <a href="https://help.bookersdesk.com/" class="footer-link hover-underline">Tekninen tuki</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Yritys</p>
+          </li>
+          <li>
+            <a href="about-us-fi.html" class="footer-link hover-underline">Meistä</a>
+          </li>
+          <li>
+            <a href="our-team-fi.html" class="footer-link hover-underline">Tiimimme</a>
+          </li>
+          <li>
+            <a href="klientet-fi.html" class="footer-link hover-underline">Asiakkaamme</a>
+          </li>
+          <li>
+            <a href="careers-fi.html" class="footer-link hover-underline">Ura</a>
+          </li>
+          <li>
+            <a href="reviews-fi.html" class="footer-link hover-underline">Arvostelut</a>
+          </li>
+          <li>
+            <a href="social-impact-fi.html" class="footer-link hover-underline">Sosiaalinen vaikutus</a>
+          </li>
+          <li>
+            <a href="contact-fi.html" class="footer-link hover-underline">Ota yhteyttä</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Yhteystiedot</p>
+          </li>
+          <li>
+            <a href="mailto:sales@bookersdesk.com" class="footer-link">
+              <i class="fa fa-shopping-cart me-3" style="color: hsl(202, 36%, 72%);"></i> sales@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@bookersdesk.com" class="footer-link">
+              <i class="fa fa-headset me-3" style="color: hsl(202, 36%, 72%);"></i> support@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reseller@bookersdesk.com" class="footer-link">
+              <i class="fa fa-handshake me-3" style="color: hsl(202, 36%, 72%);"></i> reseller@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:people@bookersdesk.com" class="footer-link">
+              <i class="fa fa-briefcase me-3" style="color: hsl(202, 36%, 72%);"></i> people@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:accounts@bookersdesk.com" class="footer-link">
+              <i class="fa fa-envelope me-3" style="color: hsl(202, 36%, 72%);"></i> accounts@bookersdesk.com
+            </a>
+          </li>
+           <li>
+            <a href="mailto:website@bookersdesk.com" class="footer-link">
+              <i class="fa fa-at me-3" style="color: hsl(202, 36%, 72%);"></i> website@bookersdesk.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marketing@bookersdesk.com" class="footer-link">
+              <i class="fa fa-bullhorn me-3" style="color: hsl(202, 36%, 72%);"></i> marketing@bookersdesk.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <ul class="terms-list">
+          <li><a href="cookies-policy-fi.html" class="footer-link">Evästekäytäntö</a></li>
+          <li><a href="privacy-policy-fi.html" class="footer-link">Tietosuojakäytäntö</a></li>
+          <li><a href="data-security-fi.html" class="footer-link">Tietoturva</a></li>
+          <li><a href="terms-and-conditions-fi.html" class="footer-link">Käyttöehdot</a></li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553280737713" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@bookers-desk" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bookersdesk/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98496675/admin/feed/posts/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="left-section">
+          <p class="footer-description">
+            BookersDesk.com, osa <a href="https://www.intermedia.al/" target="_blank">InterMedia LTD</a>:tä, tarjoaa PMS:n ja kanavanhallinnan helpottamaan hotellien hallintaa. Se yhdistyy <a href="https://www.allbookers.com/" target="_blank">AllBookers.com</a> -sivustoon varauksia varten, <a href="HotelsChecking.com" target="_blank">HotelsChecking.com</a> -sivustoon hotellien vertailua varten ja tarjoaa verkkosivujen kehitystä suoravarausjärjestelmällä.
+          </p>
+          <p class="copyright">
+            Tekijänoikeus © 2020–2025 BookersDesk.com™. Kaikki oikeudet pidätetään.
+          </p>
+        </div>
+        <div class="center-section">
+          <div class="image-container">
+            <img src="assets/images/scured.png" style="width: 130px; margin-bottom: 15px;" alt="PCI DSS SSL-turvallisuusmerkki">
+          </div>
+        </div>
+      </div>
+      <div class="footer-brandbottom">
+        <ul class="terms-list">
+          <li><img src="assets/images/logo-01-01.png" class="partner-logo1"></li>
+          <li><img src="assets/images/bookersDesklogo.png" class="partner-logo"></li>
+          <li><img src="assets/images/logoallbokers.png" class="partner-logo1"></li>       
+          <li><img src="assets/images/logo-intermedia.png" class="partner-logo"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="wrapper">
+    <header>
+      <i class="bx bx-cookie"></i>
+      <h2>Cookies Consent</h2>
+    </header>
+    <div class="data">
+      <p>Käytämme evästeitä parantaaksemme verkkosivustomme käyttökokemusta. Selaamalla tätä verkkosivustoa hyväksyt evästeidemme käytön.<a href="cookies-policy-en.html"> Lisätietoja...</a></p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="acceptBtn">Hyväksy</button>
+      <button class="button" id="declineBtn">Hylkää</button>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const readToggleLinks = document.querySelectorAll(".read-toggle-link");
+  
+      readToggleLinks.forEach(link => {
+        const card = link.closest(".job__card");
+        const fullDesc = card.querySelector(".full-desc");
+        const shortDesc = card.querySelector(".short-desc");
+  
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); 
+  
+          // Merr të gjitha kartat në grid
+          const allCards = document.querySelectorAll(".job__card");
+          
+          
+          allCards.forEach(otherCard => {
+            const otherFullDesc = otherCard.querySelector(".full-desc");
+            const otherShortDesc = otherCard.querySelector(".short-desc");
+            const otherLink = otherCard.querySelector(".read-toggle-link");
+  
+            if (otherFullDesc.style.display === "block" && otherCard !== card) {
+              otherFullDesc.style.display = "none";
+              otherShortDesc.style.display = "block";
+              otherLink.textContent = "Read More";
+            }
+          });
+  
+          
+          if (fullDesc.style.display === "none" || fullDesc.style.display === "") {
+            fullDesc.style.display = "block";
+            shortDesc.style.display = "none";
+            link.textContent = "Read Less";
+          } else {
+            fullDesc.style.display = "none";
+            shortDesc.style.display = "block";
+            link.textContent = "Read More";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
