@@ -505,40 +505,7 @@
   </div>
 </div>
 
-<script>// Funksione për hapjen/mbylljen e modal-it
-  function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.add("show");
-  }
-  
-  function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.remove("show");
-  }
-  
-  // Kërkimi i gjuhëve
-  document.getElementById("languageSearch").addEventListener("input", function (e) {
-    const searchTerm = e.target.value.toLowerCase();
-    const languageOptions = document.querySelectorAll(".language-option");
-  
-    languageOptions.forEach((option) => {
-      const language = option.getAttribute("data-language").toLowerCase();
-      if (language.includes(searchTerm)) {
-        option.style.display = "block";
-      } else {
-        option.style.display = "none";
-      }
-    });
-  });
-  
-  // Mbyll modal-in kur klikohet jashtë
-  document.addEventListener("click", function (e) {
-    const modal = document.getElementById("languageModal");
-    if (e.target === modal) {
-      closeModal("languageModal");
-    }
-  });
-</script>
+
 
 
 

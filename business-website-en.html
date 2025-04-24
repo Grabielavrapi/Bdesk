@@ -404,74 +404,112 @@
             
             </div>
           </li>
-          <li class="dropdown__item" style="position: relative;">
-            <div class="nav__link dropdown__button" style="width: auto;">
-              <span style="display: flex; align-items: center;">
-                <img src="assets/images/en.png" style="width: 18px;" alt="United Kingdom flag">&nbsp; EN &nbsp;
-                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
-              </span>
-            </div>
-            <div class="dropdown__container"
-              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
-              <div class="dropdown__content">
-                <ul class="dropdown__list">
-                 
-                  <li><a href="business-website-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
-                    </a></li>
-                  <li><a href="business-website-el.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL
-                    </a></li>
-                  <li><a href="business-website-it.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
-                    </a></li>
-                  <li><a href="business-website-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
-                    </a></li>
-                  <li><a href="business-website-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
-                    </a></li>
-                
-                  <li><a href="business-website-es.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
-                    </a></li>
-                  <li><a href="business-website-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
-                    </a></li>
-                  <li><a href="business-website-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
-                    </a></li>
-                  <li><a href="business-website-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
-                    </a></li>
-                  <li><a href="business-website-no.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
-                    </a></li>
-                  <li><a href="business-website-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
-                    </a></li>
-                  <li><a href="business-website-.html" class="dropdown__link " style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
-                  <li><a href="business-website-de.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE
-                    </a></li>
+          <li class="nav-item me-lg-4">
+            <a class="nav-link" href="#" onclick="openModal('languageModal')">
+              <img src="assets/images/en.png" class="flag" alt="English flag"> EN
+              <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+            </a>
+          </li>
+          
+          <div id="languageModal" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Select Language</h4>
+                  <button onclick="closeModal('languageModal')" class="close-btn">×</button>
+                </div>
+                <div class="modal-body">
+                  <ul class="language-list">
+                    <li class="language-option" data-language="Shqip">
+                      <a href="faqe-interneti.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/al.png');"></span>
+                        Albanian (SQ)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Deutsch">
+                      <a href="business-website-de.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/de.png');"></span>
+                        German (DE)
+                      </a>
+                    </li>
+                    <li class="language-option active" data-language="English">
+                      <a href="business-website-en.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/en.png');"></span>
+                        English (EN)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Français">
+                      <a href="business-website-fr.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/fr.png');"></span>
+                        French (FR)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Ελληνικά">
+                      <a href="business-website-el.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/gr.png');"></span>
+                        Greek (EL)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Italiano">
+                      <a href="business-website-it.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/it.png');"></span>
+                        Italian (IT)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Nederlands">
+                      <a href="business-website-nl.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/nl.png');"></span>
+                        Dutch (NL)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Português">
+                      <a href="business-website-pt.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/pt.png');"></span>
+                        Portuguese (PT)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Español">
+                      <a href="business-website-es.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/es.png');"></span>
+                        Spanish (ES)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Suomi">
+                      <a href="business-website-fi.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/finland.png');"></span>
+                        Finnish (FI)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Svenska">
+                      <a href="business-website-sv.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/sweden.png');"></span>
+                        Swedish (SV)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Dansk">
+                      <a href="business-website-dk.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/denmark.png');"></span>
+                        Danish (DK)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Norsk">
+                      <a href="business-website-no.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/nk.png');"></span>
+                        Norwegian (NO)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Polski">
+                      <a href="business-website-pl.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/pl (2).png');"></span>
+                        Polish (PL)
+                      </a>
+                    </li>
                   </ul>
+                </div>
               </div>
             </div>
-          </li>
+          </div>
+          
           <li style="display: flex; align-items: center;">
             <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
             <span style="margin: 0 10px; color: gray;">|</span>
