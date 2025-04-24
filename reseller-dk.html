@@ -436,73 +436,113 @@
             </section>
             </div>
           </li>
-          <li class="dropdown__item" style="position: relative;">
-            <div class="nav__link dropdown__button" style="width: auto;">
-              <span style="display: flex; align-items: center;">
-                <img src="assets/denmark.png" style="width: 18px;" alt="Storbritanniens flag">  DK  
-                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
-              </span>
-            </div>
-            <div class="dropdown__container"
-              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
-              <div class="dropdown__content">
-                <ul class="dropdown__list">
-                  <li><a href="reseller-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/fr.png" style="width: 18px;" alt="Fransk flag">  FR
-                    </a></li>
-                  <li><a href="reseller-el.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/gr.png" style="width: 18px;" alt="Græsk flag">  EL
-                    </a></li>
-                    <li><a href="reseller-en.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/en.png" style="width: 18px;" alt="Dansk flag">  EN
-                    </a></li>
-                  <li><a href="reseller-it.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/it.png" style="width: 18px;" alt="Italiensk flag">  IT
-                    </a></li>
-                  <li><a href="reseller-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/nl.png" style="width: 18px;" alt="Hollandsk flag">  NL
-                    </a></li>
-                  <li><a href="reseller-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portugisisk flag">  PT
-                    </a></li>
-                  <li><a href="reseller-es.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/es.png" style="width: 18px;" alt="Spansk flag">  ES
-                    </a></li>
-                  <li><a href="reseller-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/finland.png" style="width: 18px;" alt="Finsk flag">  FI
-                    </a></li>
-                  <li><a href="reseller-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/sweden.png" style="width: 18px;" alt="Svensk flag">  SV
-                    </a></li>
-                
-                  <li><a href="reseller-no.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">  NO
-                    </a></li>
-                  <li><a href="reseller-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polsk flag">  PL
-                    </a></li>
-                  <li><a href="rishitja.html" class="dropdown__link " style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/al.png" style="width: 18px;" alt="Albansk flag">  SQ </a></li>
-                  <li><a href="reseller-de.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/de.png" style="width: 18px;" alt="Tysk flag">  DE
-                    </a></li>
+          <li class="nav-item me-lg-4">
+            <a class="nav-link" href="#" onclick="openModal('languageModal')">
+              <img src="assets/denmark.png" class="flag" alt="Dansk flag"> DK
+              <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+            </a>
+          </li>
+          
+          <!-- Modal for language selection -->
+          <div id="languageModal" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Vælg sprog</h4>
+                  <button onclick="closeModal('languageModal')" class="close-btn">×</button>
+                </div>
+                <div class="modal-body">
+                  <ul class="language-list">
+                    <li class="language-option" data-language="Shqip">
+                      <a href="reseller.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/al.png');"></span>
+                        Albansk (SQ)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Deutsch">
+                      <a href="reseller-de.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/de.png');"></span>
+                        Tysk (DE)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="English">
+                      <a href="reseller-en.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/en.png');"></span>
+                        Engelsk (EN)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Français">
+                      <a href="reseller-fr.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/fr.png');"></span>
+                        Fransk (FR)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Ελληνικά">
+                      <a href="reseller-el.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/gr.png');"></span>
+                        Græsk (EL)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Italiano">
+                      <a href="reseller-it.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/it.png');"></span>
+                        Italiensk (IT)
+                      </a>
+                    </li>
+                    <li class="language-option active" data-language="Dansk">
+                      <a href="reseller-dk.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/denmark.png');"></span>
+                        Dansk (DK)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Nederlands">
+                      <a href="reseller-nl.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/nl.png');"></span>
+                        Hollandsk (NL)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Polski">
+                      <a href="reseller-pl.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/pl (2).png');"></span>
+                        Polsk (PL)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Español">
+                      <a href="reseller-es.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/es.png');"></span>
+                        Spansk (ES)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Suomi">
+                      <a href="reseller-fi.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/finland.png');"></span>
+                        Finsk (FI)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Svenska">
+                      <a href="reseller-sv.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/sweden.png');"></span>
+                        Svensk (SV)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Norsk">
+                      <a href="reseller-no.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/nk.png');"></span>
+                        Norsk (NO)
+                      </a>
+                    </li>
+                    <li class="language-option" data-language="Português">
+                      <a href="reseller-pt.html" class="language-link">
+                        <span class="flag-circle" style="background-image: url('assets/images/pt.png');"></span>
+                        Portugisisk (PT)
+                      </a>
+                    </li>
                   </ul>
+                </div>
               </div>
             </div>
-          </li>
+          </div>
+          
           <li style="display: flex; align-items: center;">
             <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
             <span style="margin: 0 10px; color: gray;">|</span>

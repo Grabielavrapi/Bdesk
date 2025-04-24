@@ -536,7 +536,7 @@
                   
               </div>
           </li>
-              <li class="dropdown__item" style="position: relative;">
+              <!-- <li class="dropdown__item" style="position: relative;">
                 <div class="nav__link dropdown__button" style="width: auto;">
                     <span style="display: flex; align-items: center;">
                         <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">
@@ -605,7 +605,117 @@
                     </ul>
                   </div>
               </div>
-            </li>
+
+            </li> -->
+
+            <!-- Nav Item për të hapur modal-in -->
+<li class="nav-item me-lg-4">
+  <a class="nav-link" href="#" onclick="openModal('languageModal')">
+    <img src="assets/images/al.png" class="flag" alt="Albanian flag"> SQ
+    <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+  </a>
+</li>
+
+<!-- Struktura e Modal-it për faqen vleresime.html -->
+<div id="languageModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Zgjidh Gjuhën</h4>
+        <button onclick="closeModal('languageModal')" class="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <ul class="language-list">
+          <li class="language-option active" data-language="Shqip">
+            <a href="vleresime.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/al.png');"></span>
+              Shqip (SQ)
+            </a>
+          </li>
+          <li class="language-option" data-language="Deutsch">
+            <a href="reviews-de.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/de.png');"></span>
+              Deutsch (DE)
+            </a>
+          </li>
+          <li class="language-option" data-language="English">
+            <a href="reviews-en.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/en.png');"></span>
+              English (EN)
+            </a>
+          </li>
+          <li class="language-option" data-language="Français">
+            <a href="reviews-fr.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/fr.png');"></span>
+              Français (FR)
+            </a>
+          </li>
+          <li class="language-option" data-language="Ελληνικά">
+            <a href="reviews-el.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/gr.png');"></span>
+              Ελληνικά (EL)
+            </a>
+          </li>
+          <li class="language-option" data-language="Italiano">
+            <a href="reviews-it.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/it.png');"></span>
+              Italiano (IT)
+            </a>
+          </li>
+          <li class="language-option" data-language="Nederlands">
+            <a href="reviews-nl.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/nl.png');"></span>
+              Nederlands (NL)
+            </a>
+          </li>
+          <li class="language-option" data-language="Português">
+            <a href="reviews-pt.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/pt.png');"></span>
+              Português (PT)
+            </a>
+          </li>
+          <li class="language-option" data-language="Español">
+            <a href="reviews-es.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/images/es.png');"></span>
+              Español (ES)
+            </a>
+          </li>
+          <li class="language-option" data-language="Suomi">
+            <a href="reviews-fi.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/finland.png');"></span>
+              Suomi (FI)
+            </a>
+          </li>
+          <li class="language-option" data-language="Svenska">
+            <a href="reviews-sv.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/sweden.png');"></span>
+              Svenska (SV)
+            </a>
+          </li>
+          <li class="language-option" data-language="Dansk">
+            <a href="reviews-dk.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/denmark.png');"></span>
+              Dansk (DK)
+            </a>
+          </li>
+          <li class="language-option" data-language="Norsk">
+            <a href="reviews-no.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/nk.png');"></span>
+              Norsk (NO)
+            </a>
+          </li>
+          <li class="language-option" data-language="Polski">
+            <a href="reviews-pl.html" class="language-link">
+              <span class="flag-circle" style="background-image: url('assets/pl (2).png');"></span>
+              Polski (PL)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
             <li style="display: flex; align-items: center;">
               <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
               <span style="margin: 0 10px; color: gray;">|</span>

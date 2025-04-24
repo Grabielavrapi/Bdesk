@@ -387,73 +387,115 @@
                 </section>
             </div>
         </li>
-          <li class="dropdown__item" style="position: relative;">
-            <div class="nav__link dropdown__button" style="width: auto;">
-              <span style="display: flex; align-items: center;">
-                <img src="assets/images/de.png" style="width: 18px;" alt="German flag">&nbsp; DE &nbsp;
-                <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
-              </span>
-            </div>
-            <div class="dropdown__container"
-              style="width: auto; min-width: 100px; position: absolute; top: 100%; left: 0;display: flex;padding:0px 10px;">
-              <div class="dropdown__content">
-                <ul class="dropdown__list">
-                  <li><a href="vaction-rentals-en.html" class="dropdown__link " style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/en.png" style="width: 18px;" alt="United Kingdom flag">&nbsp; EN</a></li>
-                  <li><a href="vaction-rentals-fr.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/fr.png" style="width: 18px;" alt="French flag">&nbsp; FR
-                    </a></li>
-                  <li><a href="vaction-rentals-el.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/gr.png" style="width: 18px;" alt="Greek flag">&nbsp; EL
-                    </a></li>
-                  <li><a href="vaction-rentals-it.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/it.png" style="width: 18px;" alt="Italian flag">&nbsp; IT
-                    </a></li>
-                  <li><a href="vaction-rentals-nl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/nl.png" style="width: 18px;" alt="Dutch flag">&nbsp; NL
-                    </a></li>
-                  <li><a href="vaction-rentals-pt.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/pt.png" style="width: 18px;" alt="Portuguese flag">&nbsp; PT
-                    </a></li>
-                
-                  <li><a href="vaction-rentals-es.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/es.png" style="width: 18px;" alt="Español flag">&nbsp; ES
-                    </a></li>
-                  <li><a href="vaction-rentals-fi.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/finland.png" style="width: 18px;" alt="Suomi flag">&nbsp; FI
-                    </a></li>
-                  <li><a href="vaction-rentals-sv.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/sweden.png" style="width: 18px;" alt="Svenska flag">&nbsp; SV
-                    </a></li>
-                  <li><a href="vaction-rentals-dk.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/denmark.png" style="width: 18px;" alt="Dansk flag">&nbsp; DK
-                    </a></li>
-                  <li><a href="vaction-rentals-no.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/nk.png" style="width: 18px;" alt="Norsk flag">&nbsp; NO
-                    </a></li>
-                  <li><a href="vaction-rentals-pl.html" class="dropdown__link" style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/pl (2).png" style="width: 18px;" alt="Polski flag">&nbsp; PL
-                    </a></li>
-                  <li><a href="qira-afatshkurtra.html" class="dropdown__link " style="display: flex; align-items: center;">
-                      <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
-                      <img src="assets/images/al.png" style="width: 18px;" alt="Albanian flag">&nbsp; SQ </a></li>
-               
-                  </ul>
+         <!-- Nav Item për të hapur modal-in -->
+         <li class="nav-item me-lg-4">
+          <a class="nav-link" href="#" onclick="openModal('languageModal')">
+            <img src="assets/images/de.png" class="flag" alt="German flag"> DE
+            <i class="fa fa-chevron-down" style="font-size: smaller;"></i>
+          </a>
+        </li>
+        
+        <!-- Struktura e Modal-it për faqen vaction-rentals -->
+        <div id="languageModal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Sprache wählen</h4>
+                <button onclick="closeModal('languageModal')" class="close-btn">×</button>
+              </div>
+              <div class="modal-body">
+                <ul class="language-list">
+                  <li class="language-option" data-language="Albanisch">
+                    <a href="qira-afatshkurtra.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/al.png');"></span>
+                      Albanisch (SQ)
+                    </a>
+                  </li>
+                  <li class="language-option active" data-language="Deutsch">
+                    <a href="vaction-rentals-de.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/de.png');"></span>
+                      Deutsch (DE)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Englisch">
+                    <a href="vaction-rentals-en.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/en.png');"></span>
+                      Englisch (EN)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Französisch">
+                    <a href="vaction-rentals-fr.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/fr.png');"></span>
+                      Französisch (FR)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Griechisch">
+                    <a href="vaction-rentals-el.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/gr.png');"></span>
+                      Griechisch (EL)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Italienisch">
+                    <a href="vaction-rentals-it.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/it.png');"></span>
+                      Italienisch (IT)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Niederländisch">
+                    <a href="vaction-rentals-nl.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/nl.png');"></span>
+                      Niederländisch (NL)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Portugiesisch">
+                    <a href="vaction-rentals-pt.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/pt.png');"></span>
+                      Portugiesisch (PT)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Spanisch">
+                    <a href="vaction-rentals-es.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/images/es.png');"></span>
+                      Spanisch (ES)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Finnisch">
+                    <a href="vaction-rentals-fi.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/finland.png');"></span>
+                      Finnisch (FI)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Schwedisch">
+                    <a href="vaction-rentals-sv.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/sweden.png');"></span>
+                      Schwedisch (SV)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Dänisch">
+                    <a href="vaction-rentals-dk.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/denmark.png');"></span>
+                      Dänisch (DK)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Norwegisch">
+                    <a href="vaction-rentals-no.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/nk.png');"></span>
+                      Norwegisch (NO)
+                    </a>
+                  </li>
+                  <li class="language-option" data-language="Polnisch">
+                    <a href="vaction-rentals-pl.html" class="language-link">
+                      <span class="flag-circle" style="background-image: url('assets/pl (2).png');"></span>
+                      Polnisch (PL)
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+        
+
           <li style="display: flex; align-items: center;">
             <a href="https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
             <span style="margin: 0 10px; color: gray;">|</span>
